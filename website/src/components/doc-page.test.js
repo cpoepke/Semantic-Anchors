@@ -19,13 +19,13 @@ describe('doc-page', () => {
 
     global.fetch.mockResolvedValueOnce({ ok: false, status: 404 }).mockResolvedValueOnce({
       ok: true,
-      text: async () => '= About\n\nlink:https://example.com[Example]',
+      text: async () => '<h1>About</h1><a href="https://example.com">Example</a>',
     })
 
     await loadDocContent('docs/about.adoc')
 
-    expect(global.fetch).toHaveBeenNthCalledWith(1, expect.stringContaining('docs/about.de.adoc'))
-    expect(global.fetch).toHaveBeenNthCalledWith(2, expect.stringContaining('docs/about.adoc'))
+    expect(global.fetch).toHaveBeenNthCalledWith(1, expect.stringContaining('docs/about.de.html'))
+    expect(global.fetch).toHaveBeenNthCalledWith(2, expect.stringContaining('docs/about.html'))
 
     const link = document.querySelector('#doc-content a[href="https://example.com"]')
     expect(link).toBeTruthy()

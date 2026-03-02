@@ -13,7 +13,7 @@ repos:
         language: system
         files: \.adoc$
         pass_filenames: true
-        args: [--format, console]
+        args: [--format, console, --config, .asciidoc-linter.yml]
         stages: [commit]
 
   # Trailing whitespace
