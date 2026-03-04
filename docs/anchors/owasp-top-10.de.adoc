@@ -1,0 +1,55 @@
+= OWASP Top 10
+:categories: testing-quality
+:roles: software-developer, software-architect, qa-engineer, devops-engineer, consultant, team-lead
+:related: regulated-environment, iec-61508-sil-levels
+:proponents: OWASP Foundation
+:tags: security, web-security, vulnerabilities, risk, appsec, owasp
+
+[%collapsible]
+====
+Vollständiger Name:: OWASP Top 10 Web-Anwendungs-Sicherheitsrisiken
+
+Auch bekannt als:: OWASP Top Ten, Web Application Security Top 10
+
+[discrete]
+== *Kernkonzepte*:
+
+A01 – Fehlerhafte Zugriffskontrolle:: Unzureichende Durchsetzung von Einschränkungen für authentifizierte Benutzer; häufigste Schwachstelle in Webanwendungen
+
+A02 – Kryptographische Fehler:: Offenlegung sensibler Daten durch schwache oder fehlende Verschlüsselung; früher als „Sensitive Data Exposure" bekannt
+
+A03 – Injection:: Einschleusen nicht vertrauenswürdiger Daten in einen Interpreter (SQL-, OS-, LDAP-Injection)
+
+A04 – Unsicheres Design:: Fehlende oder ineffektive Sicherheitsmaßnahmen durch fehlerhaftes Design und unzureichendes Threat Modeling
+
+A05 – Sicherheitsfehlkonfiguration:: Unsichere Standardeinstellungen, unvollständige Konfigurationen, offener Cloud-Speicher, zu ausführliche Fehlermeldungen
+
+A06 – Veraltete und anfällige Komponenten:: Einsatz von Bibliotheken, Frameworks oder Komponenten mit bekannten Schwachstellen
+
+A07 – Fehler bei Identifizierung und Authentifizierung:: Schwächen bei Authentifizierung, Session-Management und Credential-Verwaltung
+
+A08 – Fehler bei Software- und Datenintegrität:: Fehlende Absicherung gegen Integritätsverletzungen (z. B. unsichere Deserialisierung, Manipulation der CI/CD-Pipeline)
+
+A09 – Unzureichendes Sicherheits-Logging und -Monitoring:: Mangelnde Protokollierung, Erkennung und Reaktion auf Sicherheitsvorfälle
+
+A10 – Server-Side Request Forgery (SSRF):: Server ruft externe Ressourcen von angreiferkontrollierten URLs ab, ohne diese zu validieren
+
+
+Schlüsselvertreter:: OWASP Foundation (https://owasp.org/Top10/, erstmals 2003 veröffentlicht, aktuelle Ausgabe 2021)
+
+[discrete]
+== *Wann zu verwenden*:
+
+* Durchführung von Sicherheitsrisikobewertungen für Webanwendungen
+* Erstellung von Richtlinien für sicheres Programmieren und Entwicklerschulungen
+* Durchführung von Threat Modeling und sicherheitsorientierten Design-Reviews
+* Priorisierung von Sicherheitsbefunden bei Code-Reviews und Penetrationstests
+* Definition von Abnahmekriterien für Sicherheitsanforderungen
+* Prüfung von Drittanbieter- oder Open-Source-Komponenten auf bekannte Schwachstellen
+
+[discrete]
+== *Verwandte Anker*:
+
+* <<regulated-environment,Reguliertes Umfeld>>
+* <<iec-61508-sil-levels,IEC 61508 SIL-Stufen>>
+====

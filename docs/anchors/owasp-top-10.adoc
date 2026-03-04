@@ -1,0 +1,55 @@
+= OWASP Top 10
+:categories: testing-quality
+:roles: software-developer, software-architect, qa-engineer, devops-engineer, consultant, team-lead
+:related: regulated-environment, iec-61508-sil-levels
+:proponents: OWASP Foundation
+:tags: security, web-security, vulnerabilities, risk, appsec, owasp
+
+[%collapsible]
+====
+Full Name:: OWASP Top 10 Web Application Security Risks
+
+Also known as:: OWASP Top Ten, Web Application Security Top 10
+
+[discrete]
+== *Core Concepts*:
+
+A01 – Broken Access Control:: Failure to enforce restrictions on what authenticated users can do; most prevalent web application risk
+
+A02 – Cryptographic Failures:: Sensitive data exposed due to weak or absent encryption; previously called "Sensitive Data Exposure"
+
+A03 – Injection:: Untrusted data sent to an interpreter as part of a command or query (SQL, OS, LDAP injection)
+
+A04 – Insecure Design:: Missing or ineffective security controls resulting from flawed design and threat modeling
+
+A05 – Security Misconfiguration:: Insecure default settings, incomplete configurations, open cloud storage, verbose error messages
+
+A06 – Vulnerable and Outdated Components:: Use of components (libraries, frameworks) with known vulnerabilities
+
+A07 – Identification and Authentication Failures:: Weaknesses in authentication, session management, and credential handling
+
+A08 – Software and Data Integrity Failures:: Code and infrastructure that does not protect against integrity violations (e.g., insecure deserialization, CI/CD tampering)
+
+A09 – Security Logging and Monitoring Failures:: Insufficient logging, detection, and response to breaches
+
+A10 – Server-Side Request Forgery (SSRF):: Server fetches remote resources from attacker-controlled URLs without validation
+
+
+Key Proponent:: OWASP Foundation (https://owasp.org/Top10/, first published 2003, current edition 2021)
+
+[discrete]
+== *When to Use*:
+
+* Performing security risk assessments on web applications
+* Establishing secure coding guidelines and developer training programs
+* Conducting threat modeling and security design reviews
+* Prioritizing security findings during code reviews and penetration tests
+* Defining acceptance criteria for security requirements
+* Auditing third-party or open-source components for known vulnerabilities
+
+[discrete]
+== *Related Anchors*:
+
+* <<regulated-environment,Regulated Environment>>
+* <<iec-61508-sil-levels,IEC 61508 SIL Levels>>
+====

@@ -626,6 +626,37 @@
     "filePath": "docs/anchors/nelson-rules.adoc"
   },
   {
+    "id": "owasp-top-10",
+    "title": "OWASP Top 10",
+    "categories": [
+      "testing-quality"
+    ],
+    "roles": [
+      "software-developer",
+      "software-architect",
+      "qa-engineer",
+      "devops-engineer",
+      "consultant",
+      "team-lead"
+    ],
+    "related": [
+      "regulated-environment",
+      "iec-61508-sil-levels"
+    ],
+    "proponents": [
+      "OWASP Foundation"
+    ],
+    "tags": [
+      "security",
+      "web-security",
+      "vulnerabilities",
+      "risk",
+      "appsec",
+      "owasp"
+    ],
+    "filePath": "docs/anchors/owasp-top-10.adoc"
+  },
+  {
     "id": "problem-space-nvc",
     "title": "Problem Space NVC",
     "categories": [
