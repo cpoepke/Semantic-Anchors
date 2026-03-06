@@ -483,6 +483,38 @@
     "filePath": "docs/anchors/jobs-to-be-done.adoc"
   },
   {
+    "id": "lasr",
+    "title": "LASR nach Toth/Zörner",
+    "categories": [
+      "software-architecture"
+    ],
+    "roles": [
+      "software-architect",
+      "software-developer",
+      "technical-writer",
+      "team-lead",
+      "consultant"
+    ],
+    "related": [
+      "arc42",
+      "adr-according-to-nygard",
+      "c4-diagrams"
+    ],
+    "proponents": [
+      "Stefan Toth",
+      "Oliver Zörner"
+    ],
+    "tags": [
+      "architecture-documentation",
+      "solution-strategy",
+      "interfaces",
+      "risks",
+      "lightweight",
+      "communication"
+    ],
+    "filePath": "docs/anchors/lasr.adoc"
+  },
+  {
     "id": "madr",
     "title": "MADR",
     "categories": [

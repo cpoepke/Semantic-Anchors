@@ -104,6 +104,15 @@ hexagonal-architecture:
     - software-developer
   rationale: "Architectural pattern; architects design, developers implement ports/adapters"
 
+lasr:
+  roles:
+    - software-architect
+    - software-developer
+    - technical-writer
+    - team-lead
+    - consultant
+  rationale: "Lightweight architecture documentation; architects create LASR docs, developers contribute interface and risk sections, tech writers format, team leads use for onboarding, consultants teach the approach"
+
 clean-architecture:
   roles:
     - software-architect
@@ -386,17 +395,17 @@ feynman-technique:
 
 # SUMMARY STATISTICS
 
-# Total anchors mapped: 50
+# Total anchors mapped: 51
 #
 # Roles by frequency:
-#   - software-developer: 25 anchors (50%)
-#   - team-lead: 21 anchors (42%)
-#   - software-architect: 18 anchors (36%)
-#   - consultant: 16 anchors (32%)
-#   - qa-engineer: 14 anchors (28%)
-#   - business-analyst: 13 anchors (26%)
+#   - software-developer: 26 anchors (51%)
+#   - team-lead: 22 anchors (43%)
+#   - software-architect: 19 anchors (37%)
+#   - consultant: 17 anchors (33%)
+#   - qa-engineer: 14 anchors (27%)
+#   - business-analyst: 13 anchors (25%)
 #   - devops-engineer: 10 anchors (20%)
-#   - technical-writer: 9 anchors (18%)
+#   - technical-writer: 10 anchors (20%)
 #   - product-owner: 8 anchors (16%)
 #   - data-scientist: 7 anchors (14%)
 #   - educator: 7 anchors (14%)
