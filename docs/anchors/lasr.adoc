@@ -2,7 +2,7 @@
 :categories: software-architecture
 :roles: software-architect, software-developer, technical-writer, team-lead, consultant
 :related: arc42, adr-according-to-nygard, c4-diagrams
-:proponents: Stefan Toth, Oliver Zörner
+:proponents: Stefan Toth, Stefan Zörner
 :tags: architecture-documentation, solution-strategy, interfaces, risks, lightweight, communication
 
 [%collapsible]
@@ -26,7 +26,7 @@ Lightweight by design:: LASR intentionally focuses on the four most communicatio
 
 Living document:: Updated alongside the architecture; meant to communicate current state, not archive history
 
-Key Proponents:: Stefan Toth ("Vorgehensmuster für Softwarearchitektur"), Oliver Zörner ("Softwarearchitekturen dokumentieren und kommunizieren")
+Key Proponents:: Stefan Toth ("Vorgehensmuster für Softwarearchitektur"), Stefan Zörner ("Softwarearchitekturen dokumentieren und kommunizieren")
 
 [discrete]
 == *When to Use*:
