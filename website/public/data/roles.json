@@ -97,6 +97,7 @@
     "id": "product-owner",
     "name": "Product Owner / Product Manager",
     "anchors": [
+      "atam",
       "chatham-house-rule",
       "cynefin-framework",
       "impact-mapping",
@@ -135,6 +136,7 @@
     "anchors": [
       "adr-according-to-nygard",
       "arc42",
+      "atam",
       "c4-diagrams",
       "clean-architecture",
       "cynefin-framework",
@@ -203,6 +205,7 @@
     "anchors": [
       "adr-according-to-nygard",
       "arc42",
+      "atam",
       "bluf",
       "c4-diagrams",
       "chatham-house-rule",
