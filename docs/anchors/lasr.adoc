@@ -1,0 +1,46 @@
+= LASR according to Toth/Zörner
+:categories: software-architecture
+:roles: software-architect, software-developer, technical-writer, team-lead, consultant
+:related: arc42, adr-according-to-nygard, c4-diagrams
+:proponents: Stefan Toth, Stefan Zörner
+:tags: architecture-documentation, solution-strategy, interfaces, risks, lightweight, communication
+
+[%collapsible]
+====
+Full Name:: LASR – Lightweight Architecture Documentation by Toth/Zörner
+
+Also known as:: Lightweight Architecture Communication, LASR Template
+
+[discrete]
+== *Core Concepts*:
+
+L – Lösungsstrategie (Solution Strategy):: High-level description of how the solution addresses the most important quality requirements and constraints; the central architectural ideas that shape the system
+
+A – Architekturüberblick (Architecture Overview):: Key structural and runtime views showing the main building blocks, their responsibilities, and how they interact at runtime
+
+S – Schnittstellen (Interfaces):: Definition of all relevant external interfaces (APIs, protocols, data formats) and important internal interfaces between major components
+
+R – Risiken (Risks):: Identification of the most critical technical risks, open questions, and known weaknesses together with proposed mitigation strategies
+
+Lightweight by design:: LASR intentionally focuses on the four most communication-relevant aspects of an architecture, omitting detail that does not aid stakeholder understanding
+
+Living document:: Updated alongside the architecture; meant to communicate current state, not archive history
+
+Key Proponents:: Stefan Toth ("Vorgehensmuster für Softwarearchitektur"), Stefan Zörner ("Softwarearchitekturen dokumentieren und kommunizieren")
+
+[discrete]
+== *When to Use*:
+
+* Communicating architecture to stakeholders who need a concise overview rather than full documentation
+* Agile projects where a lightweight alternative to arc42 is preferred
+* Architecture reviews where the four LASR aspects serve as a structured review checklist
+* Onboarding new team members to an existing system's key design decisions
+* Workshops where teams collaboratively capture the essential architecture decisions
+
+[discrete]
+== *Related Anchors*:
+
+* <<arc42,arc42 Architecture Documentation>>
+* <<adr-according-to-nygard,ADR according to Nygard>>
+* <<c4-diagrams,C4 Diagrams>>
+====

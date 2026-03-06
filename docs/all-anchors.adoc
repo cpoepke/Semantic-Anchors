@@ -117,6 +117,8 @@ include::anchors/gom.adoc[leveloffset=+2]
 
 include::anchors/hexagonal-architecture.adoc[leveloffset=+2]
 
+include::anchors/lasr.adoc[leveloffset=+2]
+
 include::anchors/madr.adoc[leveloffset=+2]
 
 <<<
