@@ -1,4 +1,4 @@
-= LASR nach Toth/Zörner
+= LASR according to Toth/Zörner
 :categories: software-architecture
 :roles: software-architect, software-developer, technical-writer, team-lead, consultant
 :related: arc42, adr-according-to-nygard, c4-diagrams
