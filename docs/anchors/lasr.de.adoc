@@ -1,0 +1,46 @@
+= LASR nach Toth/Zörner
+:categories: software-architecture
+:roles: software-architect, software-developer, technical-writer, team-lead, consultant
+:related: arc42, adr-according-to-nygard, c4-diagrams
+:proponents: Stefan Toth, Stefan Zörner
+:tags: architecture-documentation, solution-strategy, interfaces, risks, lightweight, communication
+
+[%collapsible]
+====
+Vollständiger Name:: LASR – Leichtgewichtige Architekturdokumentation nach Toth/Zörner
+
+Auch bekannt als:: Leichtgewichtige Architekturkommunikation, LASR-Template
+
+[discrete]
+== *Kernkonzepte*:
+
+L – Lösungsstrategie:: Übergeordnete Beschreibung, wie die Lösung die wichtigsten Qualitätsanforderungen und Randbedingungen adressiert; die zentralen Architekturideen, die das System prägen
+
+A – Architekturüberblick:: Wesentliche Struktur- und Laufzeitsichten mit den wichtigsten Bausteinen, deren Verantwortlichkeiten und ihrer Interaktion zur Laufzeit
+
+S – Schnittstellen:: Definition aller relevanten Außenschnittstellen (APIs, Protokolle, Datenformate) sowie wichtiger interner Schnittstellen zwischen den Hauptkomponenten
+
+R – Risiken:: Identifikation der kritischsten technischen Risiken, offener Fragen und bekannter Schwächen zusammen mit vorgeschlagenen Maßnahmen zur Risikoreduzierung
+
+Bewusst leichtgewichtig:: LASR konzentriert sich gezielt auf die vier kommunikationsrelevantesten Aspekte einer Architektur und verzichtet auf Details, die das Stakeholder-Verständnis nicht verbessern
+
+Lebendes Dokument:: Wird parallel zur Architektur aktualisiert; dient der Kommunikation des aktuellen Stands, nicht der Archivierung von Geschichte
+
+Schlüsselvertreter:: Stefan Toth ("Vorgehensmuster für Softwarearchitektur"), Stefan Zörner ("Softwarearchitekturen dokumentieren und kommunizieren")
+
+[discrete]
+== *Wann zu verwenden*:
+
+* Kommunikation der Architektur an Stakeholder, die einen prägnanten Überblick statt vollständiger Dokumentation benötigen
+* Agile Projekte, in denen eine leichtgewichtige Alternative zu arc42 bevorzugt wird
+* Architektur-Reviews, bei denen die vier LASR-Aspekte als strukturierte Review-Checkliste dienen
+* Einarbeitung neuer Teammitglieder in die wesentlichen Entwurfsentscheidungen eines bestehenden Systems
+* Workshops, in denen Teams gemeinsam die wesentlichen Architekturentscheidungen erfassen
+
+[discrete]
+== *Verwandte Anker*:
+
+* <<arc42,arc42 Architekturdokumentation>>
+* <<adr-according-to-nygard,ADR nach Nygard>>
+* <<c4-diagrams,C4-Diagramme>>
+====
