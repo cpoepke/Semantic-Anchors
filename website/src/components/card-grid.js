@@ -360,9 +360,10 @@ export function applyCardFilters(roleId, searchQuery) {
  * Update the anchor counter display
  */
 export function updateAnchorCount(visible, total) {
-  const visibleCountEl = document.getElementById('visible-count')
-  const totalCountEl = document.getElementById('total-count')
-
-  if (visibleCountEl) visibleCountEl.textContent = visible
-  if (totalCountEl) totalCountEl.textContent = total
+  document.querySelectorAll('#visible-count, #visible-count-mobile').forEach((el) => {
+    el.textContent = visible
+  })
+  document.querySelectorAll('#total-count, #total-count-mobile').forEach((el) => {
+    el.textContent = total
+  })
 }

@@ -330,39 +330,41 @@ function bindHeaderSearchInput() {
 }
 
 function bindThemeToggle() {
-  const toggle = document.querySelector('#theme-toggle')
-  if (!toggle) return
-
-  toggle.addEventListener('click', () => {
-    toggleTheme()
-    updateThemeIcon()
+  document.querySelectorAll('#theme-toggle, #theme-toggle-mobile').forEach((toggle) => {
+    toggle.addEventListener('click', () => {
+      toggleTheme()
+      updateThemeIcon()
+    })
   })
 }
 
 function updateThemeIcon() {
-  const moonIcon = document.querySelector('#theme-icon-moon')
-  const sunIcon = document.querySelector('#theme-icon-sun')
-  const toggle = document.querySelector('#theme-toggle')
-  if (!moonIcon || !sunIcon || !toggle) return
-
   const isDark = currentTheme() === 'dark'
-  moonIcon.classList.toggle('hidden', isDark)
-  sunIcon.classList.toggle('hidden', !isDark)
-
   const ariaKey = isDark ? 'header.themeToggle.light' : 'header.themeToggle.dark'
-  toggle.setAttribute('aria-label', i18n.t(ariaKey))
-  toggle.dataset.i18nAria = ariaKey
+
+  document.querySelectorAll('#theme-icon-moon, #theme-icon-moon-mobile').forEach((el) => {
+    el.classList.toggle('hidden', isDark)
+  })
+  document.querySelectorAll('#theme-icon-sun, #theme-icon-sun-mobile').forEach((el) => {
+    el.classList.toggle('hidden', !isDark)
+  })
+  document.querySelectorAll('#theme-toggle, #theme-toggle-mobile').forEach((el) => {
+    el.setAttribute('aria-label', i18n.t(ariaKey))
+    el.dataset.i18nAria = ariaKey
+  })
 }
 
 function bindLanguageToggle() {
-  const toggle = document.querySelector('#lang-toggle')
-  if (!toggle) return
-
-  toggle.addEventListener('click', () => {
-    i18n.toggleLang()
-    toggle.textContent = i18n.currentLang() === 'en' ? 'DE' : 'EN'
-    applyTranslations()
-    updateThemeIcon()
+  document.querySelectorAll('#lang-toggle, #lang-toggle-mobile').forEach((toggle) => {
+    toggle.addEventListener('click', () => {
+      i18n.toggleLang()
+      const label = i18n.currentLang() === 'en' ? 'DE' : 'EN'
+      document.querySelectorAll('#lang-toggle, #lang-toggle-mobile').forEach((el) => {
+        el.textContent = label
+      })
+      applyTranslations()
+      updateThemeIcon()
+    })
   })
 
   document.addEventListener('langchange', handleLanguageChange)
@@ -391,9 +393,9 @@ function handleLanguageChange() {
 }
 
 function bindOnboardingButton() {
-  const btn = document.getElementById('onboarding-info-btn')
-  if (!btn) return
-  btn.addEventListener('click', () => showOnboarding())
+  document.querySelectorAll('#onboarding-info-btn, #onboarding-info-btn-mobile').forEach((btn) => {
+    btn.addEventListener('click', () => showOnboarding())
+  })
 }
 
 function bindMobileMenu() {

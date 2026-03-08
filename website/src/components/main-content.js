@@ -44,16 +44,16 @@ export function renderMain() {
             type="search"
             data-i18n-placeholder="search.placeholder"
             placeholder="${i18n.t('search.placeholder')}"
-            class="rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-2 text-sm text-[var(--color-text)] placeholder-[var(--color-text-secondary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] transition-colors duration-300"
+            class="sm:hidden rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-2 text-sm text-[var(--color-text)] placeholder-[var(--color-text-secondary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] transition-colors duration-300"
           />
           <select
             id="role-filter"
-            class="rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-2 text-sm text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] transition-colors duration-300"
+            class="sm:hidden rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-2 text-sm text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] transition-colors duration-300"
           >
             <option value="" data-i18n="filter.allRoles">${i18n.t('filter.allRoles')}</option>
           </select>
-          <span id="anchor-count" class="text-sm text-[var(--color-text-secondary)] ml-auto">
-            <span id="visible-count">0</span> / <span id="total-count">0</span> <span data-i18n="filter.anchors">${i18n.t('filter.anchors')}</span>
+          <span id="anchor-count-mobile" class="sm:hidden text-sm text-[var(--color-text-secondary)] ml-auto">
+            <span id="visible-count-mobile">0</span> / <span id="total-count-mobile">0</span> <span data-i18n="filter.anchors">${i18n.t('filter.anchors')}</span>
           </span>
         </section>
 

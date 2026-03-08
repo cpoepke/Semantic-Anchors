@@ -4,8 +4,10 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
+    "sync-anchors": "node ../scripts/sync-anchors.js",
+    "predev": "node ../scripts/sync-anchors.js",
     "dev": "vite",
-    "prebuild": "node ../scripts/render-docs.js",
+    "prebuild": "node ../scripts/sync-anchors.js && node ../scripts/render-docs.js",
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest run",
