@@ -85,7 +85,7 @@ function triggerSearchIndexBuild() {
     .then(() => {
       ;['search-input', 'header-search-input'].forEach((id) => {
         const el = document.getElementById(id)
-        if (el) el.placeholder = `${i18n.t('search.placeholder')} (full-text)`
+        if (el) el.placeholder = `${i18n.t('search.placeholder')} ${i18n.t('search.fullText')}`
       })
     })
     .catch((err) => {

@@ -14,6 +14,7 @@
   "main.proposeAnchor": "Neuen Anker vorschlagen",
   "main.documentation": "Dokumentation",
   "search.placeholder": "Anchors durchsuchen...",
+  "search.fullText": "(Volltext)",
   "filter.allRoles": "Alle Rollen",
   "filter.anchors": "Anker",
   "footer.tagline": "Semantic Anchors - Gemeinsames Vokabular für LLM-Kommunikation",
