@@ -82,6 +82,26 @@ Source: https://github.com/LLM-Coding/Semantic-Anchors
 ### SOLID Principles
 - **Core:** Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion
 
+#### SOLID-SRP (Single Responsibility Principle)
+- **Proponents:** Robert C. Martin
+- **Core:** Each class should have only one reason to change
+
+#### SOLID-OCP (Open/Closed Principle)
+- **Proponents:** Robert C. Martin, Bertrand Meyer
+- **Core:** Open for extension, closed for modification
+
+#### SOLID-LSP (Liskov Substitution Principle)
+- **Proponents:** Robert C. Martin, Barbara Liskov
+- **Core:** Subtypes must be substitutable for their base types
+
+#### SOLID-ISP (Interface Segregation Principle)
+- **Proponents:** Robert C. Martin
+- **Core:** Don't force clients to depend on unused interfaces
+
+#### SOLID-DIP (Dependency Inversion Principle)
+- **Proponents:** Robert C. Martin
+- **Core:** Depend on abstractions, not concrete implementations
+
 ### DRY (Don't Repeat Yourself)
 - **Core:** Every piece of knowledge has single, unambiguous representation
 
@@ -99,6 +119,35 @@ Source: https://github.com/LLM-Coding/Semantic-Anchors
 - **Also known as:** Design Patterns, Gang of Four Patterns
 - **Proponents:** Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides
 - **Core:** 23 patterns in 3 categories (Creational, Structural, Behavioral), pattern language, composition over inheritance, program to an interface
+
+#### Creational Patterns
+- **GoF-Abstract Factory** — Families of related objects without specifying concrete classes
+- **GoF-Builder** — Construct complex objects step by step
+- **GoF-Factory Method** — Let subclasses decide which class to instantiate
+- **GoF-Prototype** — Clone existing objects
+- **GoF-Singleton** — Ensure single instance with global access
+
+#### Structural Patterns
+- **GoF-Adapter** — Convert interface to one clients expect
+- **GoF-Bridge** — Separate abstraction from implementation
+- **GoF-Composite** — Compose objects into tree structures
+- **GoF-Decorator** — Add responsibilities dynamically
+- **GoF-Facade** — Simplified interface to a subsystem
+- **GoF-Flyweight** — Share fine-grained objects efficiently (not a semantic anchor)
+- **GoF-Proxy** — Surrogate controlling access to another object
+
+#### Behavioral Patterns
+- **GoF-Chain of Responsibility** — Pass requests along a chain of handlers
+- **GoF-Command** — Encapsulate requests as objects
+- **GoF-Interpreter** — Grammar and interpreter for a language (not a semantic anchor)
+- **GoF-Iterator** — Sequential access without exposing structure
+- **GoF-Mediator** — Centralize complex communications
+- **GoF-Memento** — Capture and restore object state (not a semantic anchor)
+- **GoF-Observer** — Notify dependents of state changes
+- **GoF-State** — Alter behavior when internal state changes
+- **GoF-Strategy** — Interchangeable algorithm families
+- **GoF-Template Method** — Define skeleton, let subclasses fill in steps
+- **GoF-Visitor** — Operations on elements without changing their classes (not a semantic anchor)
 
 ### Patterns of Enterprise Application Architecture (PEAA)
 - **Proponents:** Martin Fowler
