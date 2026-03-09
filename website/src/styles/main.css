@@ -295,3 +295,27 @@ body {
 .animate-fade-out {
   animation: fade-out 0.3s ease-out;
 }
+
+/* Umbrella anchor stacked card effect */
+.anchor-card-umbrella {
+  position: relative;
+}
+
+.anchor-card-umbrella::before,
+.anchor-card-umbrella::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  z-index: -1;
+}
+
+.anchor-card-umbrella::before {
+  transform: rotate(2deg) translate(4px, 4px);
+}
+
+.anchor-card-umbrella::after {
+  transform: rotate(-1deg) translate(-3px, 3px);
+}

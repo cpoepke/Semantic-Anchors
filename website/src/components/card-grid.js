@@ -64,7 +64,10 @@ export function renderCardGrid(categories, anchors) {
  */
 function renderCategorySection(category, allAnchors) {
   const categoryAnchors = allAnchors.filter(
-    (anchor) => anchor.categories && anchor.categories.includes(category.id)
+    (anchor) =>
+      anchor.categories &&
+      anchor.categories.includes(category.id) &&
+      !anchor.umbrella
   )
 
   if (categoryAnchors.length === 0) return ''
@@ -91,6 +94,8 @@ function renderCategorySection(category, allAnchors) {
  * Render a single anchor card
  */
 function renderAnchorCard(anchor, categoryColor) {
+  const isUmbrella = anchor.subAnchors && anchor.subAnchors.length > 0
+  const umbrellaClass = isUmbrella ? ' anchor-card-umbrella' : ''
   const rolesCount = anchor.roles ? anchor.roles.length : 0
   const githubEditUrl = `https://github.com/LLM-Coding/Semantic-Anchors/edit/main/docs/anchors/${anchor.id}.adoc`
   const roleText = rolesCount === 1 ? i18n.t('card.roles') : i18n.t('card.rolesPlural')
@@ -101,7 +106,7 @@ function renderAnchorCard(anchor, categoryColor) {
 
   return `
     <article
-      class="anchor-card"
+      class="anchor-card${umbrellaClass}"
       data-anchor="${safeId}"
       data-roles="${escapeHtml(anchor.roles ? anchor.roles.join(',') : '')}"
       data-tags="${escapeHtml(anchor.tags ? anchor.tags.join(',') : '')}"
