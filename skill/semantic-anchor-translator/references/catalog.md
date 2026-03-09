@@ -174,6 +174,11 @@ Source: https://github.com/LLM-Coding/Semantic-Anchors
 ### Socratic Method
 - **Core:** Ask questions to stimulate critical thinking and illuminate ideas
 
+### Myers-Briggs Type Indicator (MBTI)
+- **Also known as:** MBTI, Myers-Briggs, 16 Personality Types
+- **Proponents:** Isabel Briggs Myers, Katharine Cook Briggs, Carl Gustav Jung
+- **Core:** Four dichotomies (E/I, S/N, T/F, J/P) produce 16 personality types describing communication preferences, decision-making styles, and team dynamics
+
 ## Documentation
 
 ### Diátaxis Framework

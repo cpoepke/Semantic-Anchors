@@ -1,0 +1,59 @@
+= Myers-Briggs Type Indicator (MBTI)
+:categories: communication-presentation
+:roles: team-lead, consultant, educator, ux-designer, product-owner
+:proponents: Isabel Briggs Myers, Katharine Cook Briggs, Carl Gustav Jung
+:tags: personality types, MBTI, psychological types, communication styles, team dynamics, Jungian psychology
+
+[%collapsible]
+====
+Full Name:: Myers-Briggs Type Indicator (MBTI)
+
+Also known as:: MBTI, Myers-Briggs, Jungian Type Theory Applied, 16 Personality Types
+
+[discrete]
+== *Core Concepts*:
+
+Four Dichotomies:: The framework defines four preference dimensions, each with two poles:
+* *Extraversion (E) vs. Introversion (I)* — Where do you direct your energy? Outward toward people and activity, or inward toward ideas and reflection?
+* *Sensing (S) vs. Intuition (N)* — How do you take in information? Through concrete facts and present reality, or through patterns and future possibilities?
+* *Thinking (T) vs. Feeling (F)* — How do you make decisions? Based on logic and objective analysis, or based on values and interpersonal impact?
+* *Judging (J) vs. Perceiving (P)* — How do you deal with the outer world? With structure and planning, or with flexibility and spontaneity?
+
+16 Personality Types:: The four dichotomies combine into 16 distinct type profiles (e.g., INTJ, ENFP, ISTJ, ESFP), each with characteristic strengths, blind spots, and communication preferences
+
+Cognitive Functions:: Each type has a stack of four cognitive functions (e.g., dominant Introverted Intuition, auxiliary Extraverted Feeling for INFJs) that describe how information is processed and decisions are made
+
+Preference, Not Ability:: Type describes a natural preference, not a skill or fixed trait — people can and do use all functions, but prefer some over others
+
+Type Dynamics:: Understanding a team's type mix reveals likely sources of friction (e.g., S/N conflicts over big-picture vs. detail focus) and natural collaboration patterns
+
+Key Proponents:: Isabel Briggs Myers and Katharine Cook Briggs, building on Carl Gustav Jung's theory of psychological types ("Psychological Types", 1921)
+
+Historical Context:: Developed during World War II to help women entering the industrial workforce find roles suited to their personality; officially published as an instrument in 1962 and widely adopted in organizational and educational settings
+
+[discrete]
+== *When to Use*:
+
+* Understanding communication preferences and potential friction sources within a team
+* Facilitating team retrospectives or kickoffs where interpersonal dynamics matter
+* Coaching individuals on leadership and communication style
+* Career development discussions to align role expectations with personal working style
+* UX research to consider how different user types might interact with a product
+* Onboarding programs to accelerate mutual understanding among new team members
+
+[discrete]
+== *Common Misunderstandings*:
+
+* ❌ "My type means I can't do X" — MBTI describes preferences, not capabilities or limits
+* ❌ "Types are fixed for life" — Preferences can shift with experience, stress, or context
+* ❌ "One type is better than another" — All 16 types bring value; the framework is descriptive, not evaluative
+* ✓ "MBTI is a starting point for self-reflection and dialogue" — Correct use is exploratory, not diagnostic
+
+[discrete]
+== *Limitations and Criticisms*:
+
+* Test-retest reliability is modest — the same person can receive a different type on retaking the assessment
+* Binary dichotomies oversimplify continuous trait distributions
+* Not endorsed for high-stakes hiring or selection decisions
+* Criticized for low predictive validity for job performance compared to, e.g., Big Five personality traits
+====

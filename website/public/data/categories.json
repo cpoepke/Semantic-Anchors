@@ -6,6 +6,7 @@
       "bluf",
       "chatham-house-rule",
       "mece",
+      "myers-briggs-type-indicator",
       "pyramid-principle"
     ]
   },
@@ -15,9 +16,34 @@
     "anchors": [
       "dry-principle",
       "fowler-patterns",
+      "gof-abstract-factory-pattern",
+      "gof-adapter-pattern",
+      "gof-bridge-pattern",
+      "gof-builder-pattern",
+      "gof-chain-of-responsibility-pattern",
+      "gof-command-pattern",
+      "gof-composite-pattern",
+      "gof-decorator-pattern",
+      "gof-design-patterns",
+      "gof-facade-pattern",
+      "gof-factory-method-pattern",
+      "gof-flyweight-pattern",
+      "gof-interpreter-pattern",
+      "gof-iterator-pattern",
+      "gof-mediator-pattern",
+      "gof-memento-pattern",
+      "gof-observer-pattern",
+      "gof-prototype-pattern",
+      "gof-proxy-pattern",
+      "gof-singleton-pattern",
+      "gof-state-pattern",
+      "gof-strategy-pattern",
+      "gof-template-method-pattern",
+      "gof-visitor-pattern",
       "solid-principles",
       "spot-principle",
-      "ssot-principle"
+      "ssot-principle",
+      "yagni"
     ]
   },
   {
@@ -87,7 +113,9 @@
       "atam",
       "c4-diagrams",
       "clean-architecture",
+      "cqrs",
       "domain-driven-design",
+      "event-driven-architecture",
       "gom",
       "hexagonal-architecture",
       "lasr",
@@ -118,12 +146,14 @@
     "id": "testing-quality",
     "name": "Testing & Quality Practices",
     "anchors": [
+      "bdd-given-when-then",
       "iec-61508-sil-levels",
       "mutation-testing",
       "owasp-top-10",
       "property-based-testing",
       "tdd-chicago-school",
       "tdd-london-school",
+      "test-double-meszaros",
       "testing-pyramid"
     ]
   }

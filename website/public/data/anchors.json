@@ -65,6 +65,37 @@
     "filePath": "docs/anchors/atam.adoc"
   },
   {
+    "id": "bdd-given-when-then",
+    "title": "BDD (Behavior-Driven Development)",
+    "categories": [
+      "testing-quality"
+    ],
+    "roles": [
+      "software-developer",
+      "qa-engineer",
+      "business-analyst",
+      "product-owner"
+    ],
+    "related": [
+      "tdd-london-school",
+      "tdd-chicago-school",
+      "user-story-mapping"
+    ],
+    "proponents": [
+      "Dan North"
+    ],
+    "tags": [
+      "bdd",
+      "gherkin",
+      "cucumber",
+      "specification-by-example",
+      "three-amigos",
+      "given-when-then",
+      "living-documentation"
+    ],
+    "filePath": "docs/anchors/bdd-given-when-then.adoc"
+  },
+  {
     "id": "bem-methodology",
     "title": "BEM Methodology",
     "categories": [
@@ -214,6 +245,36 @@
     "filePath": "docs/anchors/conventional-commits.adoc"
   },
   {
+    "id": "cqrs",
+    "title": "CQRS (Command Query Responsibility Segregation)",
+    "categories": [
+      "software-architecture"
+    ],
+    "roles": [
+      "software-architect",
+      "software-developer"
+    ],
+    "related": [
+      "domain-driven-design",
+      "hexagonal-architecture",
+      "fowler-patterns"
+    ],
+    "proponents": [
+      "Greg Young",
+      "Bertrand Meyer",
+      "Udi Dahan"
+    ],
+    "tags": [
+      "cqrs",
+      "cqs",
+      "architecture",
+      "commands",
+      "queries",
+      "read-write-separation"
+    ],
+    "filePath": "docs/anchors/cqrs.adoc"
+  },
+  {
     "id": "cynefin-framework",
     "title": "Cynefin Framework",
     "categories": [
@@ -337,6 +398,38 @@
     "filePath": "docs/anchors/ears-requirements.adoc"
   },
   {
+    "id": "event-driven-architecture",
+    "title": "Event-Driven Architecture",
+    "categories": [
+      "software-architecture"
+    ],
+    "roles": [
+      "software-architect",
+      "software-developer",
+      "devops-engineer"
+    ],
+    "related": [
+      "domain-driven-design",
+      "hexagonal-architecture",
+      "clean-architecture"
+    ],
+    "proponents": [
+      "Gregor Hohpe",
+      "Bobby Woolf",
+      "Martin Fowler"
+    ],
+    "tags": [
+      "eda",
+      "events",
+      "async",
+      "messaging",
+      "publish-subscribe",
+      "decoupling",
+      "eventual-consistency"
+    ],
+    "filePath": "docs/anchors/event-driven-architecture.adoc"
+  },
+  {
     "id": "feynman-technique",
     "title": "Feynman Technique",
     "categories": [
@@ -397,6 +490,749 @@
       "orm"
     ],
     "filePath": "docs/anchors/fowler-patterns.adoc"
+  },
+  {
+    "id": "gof-abstract-factory-pattern",
+    "title": "GoF-Abstract Factory Pattern",
+    "categories": [
+      "design-principles"
+    ],
+    "roles": [
+      "software-developer",
+      "software-architect"
+    ],
+    "related": [],
+    "proponents": [
+      "Erich Gamma",
+      "Richard Helm",
+      "Ralph Johnson",
+      "John Vlissides"
+    ],
+    "tags": [
+      "GoF",
+      "design pattern",
+      "creational",
+      "abstract factory",
+      "family",
+      "platform independence"
+    ],
+    "filePath": "docs/anchors/gof-abstract-factory-pattern.adoc",
+    "umbrella": "gof-design-patterns",
+    "tier": 2
+  },
+  {
+    "id": "gof-adapter-pattern",
+    "title": "GoF-Adapter Pattern",
+    "categories": [
+      "design-principles"
+    ],
+    "roles": [
+      "software-developer",
+      "software-architect"
+    ],
+    "related": [],
+    "proponents": [
+      "Erich Gamma",
+      "Richard Helm",
+      "Ralph Johnson",
+      "John Vlissides"
+    ],
+    "tags": [
+      "GoF",
+      "design pattern",
+      "structural",
+      "adapter",
+      "wrapper",
+      "interface conversion",
+      "compatibility"
+    ],
+    "filePath": "docs/anchors/gof-adapter-pattern.adoc",
+    "umbrella": "gof-design-patterns",
+    "tier": 1
+  },
+  {
+    "id": "gof-bridge-pattern",
+    "title": "GoF-Bridge Pattern",
+    "categories": [
+      "design-principles"
+    ],
+    "roles": [
+      "software-developer",
+      "software-architect"
+    ],
+    "related": [],
+    "proponents": [
+      "Erich Gamma",
+      "Richard Helm",
+      "Ralph Johnson",
+      "John Vlissides"
+    ],
+    "tags": [
+      "GoF",
+      "design pattern",
+      "structural",
+      "bridge",
+      "abstraction",
+      "implementation",
+      "decoupling"
+    ],
+    "filePath": "docs/anchors/gof-bridge-pattern.adoc",
+    "umbrella": "gof-design-patterns",
+    "tier": 2
+  },
+  {
+    "id": "gof-builder-pattern",
+    "title": "GoF-Builder Pattern",
+    "categories": [
+      "design-principles"
+    ],
+    "roles": [
+      "software-developer",
+      "software-architect"
+    ],
+    "related": [],
+    "proponents": [
+      "Erich Gamma",
+      "Richard Helm",
+      "Ralph Johnson",
+      "John Vlissides"
+    ],
+    "tags": [
+      "GoF",
+      "design pattern",
+      "creational",
+      "builder",
+      "construction",
+      "fluent interface",
+      "complex objects"
+    ],
+    "filePath": "docs/anchors/gof-builder-pattern.adoc",
+    "umbrella": "gof-design-patterns",
+    "tier": 1
+  },
+  {
+    "id": "gof-chain-of-responsibility-pattern",
+    "title": "GoF-Chain of Responsibility Pattern",
+    "categories": [
+      "design-principles"
+    ],
+    "roles": [
+      "software-developer",
+      "software-architect"
+    ],
+    "related": [],
+    "proponents": [
+      "Erich Gamma",
+      "Richard Helm",
+      "Ralph Johnson",
+      "John Vlissides"
+    ],
+    "tags": [
+      "GoF",
+      "design pattern",
+      "behavioral",
+      "chain of responsibility",
+      "handler",
+      "pipeline",
+      "middleware"
+    ],
+    "filePath": "docs/anchors/gof-chain-of-responsibility-pattern.adoc",
+    "umbrella": "gof-design-patterns",
+    "tier": 2
+  },
+  {
+    "id": "gof-command-pattern",
+    "title": "GoF-Command Pattern",
+    "categories": [
+      "design-principles"
+    ],
+    "roles": [
+      "software-developer",
+      "software-architect"
+    ],
+    "related": [],
+    "proponents": [
+      "Erich Gamma",
+      "Richard Helm",
+      "Ralph Johnson",
+      "John Vlissides"
+    ],
+    "tags": [
+      "GoF",
+      "design pattern",
+      "behavioral",
+      "command",
+      "undo",
+      "queue",
+      "encapsulation",
+      "action"
+    ],
+    "filePath": "docs/anchors/gof-command-pattern.adoc",
+    "umbrella": "gof-design-patterns",
+    "tier": 1
+  },
+  {
+    "id": "gof-composite-pattern",
+    "title": "GoF-Composite Pattern",
+    "categories": [
+      "design-principles"
+    ],
+    "roles": [
+      "software-developer",
+      "software-architect"
+    ],
+    "related": [],
+    "proponents": [
+      "Erich Gamma",
+      "Richard Helm",
+      "Ralph Johnson",
+      "John Vlissides"
+    ],
+    "tags": [
+      "GoF",
+      "design pattern",
+      "structural",
+      "composite",
+      "tree",
+      "hierarchy",
+      "part-whole"
+    ],
+    "filePath": "docs/anchors/gof-composite-pattern.adoc",
+    "umbrella": "gof-design-patterns",
+    "tier": 2
+  },
+  {
+    "id": "gof-decorator-pattern",
+    "title": "GoF-Decorator Pattern",
+    "categories": [
+      "design-principles"
+    ],
+    "roles": [
+      "software-developer",
+      "software-architect"
+    ],
+    "related": [],
+    "proponents": [
+      "Erich Gamma",
+      "Richard Helm",
+      "Ralph Johnson",
+      "John Vlissides"
+    ],
+    "tags": [
+      "GoF",
+      "design pattern",
+      "structural",
+      "decorator",
+      "wrapper",
+      "dynamic behavior",
+      "composition"
+    ],
+    "filePath": "docs/anchors/gof-decorator-pattern.adoc",
+    "umbrella": "gof-design-patterns",
+    "tier": 1
+  },
+  {
+    "id": "gof-design-patterns",
+    "title": "GoF Design Patterns",
+    "categories": [
+      "design-principles"
+    ],
+    "roles": [
+      "software-developer",
+      "software-architect",
+      "educator"
+    ],
+    "related": [
+      "solid-principles",
+      "fowler-patterns",
+      "clean-architecture"
+    ],
+    "proponents": [
+      "Erich Gamma",
+      "Richard Helm",
+      "Ralph Johnson",
+      "John Vlissides"
+    ],
+    "tags": [
+      "design-patterns",
+      "gang-of-four",
+      "oop",
+      "creational",
+      "structural",
+      "behavioral"
+    ],
+    "filePath": "docs/anchors/gof-design-patterns.adoc",
+    "subAnchors": [
+      "gof-strategy-pattern",
+      "gof-observer-pattern",
+      "gof-factory-method-pattern",
+      "gof-singleton-pattern",
+      "gof-adapter-pattern",
+      "gof-decorator-pattern",
+      "gof-command-pattern",
+      "gof-facade-pattern",
+      "gof-template-method-pattern",
+      "gof-builder-pattern",
+      "gof-state-pattern",
+      "gof-proxy-pattern",
+      "gof-abstract-factory-pattern",
+      "gof-composite-pattern",
+      "gof-iterator-pattern",
+      "gof-mediator-pattern",
+      "gof-chain-of-responsibility-pattern",
+      "gof-bridge-pattern",
+      "gof-prototype-pattern",
+      "gof-flyweight-pattern",
+      "gof-interpreter-pattern",
+      "gof-memento-pattern",
+      "gof-visitor-pattern"
+    ]
+  },
+  {
+    "id": "gof-facade-pattern",
+    "title": "GoF-Facade Pattern",
+    "categories": [
+      "design-principles"
+    ],
+    "roles": [
+      "software-developer",
+      "software-architect"
+    ],
+    "related": [],
+    "proponents": [
+      "Erich Gamma",
+      "Richard Helm",
+      "Ralph Johnson",
+      "John Vlissides"
+    ],
+    "tags": [
+      "GoF",
+      "design pattern",
+      "structural",
+      "facade",
+      "simplification",
+      "subsystem",
+      "unified interface"
+    ],
+    "filePath": "docs/anchors/gof-facade-pattern.adoc",
+    "umbrella": "gof-design-patterns",
+    "tier": 1
+  },
+  {
+    "id": "gof-factory-method-pattern",
+    "title": "GoF-Factory Method Pattern",
+    "categories": [
+      "design-principles"
+    ],
+    "roles": [
+      "software-developer",
+      "software-architect"
+    ],
+    "related": [],
+    "proponents": [
+      "Erich Gamma",
+      "Richard Helm",
+      "Ralph Johnson",
+      "John Vlissides"
+    ],
+    "tags": [
+      "GoF",
+      "design pattern",
+      "creational",
+      "factory",
+      "polymorphism",
+      "instantiation"
+    ],
+    "filePath": "docs/anchors/gof-factory-method-pattern.adoc",
+    "umbrella": "gof-design-patterns",
+    "tier": 1
+  },
+  {
+    "id": "gof-flyweight-pattern",
+    "title": "GoF-Flyweight Pattern",
+    "categories": [
+      "design-principles"
+    ],
+    "roles": [
+      "software-developer",
+      "software-architect"
+    ],
+    "related": [],
+    "proponents": [
+      "Erich Gamma",
+      "Richard Helm",
+      "Ralph Johnson",
+      "John Vlissides"
+    ],
+    "tags": [
+      "GoF",
+      "design pattern",
+      "structural",
+      "flyweight",
+      "memory optimization",
+      "sharing"
+    ],
+    "filePath": "docs/anchors/gof-flyweight-pattern.adoc",
+    "umbrella": "gof-design-patterns",
+    "tier": 3
+  },
+  {
+    "id": "gof-interpreter-pattern",
+    "title": "GoF-Interpreter Pattern",
+    "categories": [
+      "design-principles"
+    ],
+    "roles": [
+      "software-developer",
+      "software-architect"
+    ],
+    "related": [],
+    "proponents": [
+      "Erich Gamma",
+      "Richard Helm",
+      "Ralph Johnson",
+      "John Vlissides"
+    ],
+    "tags": [
+      "GoF",
+      "design pattern",
+      "behavioral",
+      "interpreter",
+      "grammar",
+      "DSL",
+      "parsing"
+    ],
+    "filePath": "docs/anchors/gof-interpreter-pattern.adoc",
+    "umbrella": "gof-design-patterns",
+    "tier": 3
+  },
+  {
+    "id": "gof-iterator-pattern",
+    "title": "GoF-Iterator Pattern",
+    "categories": [
+      "design-principles"
+    ],
+    "roles": [
+      "software-developer",
+      "software-architect"
+    ],
+    "related": [],
+    "proponents": [
+      "Erich Gamma",
+      "Richard Helm",
+      "Ralph Johnson",
+      "John Vlissides"
+    ],
+    "tags": [
+      "GoF",
+      "design pattern",
+      "behavioral",
+      "iterator",
+      "traversal",
+      "collection",
+      "aggregate"
+    ],
+    "filePath": "docs/anchors/gof-iterator-pattern.adoc",
+    "umbrella": "gof-design-patterns",
+    "tier": 2
+  },
+  {
+    "id": "gof-mediator-pattern",
+    "title": "GoF-Mediator Pattern",
+    "categories": [
+      "design-principles"
+    ],
+    "roles": [
+      "software-developer",
+      "software-architect"
+    ],
+    "related": [],
+    "proponents": [
+      "Erich Gamma",
+      "Richard Helm",
+      "Ralph Johnson",
+      "John Vlissides"
+    ],
+    "tags": [
+      "GoF",
+      "design pattern",
+      "behavioral",
+      "mediator",
+      "loose coupling",
+      "coordination",
+      "hub"
+    ],
+    "filePath": "docs/anchors/gof-mediator-pattern.adoc",
+    "umbrella": "gof-design-patterns",
+    "tier": 2
+  },
+  {
+    "id": "gof-memento-pattern",
+    "title": "GoF-Memento Pattern",
+    "categories": [
+      "design-principles"
+    ],
+    "roles": [
+      "software-developer",
+      "software-architect"
+    ],
+    "related": [],
+    "proponents": [
+      "Erich Gamma",
+      "Richard Helm",
+      "Ralph Johnson",
+      "John Vlissides"
+    ],
+    "tags": [
+      "GoF",
+      "design pattern",
+      "behavioral",
+      "memento",
+      "snapshot",
+      "undo",
+      "state preservation"
+    ],
+    "filePath": "docs/anchors/gof-memento-pattern.adoc",
+    "umbrella": "gof-design-patterns",
+    "tier": 3
+  },
+  {
+    "id": "gof-observer-pattern",
+    "title": "GoF-Observer Pattern",
+    "categories": [
+      "design-principles"
+    ],
+    "roles": [
+      "software-developer",
+      "software-architect"
+    ],
+    "related": [],
+    "proponents": [
+      "Erich Gamma",
+      "Richard Helm",
+      "Ralph Johnson",
+      "John Vlissides"
+    ],
+    "tags": [
+      "GoF",
+      "design pattern",
+      "behavioral",
+      "observer",
+      "publish-subscribe",
+      "event",
+      "notification",
+      "reactive"
+    ],
+    "filePath": "docs/anchors/gof-observer-pattern.adoc",
+    "umbrella": "gof-design-patterns",
+    "tier": 1
+  },
+  {
+    "id": "gof-prototype-pattern",
+    "title": "GoF-Prototype Pattern",
+    "categories": [
+      "design-principles"
+    ],
+    "roles": [
+      "software-developer",
+      "software-architect"
+    ],
+    "related": [],
+    "proponents": [
+      "Erich Gamma",
+      "Richard Helm",
+      "Ralph Johnson",
+      "John Vlissides"
+    ],
+    "tags": [
+      "GoF",
+      "design pattern",
+      "creational",
+      "prototype",
+      "cloning",
+      "copy",
+      "object creation"
+    ],
+    "filePath": "docs/anchors/gof-prototype-pattern.adoc",
+    "umbrella": "gof-design-patterns",
+    "tier": 2
+  },
+  {
+    "id": "gof-proxy-pattern",
+    "title": "GoF-Proxy Pattern",
+    "categories": [
+      "design-principles"
+    ],
+    "roles": [
+      "software-developer",
+      "software-architect"
+    ],
+    "related": [],
+    "proponents": [
+      "Erich Gamma",
+      "Richard Helm",
+      "Ralph Johnson",
+      "John Vlissides"
+    ],
+    "tags": [
+      "GoF",
+      "design pattern",
+      "structural",
+      "proxy",
+      "access control",
+      "lazy loading",
+      "caching",
+      "virtual proxy"
+    ],
+    "filePath": "docs/anchors/gof-proxy-pattern.adoc",
+    "umbrella": "gof-design-patterns",
+    "tier": 1
+  },
+  {
+    "id": "gof-singleton-pattern",
+    "title": "GoF-Singleton Pattern",
+    "categories": [
+      "design-principles"
+    ],
+    "roles": [
+      "software-developer",
+      "software-architect"
+    ],
+    "related": [],
+    "proponents": [
+      "Erich Gamma",
+      "Richard Helm",
+      "Ralph Johnson",
+      "John Vlissides"
+    ],
+    "tags": [
+      "GoF",
+      "design pattern",
+      "creational",
+      "singleton",
+      "global state",
+      "instance control"
+    ],
+    "filePath": "docs/anchors/gof-singleton-pattern.adoc",
+    "umbrella": "gof-design-patterns",
+    "tier": 1
+  },
+  {
+    "id": "gof-state-pattern",
+    "title": "GoF-State Pattern",
+    "categories": [
+      "design-principles"
+    ],
+    "roles": [
+      "software-developer",
+      "software-architect"
+    ],
+    "related": [],
+    "proponents": [
+      "Erich Gamma",
+      "Richard Helm",
+      "Ralph Johnson",
+      "John Vlissides"
+    ],
+    "tags": [
+      "GoF",
+      "design pattern",
+      "behavioral",
+      "state",
+      "state machine",
+      "finite automaton",
+      "context"
+    ],
+    "filePath": "docs/anchors/gof-state-pattern.adoc",
+    "umbrella": "gof-design-patterns",
+    "tier": 1
+  },
+  {
+    "id": "gof-strategy-pattern",
+    "title": "GoF-Strategy Pattern",
+    "categories": [
+      "design-principles"
+    ],
+    "roles": [
+      "software-developer",
+      "software-architect"
+    ],
+    "related": [],
+    "proponents": [
+      "Erich Gamma",
+      "Richard Helm",
+      "Ralph Johnson",
+      "John Vlissides"
+    ],
+    "tags": [
+      "GoF",
+      "design pattern",
+      "behavioral",
+      "strategy"
+    ],
+    "filePath": "docs/anchors/gof-strategy-pattern.adoc",
+    "umbrella": "gof-design-patterns",
+    "tier": 1
+  },
+  {
+    "id": "gof-template-method-pattern",
+    "title": "GoF-Template Method Pattern",
+    "categories": [
+      "design-principles"
+    ],
+    "roles": [
+      "software-developer",
+      "software-architect"
+    ],
+    "related": [],
+    "proponents": [
+      "Erich Gamma",
+      "Richard Helm",
+      "Ralph Johnson",
+      "John Vlissides"
+    ],
+    "tags": [
+      "GoF",
+      "design pattern",
+      "behavioral",
+      "template method",
+      "algorithm skeleton",
+      "hook",
+      "inheritance"
+    ],
+    "filePath": "docs/anchors/gof-template-method-pattern.adoc",
+    "umbrella": "gof-design-patterns",
+    "tier": 1
+  },
+  {
+    "id": "gof-visitor-pattern",
+    "title": "GoF-Visitor Pattern",
+    "categories": [
+      "design-principles"
+    ],
+    "roles": [
+      "software-developer",
+      "software-architect"
+    ],
+    "related": [],
+    "proponents": [
+      "Erich Gamma",
+      "Richard Helm",
+      "Ralph Johnson",
+      "John Vlissides"
+    ],
+    "tags": [
+      "GoF",
+      "design pattern",
+      "behavioral",
+      "visitor",
+      "double dispatch",
+      "operations",
+      "traversal"
+    ],
+    "filePath": "docs/anchors/gof-visitor-pattern.adoc",
+    "umbrella": "gof-design-patterns",
+    "tier": 3
   },
   {
     "id": "gom",
@@ -514,7 +1350,7 @@
   },
   {
     "id": "lasr",
-    "title": "LASR by Toth/Zörner",
+    "title": "LASR according to Toth/Zörner",
     "categories": [
       "software-architecture"
     ],
@@ -671,6 +1507,35 @@
     ],
     "tags": [],
     "filePath": "docs/anchors/mutation-testing.adoc"
+  },
+  {
+    "id": "myers-briggs-type-indicator",
+    "title": "Myers-Briggs Type Indicator (MBTI)",
+    "categories": [
+      "communication-presentation"
+    ],
+    "roles": [
+      "team-lead",
+      "consultant",
+      "educator",
+      "ux-designer",
+      "product-owner"
+    ],
+    "related": [],
+    "proponents": [
+      "Isabel Briggs Myers",
+      "Katharine Cook Briggs",
+      "Carl Gustav Jung"
+    ],
+    "tags": [
+      "personality types",
+      "MBTI",
+      "psychological types",
+      "communication styles",
+      "team dynamics",
+      "Jungian psychology"
+    ],
+    "filePath": "docs/anchors/myers-briggs-type-indicator.adoc"
   },
   {
     "id": "nelson-rules",
@@ -996,6 +1861,38 @@
     "filePath": "docs/anchors/tdd-london-school.adoc"
   },
   {
+    "id": "test-double-meszaros",
+    "title": "Test Double (Meszaros)",
+    "categories": [
+      "testing-quality"
+    ],
+    "roles": [
+      "software-developer",
+      "qa-engineer",
+      "educator"
+    ],
+    "related": [
+      "tdd-london-school",
+      "tdd-chicago-school",
+      "property-based-testing"
+    ],
+    "proponents": [
+      "Gerard Meszaros"
+    ],
+    "tags": [
+      "test-double",
+      "mock",
+      "stub",
+      "spy",
+      "fake",
+      "dummy",
+      "xunit",
+      "testing",
+      "isolation"
+    ],
+    "filePath": "docs/anchors/test-double-meszaros.adoc"
+  },
+  {
     "id": "testing-pyramid",
     "title": "Testing Pyramid",
     "categories": [
@@ -1095,5 +1992,34 @@
     "proponents": [],
     "tags": [],
     "filePath": "docs/anchors/what-qualifies-as-a-semantic-anchor.adoc"
+  },
+  {
+    "id": "yagni",
+    "title": "YAGNI (You Aren’t Gonna Need It)",
+    "categories": [
+      "design-principles"
+    ],
+    "roles": [
+      "software-developer",
+      "software-architect",
+      "consultant"
+    ],
+    "related": [
+      "dry-principle",
+      "spot-principle",
+      "tdd-chicago-school"
+    ],
+    "proponents": [
+      "Ron Jeffries",
+      "Kent Beck"
+    ],
+    "tags": [
+      "yagni",
+      "extreme-programming",
+      "simplicity",
+      "incremental-design",
+      "over-engineering"
+    ],
+    "filePath": "docs/anchors/yagni.adoc"
   }
 ]
