@@ -319,3 +319,28 @@ body {
 .anchor-card-umbrella::after {
   transform: rotate(-1deg) translate(-3px, 3px);
 }
+
+/* Sub-anchor tier styling */
+.sub-anchor-item.tier-1 {
+  font-weight: 600;
+  border-left: 3px solid var(--color-primary);
+  padding-left: 0.75rem;
+}
+
+.sub-anchor-item.tier-2 {
+  padding-left: calc(0.75rem + 3px);
+}
+
+.sub-anchor-item.tier-3 {
+  padding-left: calc(0.75rem + 3px);
+  opacity: 0.5;
+}
+
+.sub-anchor-link {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.sub-anchor-link:hover {
+  text-decoration: underline;
+}
