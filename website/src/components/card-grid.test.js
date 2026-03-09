@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, vi } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 import { renderCardGrid } from './card-grid.js'
 
 // Mock i18n module
