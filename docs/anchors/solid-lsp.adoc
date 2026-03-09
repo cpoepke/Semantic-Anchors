@@ -1,0 +1,30 @@
+= SOLID-Liskov Substitution Principle
+:categories: design-principles
+:roles: software-developer, software-architect
+:umbrella: solid-principles
+:tier: 1
+:proponents: Robert C. Martin, Barbara Liskov
+:tags: SOLID, design principle, LSP, liskov, substitution
+
+[%collapsible]
+====
+Full Name:: SOLID Liskov Substitution Principle (LSP)
+
+[discrete]
+== *Intent*:
+Subtypes must be substitutable for their base types without altering the correctness of the program. Derived classes must honor the contracts of their base classes.
+
+[discrete]
+== *When to Use*:
+* Subclass overrides break expected behavior of the base class
+* instanceof/type checks appear in client code
+* Inheritance hierarchies violate "is-a" relationships
+
+[discrete]
+== *Prompt Example*:
+"Überprüfe diese Vererbungshierarchie auf Verletzungen des SOLID-Liskov Substitution Principle."
+
+[discrete]
+== *Related Anchors*:
+* <<solid-principles,SOLID Principles>> (Umbrella)
+====

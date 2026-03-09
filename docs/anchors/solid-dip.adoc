@@ -1,0 +1,31 @@
+= SOLID-Dependency Inversion Principle
+:categories: design-principles
+:roles: software-developer, software-architect
+:umbrella: solid-principles
+:tier: 1
+:proponents: Robert C. Martin
+:tags: SOLID, design principle, DIP, dependency inversion
+
+[%collapsible]
+====
+Full Name:: SOLID Dependency Inversion Principle (DIP)
+
+[discrete]
+== *Intent*:
+High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details; details should depend on abstractions.
+
+[discrete]
+== *When to Use*:
+* High-level business logic directly instantiates infrastructure classes
+* Changing a database or framework requires modifying business logic
+* Unit testing requires running actual external services
+
+[discrete]
+== *Prompt Example*:
+"Refactore diese Klasse nach dem SOLID-Dependency Inversion Principle, sodass die Abhängigkeiten über Interfaces injiziert werden."
+
+[discrete]
+== *Related Anchors*:
+* <<solid-principles,SOLID Principles>> (Umbrella)
+* <<hexagonal-architecture,Hexagonal Architecture>> - Architectural application of DIP
+====
