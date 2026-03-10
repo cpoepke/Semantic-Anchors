@@ -1,0 +1,12 @@
+{
+  "name": "semantic-anchors",
+  "version": "0.1.0",
+  "description": "Semantic anchor skills for translating terminology and onboarding persistent anchor context into coding agents.",
+  "author": {
+    "name": "Conrad Pöpke",
+    "email": "conrad@poepke.info"
+  },
+  "repository": "https://github.com/cpoepke/Semantic-Anchors",
+  "keywords": ["semantic-anchors", "prompting", "llm", "codex", "claude-code", "gemini"],
+  "skills": "./skills/"
+}
