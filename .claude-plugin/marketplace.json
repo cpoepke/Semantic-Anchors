@@ -1,0 +1,23 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "semantic-anchors",
+  "description": "Semantic anchor skills for LLM and coding-agent onboarding",
+  "owner": {
+    "name": "Conrad Pöpke",
+    "email": "conrad@poepke.info"
+  },
+  "plugins": [
+    {
+      "name": "semantic-anchors",
+      "description": "Semantic anchor skills for translating established methodologies and onboarding them into persistent coding-agent context.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Conrad Pöpke",
+        "email": "conrad@poepke.info"
+      },
+      "source": "./plugins/semantic-anchors",
+      "category": "productivity",
+      "homepage": "https://github.com/cpoepke/Semantic-Anchors"
+    }
+  ]
+}
