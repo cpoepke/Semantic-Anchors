@@ -1,0 +1,49 @@
+= SWOT
+:categories: strategic-planning
+:roles: product-owner, business-analyst, consultant, team-lead, software-architect
+:related: pugh-matrix, wardley-mapping, moscow
+:proponents: Albert Humphrey
+:tags: swot, strategic-planning, analysis, strengths, weaknesses, opportunities, threats, business-analysis
+
+[%collapsible]
+====
+Full Name:: SWOT Analysis
+
+Also known as:: SWOT Matrix, TOWS Analysis
+
+[discrete]
+== *Core Concepts*:
+
+SWOT = **S**trengths / **W**eaknesses / **O**pportunities / **T**hreats
+
+Strengths:: Internal positive attributes and resources that give the subject an advantage over others
+
+Weaknesses:: Internal negative attributes or limitations that place the subject at a disadvantage relative to others
+
+Opportunities:: External factors or trends that the subject could exploit to its advantage
+
+Threats:: External factors or conditions that could cause problems or jeopardise the subject's success
+
+Internal vs. External:: Strengths and Weaknesses are internal (within control); Opportunities and Threats are external (environmental)
+
+Present vs. Future orientation:: Strengths and Weaknesses reflect the current state; Opportunities and Threats look toward future conditions
+
+TOWS variant:: Systematic derivation of strategies by cross-referencing SWOT quadrants (SO, ST, WO, WT strategies)
+
+Key Proponent:: Albert Humphrey (Stanford Research Institute, 1960s–1970s)
+
+[discrete]
+== *When to Use*:
+
+* Strategic planning for a product, project, organisation, or technology choice
+* Competitive analysis to understand market positioning
+* Evaluating an architectural or technology decision holistically
+* Team retrospectives to assess current state before planning next steps
+* Business case preparation and stakeholder communication
+
+*Related Anchors*:
+
+* <<pugh-matrix,Pugh Matrix>>
+* <<wardley-mapping,Wardley Mapping>>
+* <<moscow,MoSCoW>>
+====

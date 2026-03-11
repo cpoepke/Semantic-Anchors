@@ -1,0 +1,49 @@
+= SWOT
+:categories: strategic-planning
+:roles: product-owner, business-analyst, consultant, team-lead, software-architect
+:related: pugh-matrix, wardley-mapping, moscow
+:proponents: Albert Humphrey
+:tags: swot, strategic-planning, analysis, strengths, weaknesses, opportunities, threats, business-analysis
+
+[%collapsible]
+====
+Vollständiger Name:: SWOT-Analyse
+
+Auch bekannt als:: SWOT-Matrix, TOWS-Analyse
+
+[discrete]
+== *Kernkonzepte*:
+
+SWOT = **S**tärken / **S**chwächen / **C**hancen / **B**edrohungen (englisches Akronym: Strengths / Weaknesses / Opportunities / Threats)
+
+Strengths (Stärken):: Interne positive Eigenschaften und Ressourcen, die dem Betrachtungsobjekt einen Vorteil gegenüber anderen verschaffen
+
+Weaknesses (Schwächen):: Interne negative Eigenschaften oder Einschränkungen, die das Betrachtungsobjekt gegenüber anderen benachteiligen
+
+Opportunities (Chancen):: Externe Faktoren oder Trends, die das Betrachtungsobjekt zu seinem Vorteil nutzen könnte
+
+Threats (Risiken):: Externe Faktoren oder Bedingungen, die Probleme verursachen oder den Erfolg des Betrachtungsobjekts gefährden könnten
+
+Intern vs. Extern:: Stärken und Schwächen sind intern (beeinflussbar); Chancen und Risiken sind extern (umgebungsbedingt)
+
+Gegenwart vs. Zukunft:: Stärken und Schwächen spiegeln den aktuellen Zustand wider; Chancen und Risiken blicken auf zukünftige Bedingungen
+
+TOWS-Variante:: Systematische Ableitung von Strategien durch Kreuzvergleich der SWOT-Quadranten (SO-, ST-, WO-, WT-Strategien)
+
+Schlüsselvertreter:: Albert Humphrey (Stanford Research Institute, 1960er–1970er Jahre)
+
+[discrete]
+== *Wann zu verwenden*:
+
+* Strategische Planung für ein Produkt, Projekt, eine Organisation oder Technologieentscheidung
+* Wettbewerbsanalyse zur Bestimmung der Marktpositionierung
+* Ganzheitliche Bewertung einer Architektur- oder Technologieentscheidung
+* Team-Retrospektiven zur Zustandsbewertung vor der nächsten Planungsrunde
+* Erstellung von Business Cases und Stakeholder-Kommunikation
+
+*Verwandte Anker*:
+
+* <<pugh-matrix,Pugh-Matrix>>
+* <<wardley-mapping,Wardley Mapping>>
+* <<moscow,MoSCoW>>
+====
