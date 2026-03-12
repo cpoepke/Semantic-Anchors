@@ -19,11 +19,17 @@ Source: https://github.com/LLM-Coding/Semantic-Anchors
 - **Proponents:** Dan North
 - **Core:** Given-When-Then scenarios, Gherkin syntax, three amigos, living documentation, outside-in specification
 
+### Gherkin
+- **Also known as:** Cucumber DSL, BDD Scenario Language
+- **Proponents:** Aslak Hellesøy
+- **Core:** Domain-specific language for writing human-readable executable specifications; Feature/Scenario/Given/When/Then keywords; Background, Scenario Outline, Examples; 70+ natural languages; used by Cucumber, SpecFlow, Behave
+
 ### Test Double (Meszaros)
 - **Proponents:** Gerard Meszaros
 - **Core:** Taxonomy of test substitutes — Dummy (unused), Stub (canned responses), Spy (records calls), Mock (verifies interactions), Fake (simplified implementation)
 
 ### Testing Pyramid
+- **Proponents:** Mike Cohn
 - **Core:** Many unit tests, fewer integration tests, fewest E2E tests
 
 ### Mutation Testing
@@ -31,7 +37,12 @@ Source: https://github.com/LLM-Coding/Semantic-Anchors
 - **Core:** Inject faults into code, verify tests catch them
 
 ### Property-Based Testing
+- **Proponents:** Koen Claessen, John Hughes
 - **Core:** Test properties/invariants with generated inputs (QuickCheck, Hypothesis)
+
+### OWASP Top 10
+- **Proponents:** OWASP Foundation
+- **Core:** Top ten most critical web application security risks, updated periodically, covering injection, broken auth, XSS, misconfiguration, etc.
 
 ### IEC 61508 SIL Levels
 - **Proponents:** International Electrotechnical Commission
@@ -40,9 +51,13 @@ Source: https://github.com/LLM-Coding/Semantic-Anchors
 ## Software Architecture
 
 ### Clean Architecture
+- **Also known as:** Onion Architecture
+- **Proponents:** Robert C. Martin
 - **Core:** Dependency rule, entities at center, frameworks at edge
 
 ### Hexagonal Architecture (Ports & Adapters)
+- **Also known as:** Ports and Adapters
+- **Proponents:** Alistair Cockburn
 - **Core:** Business logic isolated via ports, adapters for external systems
 
 ### Domain-Driven Design (DDD)
@@ -72,6 +87,15 @@ Source: https://github.com/LLM-Coding/Semantic-Anchors
 ### MADR
 - **Proponents:** Oliver Kopp, Olaf Zimmermann
 - **Core:** Markdown ADR template with options considered section
+
+### ATAM (Architecture Tradeoff Analysis Method)
+- **Proponents:** Rick Kazman, Mark Klein, Paul Clements (SEI/CMU)
+- **Core:** Evaluate architecture through quality-attribute scenarios, sensitivity points, tradeoff points, and risks
+
+### LASR (Lean Architecture for Software-intensive Real-time systems)
+- **Also known as:** LASR by Toth/Zörner
+- **Proponents:** Stefan Toth, Stefan Zörner
+- **Core:** Layered solution strategy, architecture, and rationale for describing systems
 
 ### GoM (Guidelines of Modeling)
 - **Proponents:** Jörg Becker, Michael Rosemann
@@ -133,21 +157,21 @@ Source: https://github.com/LLM-Coding/Semantic-Anchors
 - **GoF-Composite** — Compose objects into tree structures
 - **GoF-Decorator** — Add responsibilities dynamically
 - **GoF-Facade** — Simplified interface to a subsystem
-- **GoF-Flyweight** — Share fine-grained objects efficiently (not a semantic anchor)
+- **GoF-Flyweight** — Share fine-grained objects efficiently (GoF sub-pattern)
 - **GoF-Proxy** — Surrogate controlling access to another object
 
 #### Behavioral Patterns
 - **GoF-Chain of Responsibility** — Pass requests along a chain of handlers
 - **GoF-Command** — Encapsulate requests as objects
-- **GoF-Interpreter** — Grammar and interpreter for a language (not a semantic anchor)
+- **GoF-Interpreter** — Grammar and interpreter for a language (GoF sub-pattern)
 - **GoF-Iterator** — Sequential access without exposing structure
 - **GoF-Mediator** — Centralize complex communications
-- **GoF-Memento** — Capture and restore object state (not a semantic anchor)
+- **GoF-Memento** — Capture and restore object state (GoF sub-pattern)
 - **GoF-Observer** — Notify dependents of state changes
 - **GoF-State** — Alter behavior when internal state changes
 - **GoF-Strategy** — Interchangeable algorithm families
 - **GoF-Template Method** — Define skeleton, let subclasses fill in steps
-- **GoF-Visitor** — Operations on elements without changing their classes (not a semantic anchor)
+- **GoF-Visitor** — Operations on elements without changing their classes (GoF sub-pattern)
 
 ### Patterns of Enterprise Application Architecture (PEAA)
 - **Proponents:** Martin Fowler
@@ -288,3 +312,7 @@ Source: https://github.com/LLM-Coding/Semantic-Anchors
 ### Pugh Matrix
 - **Proponents:** Stuart Pugh
 - **Core:** Decision matrix comparing options against criteria with baseline
+
+### SWOT
+- **Proponents:** Albert Humphrey
+- **Core:** Strengths, Weaknesses, Opportunities, Threats — internal vs. external strategic analysis

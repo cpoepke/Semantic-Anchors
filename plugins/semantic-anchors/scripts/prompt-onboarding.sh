@@ -47,7 +47,7 @@ now = datetime.now(timezone.utc)
 try:
     with open(state_path, "r", encoding="utf-8") as handle:
         state = json.load(handle)
-except FileNotFoundError:
+except (FileNotFoundError, json.JSONDecodeError):
     state = {}
 
 projects = state.setdefault("projects", {})
@@ -55,8 +55,11 @@ entry = projects.setdefault(project_dir, {})
 last_prompt_raw = entry.get("last_prompt")
 
 if last_prompt_raw:
-    last_prompt = datetime.fromisoformat(last_prompt_raw.replace("Z", "+00:00"))
-    if now - last_prompt < timedelta(hours=cooldown_hours):
+    try:
+        last_prompt = datetime.fromisoformat(last_prompt_raw.replace("Z", "+00:00"))
+    except (ValueError, TypeError):
+        last_prompt = None
+    if last_prompt and now - last_prompt < timedelta(hours=cooldown_hours):
         raise SystemExit(0)
 
 entry["last_prompt"] = now.isoformat().replace("+00:00", "Z")

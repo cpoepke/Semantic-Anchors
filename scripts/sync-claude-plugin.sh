@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/bin/sh
 # Sync generic skills into the Claude plugin package.
 
-set -euo pipefail
+set -eu
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"

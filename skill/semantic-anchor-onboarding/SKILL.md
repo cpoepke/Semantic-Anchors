@@ -76,6 +76,10 @@ Reusable starter templates live in `assets/templates/`:
 
 Use the installer first. Mirror into native files only when a target agent requires it.
 
+## Requirements
+
+- **Platform:** Unix/macOS (WSL on Windows). Shell scripts use Unix paths (`$HOME/.claude/`, `$HOME/.codex/`) and are not Windows-native.
+
 ## Maintenance
 
 - Treat `skill/` as the canonical source for generic skills.

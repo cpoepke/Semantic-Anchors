@@ -199,6 +199,10 @@ install_claude_hook() {
   cp "$SCRIPT_DIR/claude-session-start.sh" "$hook_script"
   chmod +x "$hook_script"
 
+  if [ -f "$settings_file" ]; then
+    cp "$settings_file" "$settings_file.bak"
+  fi
+
   python3 - "$settings_file" "$hook_command" <<'PY'
 import json
 import os
