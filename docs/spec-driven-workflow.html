@@ -598,61 +598,10 @@ You review at the boundaries between phases, not after every line of code.</p>
 <div class="sect1">
 <h2 id="_workflow_overview">Workflow Overview</h2>
 <div class="sectionbody">
-<div style="text-align:center;margin:1.5rem 0">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" style="max-width:100%;height:auto;font-family:'Open Sans','DejaVu Sans',sans-serif">
-  <!-- Phase boxes -->
-  <rect x="10" y="60" width="150" height="80" rx="10" fill="#e8f0fe" stroke="#2156a5" stroke-width="2"/>
-  <text x="85" y="92" text-anchor="middle" font-size="13" font-weight="bold" fill="#2156a5">Phase 1</text>
-  <text x="85" y="112" text-anchor="middle" font-size="11" fill="#333">Requirements</text>
-  <text x="85" y="126" text-anchor="middle" font-size="11" fill="#333">Discovery</text>
-
-  <rect x="195" y="60" width="150" height="80" rx="10" fill="#e8f0fe" stroke="#2156a5" stroke-width="2"/>
-  <text x="270" y="92" text-anchor="middle" font-size="13" font-weight="bold" fill="#2156a5">Phase 2</text>
-  <text x="270" y="112" text-anchor="middle" font-size="11" fill="#333">Architecture</text>
-
-  <rect x="380" y="60" width="150" height="80" rx="10" fill="#e8f0fe" stroke="#2156a5" stroke-width="2"/>
-  <text x="455" y="92" text-anchor="middle" font-size="13" font-weight="bold" fill="#2156a5">Phase 3</text>
-  <text x="455" y="112" text-anchor="middle" font-size="11" fill="#333">Implementation</text>
-  <text x="455" y="126" text-anchor="middle" font-size="11" fill="#333">Planning</text>
-
-  <rect x="565" y="60" width="150" height="80" rx="10" fill="#fff3e0" stroke="#bf6900" stroke-width="2"/>
-  <text x="640" y="92" text-anchor="middle" font-size="13" font-weight="bold" fill="#bf6900">Phase 4</text>
-  <text x="640" y="112" text-anchor="middle" font-size="11" fill="#333">Implementation</text>
-  <text x="640" y="126" text-anchor="middle" font-size="11" fill="#333">Loop</text>
-
-  <rect x="750" y="60" width="140" height="80" rx="10" fill="#e8f5e9" stroke="#007f00" stroke-width="2"/>
-  <text x="820" y="92" text-anchor="middle" font-size="13" font-weight="bold" fill="#007f00">Phase 5</text>
-  <text x="820" y="112" text-anchor="middle" font-size="11" fill="#333">Quality</text>
-  <text x="820" y="126" text-anchor="middle" font-size="11" fill="#333">Assurance</text>
-
-  <!-- Arrows between phases -->
-  <polygon points="165,100 190,100 190,95 200,100 190,105 190,100" fill="#2156a5"/>
-  <polygon points="350,100 375,100 375,95 385,100 375,105 375,100" fill="#2156a5"/>
-  <polygon points="535,100 560,100 560,95 570,100 560,105 560,100" fill="#2156a5"/>
-  <polygon points="720,100 745,100 745,95 755,100 745,105 745,100" fill="#bf6900"/>
-
-  <!-- Loop arrow for Phase 4 -->
-  <path d="M 640 145 L 640 170 C 640 180 630 185 620 185 L 580 185 C 570 185 565 180 565 170 L 565 145" fill="none" stroke="#bf6900" stroke-width="2" stroke-dasharray="5,3"/>
-  <polygon points="565,150 560,155 570,155" fill="#bf6900"/>
-  <text x="603" y="200" text-anchor="middle" font-size="10" fill="#bf6900" font-style="italic">per issue</text>
-
-  <!-- Cross-cutting concerns bar -->
-  <rect x="10" y="240" width="880" height="50" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="1" stroke-dasharray="4,2"/>
-  <text x="450" y="260" text-anchor="middle" font-size="12" font-weight="bold" fill="#555">Cross-Cutting Concerns</text>
-  <text x="450" y="278" text-anchor="middle" font-size="10" fill="#777">Plain English | Conventional Commits | Docs-as-Code | Definition of Done</text>
-
-  <!-- Key artifacts below each phase -->
-  <text x="85" y="30" text-anchor="middle" font-size="9" fill="#666">PRD, Specs,</text>
-  <text x="85" y="42" text-anchor="middle" font-size="9" fill="#666">Acceptance Criteria</text>
-  <text x="270" y="30" text-anchor="middle" font-size="9" fill="#666">arc42, ADRs,</text>
-  <text x="270" y="42" text-anchor="middle" font-size="9" fill="#666">C4 Diagrams</text>
-  <text x="455" y="30" text-anchor="middle" font-size="9" fill="#666">Issues, Epics,</text>
-  <text x="455" y="42" text-anchor="middle" font-size="9" fill="#666">Task Breakdown</text>
-  <text x="640" y="30" text-anchor="middle" font-size="9" fill="#666">TDD, Code,</text>
-  <text x="640" y="42" text-anchor="middle" font-size="9" fill="#666">Tests, Commits</text>
-  <text x="820" y="30" text-anchor="middle" font-size="9" fill="#666">Reviews, Risk</text>
-  <text x="820" y="42" text-anchor="middle" font-size="9" fill="#666">Radar, Refactoring</text>
-</svg>
+<div class="imageblock">
+<div class="content">
+<img src="workflow-diagram.png" alt="Workflow Overview" width="800">
+</div>
 </div>
 </div>
 </div>
