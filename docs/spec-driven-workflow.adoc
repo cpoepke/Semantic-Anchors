@@ -58,7 +58,7 @@ You review at the boundaries between phases, not after every line of code.
 
 == Workflow Overview
 
-image::workflow-diagram.png[Workflow Overview,width=800]
+image::docs/workflow-diagram.png[Workflow Overview,width=800]
 
 == Cross-Cutting Concerns
 

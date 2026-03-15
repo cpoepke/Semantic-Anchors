@@ -1,6 +1,6 @@
 import { i18n } from '../i18n.js'
 import { fetchAnchorsData } from '../utils/data-loader.js'
-import { getRouteBeforeModal } from '../utils/router.js'
+import { getRouteBeforeModal, getScrollBeforeModal } from '../utils/router.js'
 
 let asciidoctor = null
 
@@ -104,7 +104,10 @@ export function closeModal() {
     // Return to the page that was active before the modal opened
     if (window.location.hash.startsWith('#/anchor/')) {
       const returnTo = getRouteBeforeModal() || '/'
+      const scrollY = getScrollBeforeModal()
       window.location.hash = '#' + returnTo
+      // Restore scroll position after the hashchange event
+      requestAnimationFrame(() => window.scrollTo(0, scrollY))
     }
   }
 }

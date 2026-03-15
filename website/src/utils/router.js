@@ -5,6 +5,7 @@
 const routes = new Map()
 let currentRoute = null
 let routeBeforeModal = null
+let scrollBeforeModal = 0
 
 /**
  * Register a route handler
@@ -55,8 +56,9 @@ function handleRoute() {
     const safeAnchorId = /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(anchorId) ? anchorId : null
     if (!safeAnchorId) return
 
-    // Remember the current route so we can return to it when the modal closes
+    // Remember the current route and scroll position for restoring after modal close
     routeBeforeModal = currentRoute
+    scrollBeforeModal = window.scrollY
 
     // Only navigate to home if no page is currently rendered
     if (!currentRoute) {
@@ -66,6 +68,9 @@ function handleRoute() {
         homeHandler()
       }
     }
+    // Restore scroll position (browser resets it on hash change)
+    window.scrollTo(0, scrollBeforeModal)
+
     // Open the anchor modal as overlay on current page
     // Import dynamically to avoid circular dependency
     import('../components/anchor-modal.js').then(({ showAnchorDetails }) => {
@@ -104,4 +109,12 @@ export function isActive(path) {
  */
 export function getRouteBeforeModal() {
   return routeBeforeModal
+}
+
+/**
+ * Get the scroll position that was active before the anchor modal opened
+ * @returns {number} Scroll Y position
+ */
+export function getScrollBeforeModal() {
+  return scrollBeforeModal
 }

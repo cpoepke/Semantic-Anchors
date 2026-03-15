@@ -60,7 +60,7 @@ Man reviewt an den Übergängen zwischen Phasen, nicht nach jeder einzelnen Code
 
 == Workflow-Übersicht
 
-image::workflow-diagram.png[Workflow-Übersicht,width=800]
+image::docs/workflow-diagram.png[Workflow-Übersicht,width=800]
 
 == Querschnittsthemen
 
