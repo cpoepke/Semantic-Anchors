@@ -14,11 +14,12 @@ If the repository also ships a Claude marketplace plugin, keep `skill/` as the s
 
 | Agent | Project-level startup context | User or home-level startup context | Hooks or dynamic injection | Guidance |
 | --- | --- | --- | --- | --- |
-| Codex | `AGENTS.md` in the repo; project-root and subdirectory files can be aggregated hierarchically | `$CODEX_HOME/AGENTS.md` (commonly `~/.codex/AGENTS.md`) | None documented in the product docs used here | Use `AGENTS.md` as the primary file. This is the best baseline for portable semantic-anchor onboarding. |
-| Claude Code | `CLAUDE.md` in the project root | `~/.claude/CLAUDE.md` | Hooks in settings, especially `SessionStart` and `UserPromptSubmit` | Use `CLAUDE.md` for static anchors. For the Claude plugin, a `SessionStart` hook can also prompt the user to onboard anchors when no managed marker exists yet. |
-| Gemini CLI | `GEMINI.md` by default; optionally configure Gemini to also load `AGENTS.md` via `context.fileName` | `~/.gemini/GEMINI.md` | Hooks such as `BeforeAgent` and `SessionStart` | If standardizing across agents, prefer `AGENTS.md` plus Gemini settings; otherwise mirror into `GEMINI.md`. |
-| Cursor | `AGENTS.md`, `CLAUDE.md`, or `.cursor/rules/*.mdc` | User Rules in Cursor settings | None needed for this use case | Use `AGENTS.md` unless path-scoped behavior is required, in which case use `.cursor/rules`. |
-| GitHub Copilot | `AGENTS.md`, `CLAUDE.md`, or `GEMINI.md` for agent instructions; `.github/copilot-instructions.md` for repository-wide guidance | IDE-specific global instructions, not one portable path | Custom agents exist, but are not required for default anchor onboarding | Use both `AGENTS.md` and `.github/copilot-instructions.md` when you want broad coverage across coding agent, chat, and review workflows. |
+| Codex | `AGENTS.md` in the repo; repository and parent-directory instruction files can be layered | `$CODEX_HOME/AGENTS.md` (commonly `~/.codex/AGENTS.md`) | None needed for static anchors | Use `AGENTS.md` as the primary file. This is the best baseline for portable semantic-anchor onboarding. |
+| Claude Code | `CLAUDE.md` in the project root (plus project and user memory layers) | `~/.claude/CLAUDE.md` | Hooks in settings, especially `SessionStart` and `UserPromptSubmit` | Use `CLAUDE.md` for native Claude startup context. The optional `SessionStart` hook is useful only when you need reinjection or automation. |
+| Gemini CLI | `GEMINI.md` by default; optionally configure Gemini to load `AGENTS.md` via `context.fileName` | `~/.gemini/GEMINI.md` | Extensions and hooks exist, but are not required for static anchors | Prefer `AGENTS.md` plus Gemini `context.fileName` when standardizing across agents; otherwise mirror into `GEMINI.md`. |
+| Cursor | `AGENTS.md` or `.cursor/rules/*.mdc` | User Rules in Cursor settings | None needed for this use case | Use `AGENTS.md` unless path-scoped behavior is required, in which case use `.cursor/rules`. |
+| GitHub Copilot | `AGENTS.md` for coding-agent behavior; `.github/copilot-instructions.md` for repository-wide chat and review guidance | IDE-specific personal or global instructions, not one portable path | Agent modes exist, but are not required for default anchor onboarding | Use both `AGENTS.md` and `.github/copilot-instructions.md` when you want broad coverage across coding agent, chat, and review workflows. |
+| Windsurf | `AGENTS.md` or `.windsurf/rules/*.md` | Global Rules in Windsurf settings | Workflow automation exists, but is not required for static anchors | Use `AGENTS.md` for portable shared context; use Windsurf Rules only when you need editor-specific or scoped behavior. |
 
 ## Scope Rules
 
@@ -34,6 +35,7 @@ For the widest practical coverage, create these files in this order:
 2. `CLAUDE.md` only if Claude Code is a target
 3. `GEMINI.md` or Gemini `context.fileName` settings only if Gemini CLI is a target
 4. `.github/copilot-instructions.md` only if Copilot chat or review behavior also needs the same defaults
+5. `.cursor/rules` or `.windsurf/rules` only when agent-specific scoping is required
 
 The bundled installer automates only the shared-file step plus optional Claude hook installation. Use that as the default path before adding mirrors.
 
@@ -55,5 +57,6 @@ For static, always-on semantic anchors, plain instruction files are simpler, saf
 
 - `AGENTS.md` is the right canonical project artifact.
 - `CLAUDE.md` and `GEMINI.md` are compatibility mirrors, not the first file to author.
+- Cursor Rules and Windsurf Rules are agent-specific overlays, not the portable baseline.
 - Home-directory onboarding cannot be guaranteed for every coding agent, so avoid claiming a single universal global install path.
 - If the user says "all coding agents," interpret that as "all agents that can reliably consume repository instructions," and prefer project-local files.
