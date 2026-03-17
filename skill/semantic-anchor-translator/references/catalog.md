@@ -42,6 +42,11 @@ Source: https://github.com/LLM-Coding/Semantic-Anchors
 - **Proponents:** International Electrotechnical Commission
 - **Core:** Safety integrity levels for safety-critical systems
 
+### LINDDUN
+- **Also known as:** LINDDUN GO, Privacy Threat Modeling, Privacy STRIDE
+- **Proponents:** Kim Wuyts, Riccardo Scandariato, Wouter Joosen (KU Leuven)
+- **Core:** Privacy threat modeling framework; acronym for seven threat categories — Linkability, Identifiability, Non-repudiation, Detectability, Disclosure of information, Unawareness, Non-compliance; used for DPIA, Privacy by Design, GDPR compliance
+
 ### STRIDE Threat Model
 - **Proponents:** Loren Kohnfelder, Praerit Garg (Microsoft), Adam Shostack
 - **Core:** Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege — structured threat categorization for security design
