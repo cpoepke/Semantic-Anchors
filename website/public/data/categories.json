@@ -104,6 +104,7 @@
     "name": "Requirements Engineering",
     "anchors": [
       "ears-requirements",
+      "invest",
       "moscow",
       "prd",
       "problem-space-nvc",

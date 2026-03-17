@@ -202,6 +202,10 @@ Source: https://github.com/LLM-Coding/Semantic-Anchors
 
 ## Requirements Engineering
 
+### INVEST
+- **Proponents:** Bill Wake
+- **Core:** Independent, Negotiable, Valuable, Estimable, Small, Testable — criteria for well-formed user stories
+
 ### PRD
 - **Also known as:** Product Requirements Document, Product Spec, Feature Spec
 - **Proponents:** Marty Cagan, Roman Pichler
