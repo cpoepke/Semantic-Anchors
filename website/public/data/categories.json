@@ -5,8 +5,10 @@
     "anchors": [
       "bluf",
       "chatham-house-rule",
+      "gutes-deutsch-wolf-schneider",
       "mece",
       "myers-briggs-type-indicator",
+      "plain-english-strunk-white",
       "pyramid-principle"
     ]
   },
@@ -145,6 +147,7 @@
       "impact-mapping",
       "jobs-to-be-done",
       "pugh-matrix",
+      "swot",
       "wardley-mapping"
     ]
   },
@@ -153,6 +156,7 @@
     "name": "Testing & Quality Practices",
     "anchors": [
       "bdd-given-when-then",
+      "gherkin",
       "iec-61508-sil-levels",
       "mutation-testing",
       "owasp-top-10",

@@ -19,6 +19,11 @@ Source: https://github.com/LLM-Coding/Semantic-Anchors
 - **Proponents:** Dan North
 - **Core:** Given-When-Then scenarios, Gherkin syntax, three amigos, living documentation, outside-in specification
 
+### Gherkin
+- **Also known as:** Cucumber DSL, BDD Scenario Language
+- **Proponents:** Aslak Hellesøy
+- **Core:** Domain-specific language for writing human-readable executable specifications; Feature/Scenario/Given/When/Then keywords; Background, Scenario Outline, Examples; 70+ natural languages; used by Cucumber, SpecFlow, Behave
+
 ### Test Double (Meszaros)
 - **Proponents:** Gerard Meszaros
 - **Core:** Taxonomy of test substitutes — Dummy (unused), Stub (canned responses), Spy (records calls), Mock (verifies interactions), Fake (simplified implementation)
@@ -216,6 +221,14 @@ Source: https://github.com/LLM-Coding/Semantic-Anchors
 ### MECE Principle
 - **Core:** Mutually Exclusive, Collectively Exhaustive — no overlaps, no gaps
 
+### Gutes Deutsch nach Wolf Schneider
+- **Proponents:** Wolf Schneider
+- **Core:** Short sentences, active voice, verbs over nouns (no Nominalstil), concrete language, no filler words — clarity-first principles for German writing
+
+### Plain English according to Strunk & White
+- **Proponents:** William Strunk Jr., E.B. White
+- **Core:** Omit needless words, use active voice, prefer concrete language, write with nouns and verbs — clarity-first principles for English writing ("The Elements of Style")
+
 ### Chatham House Rule
 - **Proponents:** Chatham House
 - **Core:** Info can be used but not attributed to speaker/org
@@ -292,3 +305,7 @@ Source: https://github.com/LLM-Coding/Semantic-Anchors
 ### Pugh Matrix
 - **Proponents:** Stuart Pugh
 - **Core:** Decision matrix comparing options against criteria with baseline
+
+### SWOT
+- **Proponents:** Albert Humphrey
+- **Core:** Strengths, Weaknesses, Opportunities, Threats — internal vs. external strategic analysis
