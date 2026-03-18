@@ -1,4 +1,9 @@
 {
+  "socratic-method": {
+    "upvotes": 2,
+    "comments": 1,
+    "url": "https://github.com/LLM-Coding/Semantic-Anchors/discussions/291"
+  },
   "yagni": {
     "upvotes": 1,
     "comments": 0,
@@ -128,11 +133,6 @@
     "upvotes": 1,
     "comments": 0,
     "url": "https://github.com/LLM-Coding/Semantic-Anchors/discussions/292"
-  },
-  "socratic-method": {
-    "upvotes": 1,
-    "comments": 0,
-    "url": "https://github.com/LLM-Coding/Semantic-Anchors/discussions/291"
   },
   "semantic-versioning": {
     "upvotes": 1,
@@ -265,7 +265,7 @@
     "url": "https://github.com/LLM-Coding/Semantic-Anchors/discussions/262"
   },
   "gutes-deutsch-wolf-schneider": {
-    "upvotes": 1,
+    "upvotes": 2,
     "comments": 0,
     "url": "https://github.com/LLM-Coding/Semantic-Anchors/discussions/261"
   },
