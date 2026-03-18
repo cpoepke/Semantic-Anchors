@@ -12,12 +12,12 @@ Dieses Dokument beschreibt, wie man mit KI-Agenten produktionsreife Software ent
 
 Semantic Anchors sind kompakte Begriffe, die in LLMs zuverlässig reiches Domänenwissen aktivieren.
 Statt seitenlange Anweisungen zu schreiben, referenziert man ein Konzept, das das Modell bereits tief versteht.
-"Nutze TDD" ist kürzer als Test-Driven Development zu erklären.
-"Folge arc42" ist kürzer als 12 Architektur-Abschnitte zu beschreiben.
+"Nutze link:#/anchor/tdd-london-school[TDD, London School]" ist kürzer als Test-Driven Development mit Mocks und Outside-In-Design zu erklären.
+"Folge link:#/anchor/arc42[arc42]" ist kürzer als 12 Architektur-Abschnitte zu beschreiben.
 Die Prompts bleiben kurz, präzise und wartbar.
 
 Dieser Workflow wurde verwendet, um drei Open-Source-Projekte zu bauen, alle 100% KI-generiert.
-Die goldene Regel: Ich prompte nur, ich fasse den Code nie selbst an.
+*Die goldene Regel: Ich prompte nur, ich fasse den Code nie selbst an.*
 Jede Zeile Code, jeder Test, jede Dokumentationsdatei wurde von der KI unter meiner Anleitung geschrieben.
 
 * https://github.com/docToolchain/dacli[*dacli*]: Ein vollständiges CLI-Tool mit Spezifikation, Architekturdokumentation, Tests und Benutzerhandbuch. Von einer KI gebaut, von 5 verschiedenen LLMs gegengelesen.
@@ -43,20 +43,40 @@ Das ist so, als würde man einen Junior-Entwickler bitten, aus einem Einzeiler-B
 Das Ergebnis ist bestenfalls unvorhersehbar.
 
 Dieser Workflow geht den umgekehrten Weg: Die Arbeit wird in kleine, klar definierte Schritte zerlegt, und der Agent bearbeitet jeden davon eigenständig.
-Jeder Schritt erzeugt ein konkretes Artefakt, das man prüfen kann, bevor es weitergeht.
+Jeder Schritt erzeugt ein konkretes Artefakt, das man bei Bedarf prüfen kann.
 
 Das Paradox: Je kleiner man die einzelne Aufgabe macht, desto mehr Autonomie kann man dem Agenten geben.
 Ein vages "Baue mir X" erfordert ständige Kontrolle.
-Ein präzises "Implementiere Issue #42 mit TDD, basierend auf der Spec in src/docs/specs/" kann eigenständig laufen.
+Ein präzises "Implementiere Issue #42 mit TDD, basierend auf Spec und Architektur in src/docs/" kann eigenständig laufen.
 Die Phasen in diesem Dokument sind darauf ausgelegt, genau solche präzisen, abgeschlossenen Aufgaben zu erzeugen.
 
-Das hängt direkt mit Shannons Theorem zusammen.
-Jeder kleine Schritt ist eine kurze Übertragung über den verrauschten Kanal.
-Kurze Übertragungen mit Fehlerkorrektur (Tests, Linting, Review) sind weit zuverlässiger als eine lange, unkontrollierte Übertragung.
-LLM-Ausgaben sind inhärent nicht-deterministisch -- derselbe Prompt kann unterschiedlichen Code erzeugen.
-TDD und Reviews sind die Fehlerkorrektur, die diesen verrauschten Kanal nutzbar macht.
-Der Agent arbeitet in einer engen Schleife: implementieren, testen, committen, Dokumentation prüfen.
-Man reviewt an den Übergängen zwischen Phasen, nicht nach jeder einzelnen Codezeile.
+Das hängt direkt mit *Eichhorst's Principle* zusammen, das Shannons Noisy-Channel-Theorem auf LLM-Coding anwendet.
+Ein LLM ist kein deterministisches Werkzeug.
+Es ist ein verrauschter, nicht-deterministischer Kanal.
+Es halluziniert, verliert Kontext und liegt manchmal schlicht falsch.
+Aber ein Agent in einer Schleife korrigiert sich selbst: Der Compiler meldet einen Fehler, der Agent liest ihn, fixt den Code, führt die Tests aus, liest den Fehlschlag, korrigiert die Logik und wiederholt -- bis alles grün ist.
+Das ist keine Magie -- das ist Fehlerkorrektur, genau wie Shannon sie beschrieben hat.
+
+Wer einen LLM promptet und das Ergebnis ins Projekt einfügt, betreibt eine *offene Schleife*.
+Kein Compiler-Check, keine Test-Suite, kein Review.
+Das LLM rät einmal und man hofft, dass es richtig geraten hat.
+Wenn ein Agent Code schreibt, den Compiler ausführt, die Tests laufen lässt und iteriert bis alles passt, ist das eine *geschlossene Schleife*.
+Dasselbe Prinzip, das einen Thermostaten funktionieren lässt.
+
+Verschiedene Tests korrigieren verschiedene Fehlerklassen.
+Der Compiler fängt Syntaxfehler.
+Unit-Tests fangen Logikfehler.
+BDD-Tests fangen Domänenfehler.
+Jede Schicht erhöht die Zuverlässigkeit des Kanals.
+Ungetesteter Code ist ein unkorrigierter Kanal -- das Rauschen geht direkt durch.
+
+Die Konsequenz: *Bessere Tests schlagen bessere Prompts*.
+Eine umfassende Test-Suite macht aus einem mittelmäßigen Modell einen zuverlässigen Coding-Partner.
+Und wenn die Komplexität einer Spezifikation die Kapazität des LLM übersteigt, helfen mehr Tokens nicht.
+Die Antwort sind kleinere Spezifikationen, klarere Grenzen und bessere Tests.
+
+Jeder kleine Schritt in diesem Workflow ist eine kurze Übertragung über den verrauschten Kanal.
+Kurze Übertragungen mit Fehlerkorrektur sind weit zuverlässiger als eine lange, unkontrollierte Übertragung.
 
 == Workflow-Übersicht
 
@@ -77,7 +97,7 @@ Alle Commits folgen einem standardisierten Format für eine saubere, maschinenle
 Dokumentation lebt im Repository als AsciiDoc, gebaut von https://doctoolchain.org[docToolchain].
 Docs-as-Code behandelt Dokumentation wie Quellcode: versioniert, reviewt und automatisch gebaut.
 
-*Definition of Done*::
+⚓ link:#/anchor/definition-of-done[*Definition of Done*]::
 Code besteht alle Tests, Feature-Branch ist gemergt oder PR erstellt, Dokumentation ist aktualisiert, Architekturentscheidungen sind dokumentiert.
 
 == Voraussetzungen
@@ -87,6 +107,8 @@ Bevor es losgeht, die Projektinfrastruktur aufsetzen:
 . Git-Repository initialisieren
 . https://doctoolchain.org[docToolchain] installieren und das ⚓ link:#/anchor/arc42[*arc42*]-Template herunterladen
 . KI-Coding-Umgebung mit einer `AGENTS.md` konfigurieren (oder toolspezifisches Äquivalent wie `CLAUDE.md`)
+. Dem KI-Agenten Zugriff auf GitHub oder GitLab über die CLI geben (`gh` oder `glab`). Der Agent braucht das später für Issues, Pull Requests und ADR-Diskussionen. Für Nachvollziehbarkeit empfiehlt sich ein eigener Account.
+. Entsprechend Eichhorst's Principle Fehlerkorrektur-Schichten für das Projekt aufsetzen: Linter, Pre-Commit-Hooks, CI-Pipelines und statische Analyse. Jede Schicht fängt eine andere Fehlerklasse ab und macht den LLM-Kanal zuverlässiger. Der https://github.com/LLM-Coding/vibe-coding-risk-radar[Vibe Coding Risk Radar] kann helfen, die passenden Checks für das Risikoprofil des Projekts zu bestimmen. Diese Checks entfalten ihre volle Wirkung erst mit den ersten Zeilen lauffähigen Codes -- früh aufsetzen, aber mit wachsendem Projekt erneut prüfen.
 
 .docToolchain installieren (Linux/macOS)
 [source,bash]
@@ -122,20 +144,20 @@ Eine minimale `AGENTS.md` für diesen Workflow:
 ## Conventions
 - Documentation: Plain English according to Strunk & White
 - Testing: TDD (London or Chicago School as appropriate)
+- Code: DRY, SOLID, KISS, Ubiquitous Language (DDD)
 - Commits: Conventional Commits, reference issue number
 - Branches: feature/<issue-description>
 
-## Current State
-- Working on: EPIC #3
-- Next issue: #42
 ----
 
-Diese Datei wird laufend aktualisiert.
+Im weiteren Verlauf wird der KI-Agent die Datei selbst weiter pflegen.
 Beim Start einer neuen KI-Session liest der Agent die `AGENTS.md` und hat sofort den nötigen Kontext.
 
 [TIP]
 ====
-Neue KI-Session pro EPIC starten oder wenn die Konversation träge wird.
+Vor jedem neuen EPIC den Kontext komprimieren.
+Innerhalb einer Session das Kontextfenster im Auge behalten.
+An natürlichen Übergängen (z.B. nach Abschluss eines Issues) manuell komprimieren, statt zu warten, bis das Modell im ungünstigen Moment auto-komprimiert und dabei wichtigen Kontext verliert.
 Der Agent holt sich den Kontext automatisch aus `AGENTS.md` und den Spec-Dateien.
 ====
 
@@ -163,8 +185,8 @@ Die KI auffordern, die ⚓ link:#/anchor/socratic-method[*Sokratische Methode*] 
 [source]
 ----
 Use the Socratic Method to help me clarify requirements for [your project].
-Ask me at most 3 questions at a time. Challenge my assumptions before
-documenting anything.
+Ask me at most 3 questions at a time. Challenge my assumptions.
+Keep asking until you fully understand the requirements.
 ----
 
 Das aktiviert gezieltes Fragen, Hinterfragen von Annahmen und produktiven Umgang mit Nicht-Wissen.
@@ -183,13 +205,12 @@ Den Dialog fortführen, bis man mit der KI zufrieden ist, dass die Anforderungen
 
 === Schritt 3: Als PRD dokumentieren
 
-Die KI bitten, ein *Product Requirements Document (PRD)* als AsciiDoc zu schreiben.
+Die KI bitten, ein ⚓ link:#/anchor/prd[*Product Requirements Document (PRD)*] als AsciiDoc zu schreiben.
 Ein PRD erfasst das Was und Warum, nicht das Wie: Problemstellung, Ziele, Nutzer-Personas, Erfolgskriterien und Scope-Grenzen.
 
 [source]
 ----
 Write a PRD based on our discussion. Save it as src/docs/specs/prd.adoc.
-Follow Plain English guidelines according to Strunk and White.
 ----
 
 === Schritt 4: Detaillierte Spezifikation erstellen
@@ -208,7 +229,7 @@ Save as .adoc files in src/docs/specs/.
 ⚓ link:#/anchor/gherkin[*Gherkin*] (Given/When/Then) liefert Akzeptanzkriterien, die sowohl für Menschen lesbar als auch maschinell testbar sind.
 Diese Kriterien werden später die Grundlage für TDD.
 
-Activity Diagrams zwingen dazu, frühzeitig über Fehlerpfade, Randfälle und alternative Abläufe nachzudenken.
+Activity Diagrams sind ein wichtiger Teil der Spezifikation, weil sie Abläufe, Fehlerpfade und Randfälle so definieren, dass die KI ihnen bei der Implementierung folgen kann.
 
 == Phase 2: Architektur
 
@@ -218,16 +239,17 @@ Die KI bitten, aus der Spezifikation eine Architektur abzuleiten:
 
 [source]
 ----
-Create an arc42 architecture document based on the specification in src/docs/specs/.
-Save it in src/docs/arc42/.
+Fill the arc42 template in src/docs/arc42/ based on the specification in src/docs/specs/.
 Use PlantUML C4 diagrams for architecture visualization.
 ----
 
+Das arc42-Template wurde im Vorbereitungsschritt heruntergeladen.
+Die KI kennt die Template-Struktur und füllt die 12 Abschnitte passend.
+
 ⚓ link:#/anchor/arc42[*arc42*] bietet 12 Abschnitte, die alles von Kontextabgrenzung bis Deployment abdecken.
-Die KI kennt die Template-Struktur und füllt sie passend.
 
 ⚓ link:#/anchor/c4-diagrams[*C4 Diagrams*] kombiniert mit PlantUML ermöglichen textbasierte Architektur-Visualisierung auf vier Ebenen: Context, Container, Component, Code.
-Die KI kann diese Diagramme ohne grafische Tools erstellen und ändern.
+Da die Dokumentation AsciiDoc verwendet, werden PlantUML und andere Text-to-Diagram-Tools nativ unterstützt -- die KI generiert Diagramme als Code, und der Build rendert sie automatisch.
 
 ==== Architecture Decision Records
 
@@ -248,7 +270,7 @@ Die KI erstellt jeden ADR zunächst als GitHub/GitLab Issue.
 Man prüft das Issue, kommentiert oder genehmigt es.
 Erst nach Freigabe wird der ADR in die arc42-Dokumentation übernommen.
 So ist jede Architekturentscheidung über die Issue-Historie nachvollziehbar.
-Alle ADRs müssen sich an den Qualitätszielen aus arc42 Abschnitt 1.2 orientieren.
+Alle ADRs müssen sich an den Qualitätsanforderungen aus arc42 Abschnitt 10 orientieren.
 
 === Schritt 6: Architektur-Review (ATAM)
 
@@ -279,7 +301,7 @@ Use MoSCoW prioritization for the initial backlog order.
 Mark dependencies between issues with labels or cross-references.
 ----
 
-⚓ *INVEST* stellt sicher, dass User Stories Independent, Negotiable, Valuable, Estimable, Small und Testable sind.
+⚓ link:#/anchor/invest[*INVEST*] stellt sicher, dass User Stories Independent, Negotiable, Valuable, Estimable, Small und Testable sind.
 
 ⚓ link:#/anchor/moscow[*MoSCoW*] (Must have, Should have, Could have, Won't have) liefert klare Priorisierung.
 
@@ -291,20 +313,12 @@ Mit wachsendem Projekt das Backlog regelmäßig groomen und nach neuen Erkenntni
 
 === Schritt 8: Issue für Issue implementieren
 
-Für jedes EPIC oder jede logische Gruppe von Issues einen Feature-Branch erstellen:
-
-[source,bash]
-----
-git checkout -b feature/<epic-oder-issue-beschreibung>
-----
-
-Dann den Entwicklungs-Loop starten:
-
 [source]
 ----
+Create a feature branch for this EPIC.
 Select the next logical issue from the backlog (respect dependencies).
 Analyze it and document your analysis as a comment on the issue.
-Implement it using TDD. Commit when done.
+Implement it using TDD (choose London or Chicago School as appropriate). Commit when done.
 Check if the spec or architecture docs need updating.
 ----
 
@@ -315,19 +329,13 @@ Für jedes Issue:
 . *Committen*: Nach Implementierung und grünen Tests committen mit Referenz auf die Issue-Nummer
 . *Docs prüfen*: Fragen, ob Spezifikation oder Architekturdokumentation basierend auf den Erkenntnissen aktualisiert werden muss
 
-⚓ *TDD* (Test-Driven Development) gibt es in zwei Schulen:
+TDD (Test-Driven Development) gibt es in zwei Schulen:
 
-* ⚓ link:#/anchor/tdd-london-school[*London School*] (Mockist): Unit Under Test isolieren, Abhängigkeiten mocken. Gut für interaktionslastigen Code.
-* ⚓ link:#/anchor/tdd-chicago-school[*Chicago School*] (Classicist): Verhalten über die öffentliche API testen, echte Kollaborateure nutzen. Gut für zustandsbasierte Logik.
+* ⚓ link:#/anchor/tdd-london-school[*TDD, London School*] (Mockist): Unit Under Test isolieren, Abhängigkeiten mocken. Gut für interaktionslastigen Code.
+* ⚓ link:#/anchor/tdd-chicago-school[*TDD, Chicago School*] (Classicist): Verhalten über die öffentliche API testen, echte Kollaborateure nutzen. Gut für zustandsbasierte Logik.
 
 Die KI wählt die passende Schule basierend auf den Code-Eigenschaften.
 
-Jede Implementierung folgt dem Red-Green-Refactor-Zyklus und beachtet:
-
-* ⚓ link:#/anchor/dry-principle[*DRY*] (Don't Repeat Yourself)
-* ⚓ link:#/anchor/solid-principles[*SOLID*]-Prinzipien
-* ⚓ *KISS* (Keep It Simple, Stupid)
-* ⚓ link:#/anchor/domain-driven-design[*Ubiquitous Language*] aus Domain-Driven Design: dieselben Begriffe im Code wie in der Spezifikation
 
 ==== Feedback-Loop zur Spezifikation
 
@@ -347,15 +355,8 @@ Die Spec ist nicht nur ein Mittel zur Codegenerierung -- sie bleibt die autorita
 
 ==== Merging
 
-Wenn ein EPIC oder eine logische Gruppe von Issues abgeschlossen ist, den Feature-Branch mergen:
-
-[source,bash]
-----
-git checkout main
-git merge feature/<epic-oder-issue-beschreibung>
-----
-
-Für Teamprojekte Pull Requests für Code Review vor dem Merge nutzen.
+Wenn ein EPIC abgeschlossen ist, erstellt der KI-Agent einen Pull Request für den Feature-Branch.
+Man reviewt und mergt ihn.
 
 == Phase 5: Qualitätssicherung
 
