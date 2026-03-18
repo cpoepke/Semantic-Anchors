@@ -83,7 +83,10 @@ async function main() {
 
   let created = 0
   let failed = 0
+  let index = 0
+  const total = toCreate.length
   for (const anchor of toCreate) {
+    index++
     const title = `⚓ ${anchor.title}`
     const body = [
       `<!-- anchor-id: ${anchor.id} -->`,
@@ -116,7 +119,7 @@ async function main() {
     }
 
     // Delay to avoid secondary rate limits
-    if (created < toCreate.length) {
+    if (index < total) {
       await sleep(2000)
     }
   }
