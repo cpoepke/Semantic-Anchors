@@ -8,9 +8,7 @@ const anchorsDir = path.join(__dirname, '..', '..', '..', 'docs', 'anchors')
 
 describe('AsciiDoc anchor content validation', () => {
   it('should not use Markdown-style numbered lists (1. 2. 3.) in .adoc files', () => {
-    const files = fs
-      .readdirSync(anchorsDir)
-      .filter((f) => f.endsWith('.adoc'))
+    const files = fs.readdirSync(anchorsDir).filter((f) => f.endsWith('.adoc'))
     const violations = []
 
     for (const file of files) {
