@@ -43,26 +43,35 @@ Schlüsselvertreter:: Ola Ellnestam, Daniel Brolund ("The Mikado Method", 2012)
 [discrete]
 == *Mikado-Methode-Rezept (kanonische Form)*
 
-1. Hier beginnen: Das Mikado-Ziel aufschreiben.
-2. Das Ziel oder die Voraussetzung naiv implementieren.
-3. Treten Fehler auf?
-* Beispiele: Compilerfehler, fehlschlagende Tests, Laufzeitfehler, kaputte Builds.
-* Wenn *Ja*, gehe zu Schritt 4.
-* Wenn *Nein*, gehe zu Schritt 9.
-4. Unmittelbare Lösungen für die Fehler finden.
-5. Die Lösungen als neue Voraussetzungen in den Mikado-Graphen einzeichnen.
-6. Alle Änderungen rückgängig machen und zum letzten bekannten guten Zustand zurückkehren.
-7. Die nächste zu bearbeitende Voraussetzung auswählen.
-8. Gehe zu Schritt 2.
-9. Ist die Änderung sinnvoll?
-* Beispiele: verständlich, intern konsistent, sicher beizubehalten, für sich allein nützlich.
-* Wenn *Ja*, gehe zu Schritt 10.
-* Wenn *Nein*, gehe zu Schritt 7.
-10. Die Änderung committen.
-11. Ist das Mikado-Ziel erreicht?
-* Wenn *Ja*, gehe zu Schritt 12.
-* Wenn *Nein*, gehe zu Schritt 7.
-12. FERTIG!
+. Hier beginnen: Das Mikado-Ziel aufschreiben.
+. Das Ziel oder die Voraussetzung naiv implementieren.
+. Treten Fehler auf?
++
+--
+** Beispiele: Compilerfehler, fehlschlagende Tests, Laufzeitfehler, kaputte Builds.
+** Wenn *Ja*, gehe zu Schritt 4.
+** Wenn *Nein*, gehe zu Schritt 9.
+--
+. Unmittelbare Lösungen für die Fehler finden.
+. Die Lösungen als neue Voraussetzungen in den Mikado-Graphen einzeichnen.
+. Alle Änderungen rückgängig machen und zum letzten bekannten guten Zustand zurückkehren.
+. Die nächste zu bearbeitende Voraussetzung auswählen.
+. Gehe zu Schritt 2.
+. Ist die Änderung sinnvoll?
++
+--
+** Beispiele: verständlich, intern konsistent, sicher beizubehalten, für sich allein nützlich.
+** Wenn *Ja*, gehe zu Schritt 10.
+** Wenn *Nein*, gehe zu Schritt 7.
+--
+. Die Änderung committen.
+. Ist das Mikado-Ziel erreicht?
++
+--
+** Wenn *Ja*, gehe zu Schritt 12.
+** Wenn *Nein*, gehe zu Schritt 7.
+--
+. FERTIG!
 
 
 [discrete]
