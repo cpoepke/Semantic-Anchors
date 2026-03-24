@@ -1,0 +1,21 @@
+anchor: linddun
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "LINDDUN"?
+
+      '
+    options:
+      A: A systematic methodology for threat modeling that identifies security vulnerabilities
+        in software systems by analyzing data flow diagrams and potential attack vectors
+        across system boundaries
+      B: Attacker can link two items of interest (e.g., data items, messages, or actions)
+        without knowing the identity of the data subject; attacker can identify a
+        data subject from a set of data subjects through items of interest
+      C: A privacy-by-design framework that ensures compliance with data protection
+        regulations by implementing technical and organizational measures to minimize
+        personal data collection and processing
+      D: A security assessment technique that evaluates the confidentiality, integrity,
+        and availability of sensitive data through structured analysis of authentication,
+        authorization, and access control mechanisms
+    correct: B

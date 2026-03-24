@@ -1,0 +1,16 @@
+anchor: testing-pyramid
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Testing Pyramid"?
+
+      '
+    options:
+      A: A hierarchical structure where system tests form the base, integration tests
+        the middle, and unit tests the top layer
+      B: Three layers; more unit tests, fewer e2e tests
+      C: A risk assessment framework that categorizes software defects into three
+        priority levels based on severity impact
+      D: A test organization model where manual testing supports automated testing
+        which supports exploratory testing at the apex
+    correct: B

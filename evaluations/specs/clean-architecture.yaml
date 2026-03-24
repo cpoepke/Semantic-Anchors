@@ -1,0 +1,17 @@
+anchor: clean-architecture
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Clean Architecture"?
+
+      '
+    options:
+      A: Dependencies flow bidirectionally between layers; presentation ↔ business
+        logic ↔ data access ↔ external services
+      B: Dependencies only point inward; entities → use cases → interface adapters
+        → frameworks & drivers
+      C: Code is organized by technical concerns; controllers → services → repositories
+        → database models
+      D: System components are loosely coupled through message passing; publishers
+        → message brokers → subscribers → event handlers
+    correct: B

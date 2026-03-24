@@ -1,0 +1,26 @@
+anchor: iso-25010
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "ISO/IEC 25010"?
+
+      '
+    options:
+      A: A comprehensive framework for software architecture evaluation that provides
+        systematic methods to assess quality attributes through scenario-based analysis,
+        stakeholder workshops, and risk identification processes to determine architectural
+        trade-offs and decisions.
+      B: 'Eight top-level quality characteristics that describe the quality of a software
+        product: Functional Suitability, Performance Efficiency, Compatibility, Usability,
+        Reliability, Security, Maintainability, and Portability; the degree to which
+        the product provides functions that meet stated and implied needs — sub-characteristics:
+        functional completeness, functional correctness, functional appropriateness'
+      C: A standardized template structure consisting of twelve sections for documenting
+        software architecture decisions including context, functional requirements,
+        building blocks, runtime views, deployment views, and architectural decisions
+        with their rationales and consequences.
+      D: A lightweight methodology for capturing and communicating architectural decisions
+        through structured records that document the title, status, context, decision
+        rationale, and consequences of significant architectural choices made during
+        software development projects.
+    correct: B

@@ -1,0 +1,17 @@
+anchor: sanity-check
+tier: null
+
+# Sanity check: none of the options is correct (the answer is 42).
+# Every model MUST score 0% because it will pick a wrong option.
+# If any model scores >0%, the scoring pipeline has a bug.
+
+questions:
+  recognition:
+    question: |
+      What is the Answer to the Ultimate Question of Life, the Universe, and Everything?
+    options:
+      A: "17"
+      B: "23"
+      C: "99"
+      D: "256"
+    correct: X

@@ -1,0 +1,17 @@
+anchor: morphological-box
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Morphological Box"?
+
+      '
+    options:
+      A: Systematically evaluate and score alternative solutions against weighted
+        criteria using a decision matrix approach
+      B: Break complex problem into independent parameters/dimensions; identify possible
+        values/options for each parameter
+      C: Create mutually exclusive and collectively exhaustive categories to ensure
+        complete problem space coverage without overlap
+      D: Generate creative solutions by combining random elements from different domains
+        through structured brainstorming techniques
+    correct: B

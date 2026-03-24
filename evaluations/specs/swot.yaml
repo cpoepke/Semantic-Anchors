@@ -1,0 +1,21 @@
+anchor: swot
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "SWOT"?
+
+      '
+    options:
+      A: A prioritization framework that categorizes requirements into Should have,
+        Won't have this time, Optional features, and Time-critical deliverables to
+        manage project scope effectively
+      B: Internal positive attributes and resources that give the subject an advantage
+        over others; internal negative attributes or limitations that place the subject
+        at a disadvantage relative to others
+      C: A visual mapping technique that plots the evolution of components along a
+        value chain from genesis to commodity to identify strategic positioning and
+        dependencies
+      D: A decision-making matrix that systematically evaluates multiple alternatives
+        against weighted criteria by scoring each option to determine the optimal
+        solution objectively
+    correct: B

@@ -1,0 +1,17 @@
+anchor: bluf
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "BLUF (Bottom Line Up Front)"?
+
+      '
+    options:
+      A: Begin with background context and build logically toward the final conclusion;
+        comprehensive analysis precedes recommendations
+      B: State the main point, decision, or recommendation immediately; most important
+        information first, supporting details follow
+      C: Present multiple solutions in order of complexity; start with simple approaches
+        before advancing to detailed implementations
+      D: Structure information using inverted pyramid with broad overview first, then
+        progressively narrow to specific technical details
+    correct: B

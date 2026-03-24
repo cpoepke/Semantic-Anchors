@@ -1,0 +1,17 @@
+anchor: mutation-testing
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Mutation Testing"?
+
+      '
+    options:
+      A: Analyze genetic algorithms and evolutionary programming techniques to optimize
+        software performance through iterative code modifications
+      B: Evaluate how effective tests are at detecting bugs; deliberately introduce
+        small, syntactic changes (mutants) into source code
+      C: Test software behavior under various input combinations by systematically
+        changing configuration parameters and environmental conditions
+      D: Verify code stability by introducing controlled runtime errors and monitoring
+        how the system handles unexpected failures
+    correct: B

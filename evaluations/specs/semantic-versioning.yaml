@@ -1,0 +1,16 @@
+anchor: semantic-versioning
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Semantic Versioning (SemVer)"?
+
+      '
+    options:
+      A: Version control system that automatically tracks semantic changes in code
+        structure and meaning across different branches
+      B: 'Version format; : incompatible api changes (breaking changes)'
+      C: Development methodology that prioritizes meaningful variable and function
+        naming conventions to improve code readability
+      D: Documentation standard that requires detailed explanations of API functionality
+        and business logic for each software release
+    correct: B

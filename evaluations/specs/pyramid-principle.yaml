@@ -1,0 +1,20 @@
+anchor: pyramid-principle
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Pyramid Principle according
+      to Barbara Minto"?
+
+      '
+    options:
+      A: Hierarchical software architecture pattern where base components support
+        higher-level modules; follows dependency inversion with abstractions at the
+        top layer
+      B: Single key message at the top of the pyramid; situation → complication →
+        question → answer structure for setting context
+      C: Project management framework organizing tasks in ascending priority levels;
+        uses risk assessment → resource allocation → timeline planning → execution
+        phases
+      D: Information architecture methodology structuring content from broad categories
+        to specific details; applies user journey mapping with navigation flow optimization
+    correct: B

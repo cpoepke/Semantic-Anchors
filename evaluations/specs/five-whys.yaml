@@ -1,0 +1,17 @@
+anchor: five-whys
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Five Whys (Ohno)"?
+
+      '
+    options:
+      A: Create five alternative solution paths and systematically evaluate each option
+        against predefined criteria to select the optimal approach
+      B: Ask "Why?" repeatedly (typically ~5 times) to drill down to root causes;
+        distinguish between surface symptoms and underlying causes
+      C: Break down complex problems into exactly five manageable components and address
+        each component using dedicated team resources
+      D: Conduct five rounds of stakeholder interviews to gather comprehensive requirements
+        and validate assumptions before implementation
+    correct: B

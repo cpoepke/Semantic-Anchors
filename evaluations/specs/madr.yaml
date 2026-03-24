@@ -1,0 +1,15 @@
+anchor: madr
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "MADR"?
+
+      '
+    options:
+      A: Agile methodology for iterative decision-making processes; collaborative
+        framework
+      B: Well-defined format with specific sections; standard fields
+      C: Software architecture pattern for microservices decomposition; modular design
+        approach
+      D: Risk assessment framework for technical debt management; evaluation methodology
+    correct: B

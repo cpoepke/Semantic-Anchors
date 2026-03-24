@@ -1,0 +1,21 @@
+anchor: gutes-deutsch-wolf-schneider
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Gutes Deutsch nach Wolf Schneider"?
+
+      '
+    options:
+      A: Structure information hierarchically with the most important conclusion first,
+        followed by supporting arguments grouped logically — each section should build
+        upon the previous one; use consistent formatting throughout.
+      B: Prefer short, direct sentences over long, complex ones — every sentence should
+        express one idea; use active constructions; avoid passive voice and impersonal
+        constructions wherever possible
+      C: Begin with the bottom line up front, presenting key findings immediately
+        — organize supporting details in order of decreasing importance; eliminate
+        unnecessary background information and focus on actionable insights.
+      D: Apply modular design principles where each component serves a single responsibility
+        — minimize dependencies between modules; favor composition over inheritance
+        and maintain loose coupling throughout the system architecture.
+    correct: B

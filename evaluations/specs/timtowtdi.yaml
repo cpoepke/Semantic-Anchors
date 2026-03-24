@@ -1,0 +1,13 @@
+anchor: timtowtdi
+tier: 1
+
+questions:
+  recognition:
+    question: |
+      Which of the following best describes "TIMTOWTDI"?
+    options:
+      A: A principle that problems can have multiple equally valid solutions, favoring flexibility over prescription
+      B: A testing strategy that combines multiple test types to maximize coverage
+      C: A design pattern that delegates decisions to the most informed component at runtime
+      D: A refactoring approach that transforms complex code into simpler equivalent forms step by step
+    correct: A

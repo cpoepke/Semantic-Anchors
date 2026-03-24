@@ -1,0 +1,16 @@
+anchor: wardley-mapping
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Wardley Mapping"?
+
+      '
+    options:
+      A: Map system dependencies from infrastructure up; requirements → design → implementation
+        → deployment
+      B: Map components from user needs down; genesis → custom → product → commodity
+      C: Map stakeholder relationships outward; internal → partners → customers →
+        market segments
+      D: Map technical debt from legacy systems; identified → prioritized → refactored
+        → modernized
+    correct: B

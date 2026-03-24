@@ -1,0 +1,20 @@
+anchor: feynman-technique
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Feynman Technique"?
+
+      '
+    options:
+      A: Break down complex problems into smaller, manageable components by creating
+        visual diagrams that map dependencies and identify potential bottlenecks in
+        the system
+      B: Teach the concept in simple language as if to a beginner (traditionally "explain
+        to a 12-year-old"); when you struggle to explain, you've found gaps in your
+        understanding
+      C: Use rapid prototyping and iterative feedback loops to validate assumptions
+        early in the development process before committing to full implementation
+      D: Apply the principle of progressive disclosure by revealing information gradually
+        to users, starting with the most essential features and adding complexity
+        as needed
+    correct: B

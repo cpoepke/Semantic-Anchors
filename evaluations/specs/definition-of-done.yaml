@@ -1,0 +1,21 @@
+anchor: definition-of-done
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Definition of Done"?
+
+      '
+    options:
+      A: A comprehensive project timeline that outlines all deliverables, milestones,
+        and dependencies from project initiation through final deployment; includes
+        resource allocation, risk assessments, and stakeholder sign-off requirements
+      B: A formal, team-wide checklist of quality criteria that every increment must
+        satisfy before it is declared "done"; concrete, verifiable conditions — e.g.,
+        code reviewed, tests passing, documentation updated, no known defects
+      C: A structured template for capturing user requirements in the format 'As a
+        [user type], I want [functionality] so that [business value]'; includes acceptance
+        criteria, story points, and priority rankings for backlog management
+      D: A prioritization framework that categorizes requirements into Must have,
+        Should have, Could have, and Won't have categories; helps teams focus on essential
+        features while managing scope and stakeholder expectations effectively
+    correct: B

@@ -1,0 +1,13 @@
+anchor: docs-as-code
+tier: 3
+
+questions:
+  recognition:
+    question: |
+      Which of the following best describes "Docs-as-Code according to Ralf D. Müller"?
+    options:
+      A: "Writing documentation in a wiki with WYSIWYG editing and real-time collaboration"
+      B: "Treating documentation like source code: version-controlled, peer-reviewed, and built automatically"
+      C: "Generating API documentation automatically from code annotations and docstrings"
+      D: "Maintaining a separate documentation repository with its own release cycle"
+    correct: B

@@ -1,0 +1,22 @@
+anchor: lasr
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "LASR according to Toth/Zörner"?
+
+      '
+    options:
+      A: Lightweight Architecture Decision Records that capture the context, decision,
+        and consequences of significant architectural choices using a standardized
+        template format for documentation and communication purposes
+      B: High-level description of how the solution addresses the most important quality
+        requirements and constraints; the central architectural ideas that shape the
+        system; key structural and runtime views showing the main building blocks,
+        their responsibilities, and how they interact at runtime
+      C: Low-level technical specification that defines implementation details, coding
+        standards, and deployment procedures; focuses on concrete technology choices
+        and step-by-step guidance for development teams
+      D: Hierarchical visual modeling technique using context, container, component,
+        and code diagrams to represent software architecture at different levels of
+        abstraction for stakeholder communication and system understanding
+    correct: B

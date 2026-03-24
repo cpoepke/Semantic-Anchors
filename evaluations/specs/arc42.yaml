@@ -1,0 +1,40 @@
+anchor: arc42
+tier: 3
+
+questions:
+  recognition:
+    question: |
+      Which of the following best describes "arc42"?
+    options:
+      A: A 12-section template for standardized software architecture documentation
+      B: A framework for automated architecture compliance checking in CI pipelines
+      C: A UML-based notation for modeling software components and connectors
+      D: A methodology for evaluating architecture trade-offs against quality attributes
+    correct: A
+
+  application:
+    scenario: |
+      You are starting architecture documentation for a new microservices project.
+      The team needs to understand the system's external interfaces and deployment.
+      Where do you document these two concerns?
+    anchor_prompt: "following arc42"
+    paraphrase_prompt: "Create structured architecture documentation covering all relevant aspects"
+    options:
+      A: Both in a single Architecture Overview chapter
+      B: External interfaces in Section 3 (Context and Scope), deployment in Section 7 (Deployment View)
+      C: External interfaces in the API specification, deployment in the runbook
+      D: Both in Section 5 (Building Block View) at different abstraction levels
+    correct: B
+
+  consistency:
+    variants:
+      - 'Which of the following persons is most closely associated with "arc42"?'
+      - 'Who created the arc42 architecture documentation template?'
+      - 'Which author is known for the arc42 documentation framework?'
+    language_variant: 'Welche Person wird am engsten mit "arc42" assoziiert?'
+    options:
+      A: Martin Fowler
+      B: Gernot Starke
+      C: Robert C. Martin
+      D: Simon Brown
+    correct: B

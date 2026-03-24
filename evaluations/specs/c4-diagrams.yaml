@@ -1,0 +1,17 @@
+anchor: c4-diagrams
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "C4-Diagrams"?
+
+      '
+    options:
+      A: 'Four components of system design: data, process, interface, and security
+        layers'
+      B: 'Four levels of abstraction; : system in its environment (users, external
+        systems)'
+      C: 'Four phases of software development: requirements, design, implementation,
+        and testing'
+      D: 'Four categories of architectural patterns: layered, client-server, pipe-filter,
+        and event-driven'
+    correct: B

@@ -1,0 +1,40 @@
+anchor: tdd-london-school
+tier: 3
+
+questions:
+  recognition:
+    question: |
+      Which of the following best describes "TDD, London School"?
+    options:
+      A: State-based testing with real collaborating objects and minimal mocking
+      B: Outside-in development with mock-heavy, interaction-based testing
+      C: Acceptance testing using Given/When/Then scenario specifications
+      D: Exploratory testing focused on edge cases and unspecified behavior
+    correct: B
+
+  application:
+    scenario: |
+      You are reviewing a pull request. The code adds a new OrderService
+      that calls PaymentGateway and InventoryService.
+      What is your primary testing recommendation?
+    anchor_prompt: "using TDD, London School principles"
+    paraphrase_prompt: "Write isolated tests for the service layer"
+    options:
+      A: Write a test that processes a real order end-to-end through all three services
+      B: Write a test that mocks PaymentGateway and InventoryService to verify OrderService interactions
+      C: Write a test that checks the database state after processing an order
+      D: Skip unit tests and write an integration test with a test database
+    correct: B
+
+  consistency:
+    variants:
+      - 'Which proponent is most closely associated with "TDD, London School"?'
+      - 'Which proponent is most closely associated with "Mockist TDD"?'
+      - 'Which proponent is most closely associated with "Outside-In TDD"?'
+    language_variant: 'Welcher Proponent wird am engsten mit "TDD, London School" assoziiert?'
+    options:
+      A: Kent Beck
+      B: Steve Freeman
+      C: Dan North
+      D: Martin Fowler
+    correct: B

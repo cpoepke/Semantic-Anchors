@@ -1,0 +1,21 @@
+anchor: bem-methodology
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "BEM Methodology"?
+
+      '
+    options:
+      A: A software architecture pattern that separates business logic, event handling,
+        and model validation to create scalable enterprise applications with clear
+        separation of concerns
+      B: Solve CSS specificity wars, naming conflicts, and stylesheet maintainability
+        issues in large codebases; standalone component that is meaningful on its
+        own (e.g., `menu`, `button`, `header`)
+      C: A project management methodology that emphasizes iterative development cycles,
+        continuous integration, and stakeholder feedback to deliver software products
+        efficiently
+      D: A database design approach that structures entities, relationships, and metadata
+        to optimize query performance and maintain data integrity across distributed
+        systems
+    correct: B

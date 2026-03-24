@@ -1,0 +1,16 @@
+anchor: iec-61508-sil-levels
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "IEC 61508 SIL Levels"?
+
+      '
+    options:
+      A: 'Three Quality Assurance Levels; : 10^-3^ ≤ pfd < 10^-2^ (acceptable defect
+        density)'
+      B: 'Four Safety Integrity Levels; : 10^-2^ ≤ pfd < 10^-1^ (tolerable risk reduction)'
+      C: 'Five Reliability Assessment Levels; : 10^-4^ ≤ pfd < 10^-3^ (minimum performance
+        threshold)'
+      D: 'Six Verification Testing Levels; : 10^-1^ ≤ pfd < 10^0^ (standard compliance
+        range)'
+    correct: B

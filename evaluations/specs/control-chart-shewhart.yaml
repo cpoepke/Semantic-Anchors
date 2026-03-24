@@ -1,0 +1,13 @@
+anchor: control-chart-shewhart
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Control Chart (Shewhart)"?
+
+      '
+    options:
+      A: Graphical representation of system architecture components and their dependencies
+      B: Measured value plotted over time; process mean
+      C: Visual workflow diagram showing sequential steps in a development process
+      D: Matrix displaying test coverage metrics across different software modules
+    correct: B

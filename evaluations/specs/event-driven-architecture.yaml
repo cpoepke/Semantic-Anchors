@@ -1,0 +1,21 @@
+anchor: event-driven-architecture
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Event-Driven Architecture"?
+
+      '
+    options:
+      A: Components are organized around business domains with clear boundaries, where
+        each domain contains its own models, services, and data stores that reflect
+        real-world business concepts
+      B: Components communicate by emitting and reacting to events rather than direct
+        calls; producers publish events without knowing which consumers will process
+        them
+      C: Components are structured in concentric layers with business logic at the
+        center, isolated from external concerns through dependency inversion and interface
+        abstractions
+      D: Components communicate through well-defined interfaces at the boundaries
+        while keeping core business logic independent of external frameworks, databases,
+        and user interfaces
+    correct: B

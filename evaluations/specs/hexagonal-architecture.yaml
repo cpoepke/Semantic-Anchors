@@ -1,0 +1,18 @@
+anchor: hexagonal-architecture
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Hexagonal Architecture (Ports
+      & Adapters)"?
+
+      '
+    options:
+      A: Six-layered application structure where each layer handles specific responsibilities
+        and communicates only with adjacent layers
+      B: Core domain at the center, isolated from external concerns; interfaces defining
+        how the application communicates
+      C: Database design pattern using six normalized tables with adapter classes
+        to handle object-relational mapping between entities
+      D: Microservices architecture pattern where six independent services communicate
+        through standardized API ports and message adapters
+    correct: B

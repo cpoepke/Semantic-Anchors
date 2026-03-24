@@ -1,0 +1,19 @@
+anchor: problem-space-nvc
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Nonviolent Communication (Rosenberg)"?
+
+      '
+    options:
+      A: A structured approach to code reviews that emphasizes constructive feedback
+        through specific examples and actionable suggestions rather than general criticism.
+      B: Concrete, objective facts without evaluation or judgment. "The deploy failed
+        three times this week" instead of "The deploy always fails."; emotions arising
+        from observations. "i feel frustrated" instead of "this is frustrating."
+      C: A conflict resolution methodology that focuses on identifying root causes
+        of team disagreements and establishing clear communication protocols between
+        stakeholders.
+      D: An agile communication framework that prioritizes transparent status updates
+        and eliminates ambiguous language in sprint retrospectives and daily standups.
+    correct: B

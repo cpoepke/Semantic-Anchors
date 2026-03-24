@@ -1,0 +1,17 @@
+anchor: socratic-method
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Socratic Method"?
+
+      '
+    options:
+      A: Systematic approach to software development that emphasizes iterative refinement
+        through structured peer review and collaborative problem-solving sessions
+      B: Lead learners to insights through questions rather than direct instruction;
+        cross-examination technique to expose contradictions in beliefs
+      C: Teaching methodology that breaks complex problems into smaller components
+        and builds understanding through sequential presentation of foundational concepts
+      D: Architectural pattern that separates concerns by organizing code into distinct
+        layers with well-defined interfaces and dependency injection principles
+    correct: B

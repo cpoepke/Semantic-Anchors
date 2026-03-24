@@ -1,0 +1,20 @@
+anchor: prd
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "PRD"?
+
+      '
+    options:
+      A: Systematic prioritization framework using Must have, Should have, Could have,
+        and Won't have categories to rank feature requirements based on business value
+        and urgency
+      B: Clear articulation of the problem to be solved and the target users; measurable
+        outcomes that define what "done" looks like (kpis, okrs)
+      C: Visual representation of user activities and tasks arranged chronologically
+        to identify gaps, priorities, and release planning opportunities for product
+        development
+      D: Structured template format capturing user needs as role-based scenarios with
+        acceptance criteria to ensure requirements are testable and implementable
+        by development teams
+    correct: B

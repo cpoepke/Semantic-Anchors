@@ -1,0 +1,22 @@
+anchor: fagan-inspection
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Fagan Inspection"?
+
+      '
+    options:
+      A: A systematic code mutation technique where defects are artificially introduced
+        into software modules to evaluate the effectiveness of existing test suites
+        and identify gaps in test coverage.
+      B: A structured, multi-phase review process for software artifacts (requirements,
+        design, code) with defined roles and entry/exit criteria; moderator (facilitates
+        and logs), author (created the artifact), inspectors (reviewers), recorder
+        (documents defects)
+      C: A formal verification methodology that uses mathematical proofs and static
+        analysis to demonstrate software correctness without executing the program,
+        focusing on pre-conditions and post-conditions.
+      D: A risk-based assessment framework for evaluating software architecture decisions
+        through scenario-based analysis, stakeholder interviews, and systematic documentation
+        of trade-offs and quality attributes.
+    correct: B

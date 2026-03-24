@@ -1,0 +1,21 @@
+anchor: bdd-given-when-then
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "BDD (Behavior-Driven Development)"?
+
+      '
+    options:
+      A: Test-first development approach where unit tests are written before implementation
+        code, focusing on isolated component testing with mock objects to verify interactions
+        between system boundaries
+      B: Structured scenario format — Given a precondition, When an action occurs,
+        Then an expected outcome results; concrete examples as executable specifications
+        that define system behavior
+      C: Agile requirement gathering technique that maps user activities and tasks
+        in chronological order to identify system features and prioritize development
+        based on user journey workflows
+      D: Iterative testing methodology that emphasizes state-based verification through
+        direct assertions on system outputs, promoting comprehensive test coverage
+        without external dependencies or test doubles
+    correct: B

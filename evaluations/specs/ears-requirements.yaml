@@ -1,0 +1,16 @@
+anchor: ears-requirements
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "EARS-Requirements"?
+
+      '
+    options:
+      A: A systematic approach for evaluating and analyzing requirements through stakeholder
+        interviews and documentation review
+      B: '"The <system> shall <requirement>"; "when <trigger> the <system> shall <requirement>"'
+      C: 'A framework for organizing requirements into hierarchical categories: Essential,
+        Auxiliary, Regulatory, and Supplementary'
+      D: A validation methodology that ensures requirements are Explicit, Achievable,
+        Relevant, and Specific before implementation
+    correct: B

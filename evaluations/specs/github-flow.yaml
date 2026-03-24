@@ -1,0 +1,16 @@
+anchor: github-flow
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "GitHub Flow"?
+
+      '
+    options:
+      A: A semantic versioning system that automatically increments version numbers
+        based on commit message patterns and release types.
+      B: Workflow steps
+      C: A standardized format for writing commit messages that includes type, scope,
+        and description to improve project history readability.
+      D: A distributed version control architecture that enables multiple developers
+        to work on separate repositories while maintaining code synchronization.
+    correct: B

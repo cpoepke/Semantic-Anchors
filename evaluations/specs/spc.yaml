@@ -1,0 +1,17 @@
+anchor: spc
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "SPC (Statistical Process Control)"?
+
+      '
+    options:
+      A: Structured programming methodology that controls code execution flow through
+        systematic elimination of goto statements and unstructured branching
+      B: Systematic statistical monitoring of running processes; inherent, random
+        fluctuation — stable and predictable
+      C: Statistical performance computing framework that optimizes system resources
+        by analyzing computational workload patterns and predicting bottlenecks
+      D: Software process certification standard that validates development methodologies
+        through rigorous documentation and compliance verification procedures
+    correct: B

@@ -1,0 +1,17 @@
+anchor: tdd-chicago-school
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "TDD, Chicago School"?
+
+      '
+    options:
+      A: Write tests first, then implement code to pass those tests; focus on behavior
+        verification through extensive mocking of all dependencies
+      B: Verify the state of objects after operations; use real objects whenever possible;
+        mock only external dependencies
+      C: Design software architecture by defining interfaces first; use dependency
+        injection to isolate components and enable comprehensive unit testing
+      D: Develop code in small iterations with continuous refactoring; emphasize pair
+        programming and collective code ownership practices
+    correct: B

@@ -1,0 +1,21 @@
+anchor: todotxt-flavoured-markdown
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "todo.txt-flavoured Markdown"?
+
+      '
+    options:
+      A: A markup syntax that extends standard Markdown with project management features
+        using `@context` and `+project` tags, prioritized by numerical prefixes like
+        `1.`, `2.`, `3.`
+      B: Standard GitHub-flavoured markdown syntax (`- [ ]` uncompleted, `- [x]` completed);
+        uses todo.txt priority notation `(a)`, `(b)`, `(c)` where `(a)` is highest
+        priority
+      C: A documentation format that combines reStructuredText syntax with Kanban-style
+        workflow markers (`TODO:`, `DOING:`, `DONE:`) and uses hashtag priority levels
+        `#high`, `#medium`, `#low`
+      D: An issue tracking notation that merges JIRA-style ticket formatting with
+        plain text using bracketed status indicators `[OPEN]`, `[CLOSED]` and priority
+        weights expressed as `{P1}`, `{P2}`, `{P3}`
+    correct: B

@@ -1,0 +1,17 @@
+anchor: conventional-commits
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Conventional Commits"?
+
+      '
+    options:
+      A: A branching strategy where feature branches follow naming conventions like
+        feature/JIRA-123 with mandatory code review before merging to main
+      B: '<type>[!][(optional scope)]: <description> + optional body/footer; common
+        types'
+      C: A software architecture pattern that enforces strict separation between business
+        logic and infrastructure through standardized interface contracts
+      D: A deployment methodology that requires all releases to pass through predefined
+        stages with automated gates and rollback capabilities
+    correct: B

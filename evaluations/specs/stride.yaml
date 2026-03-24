@@ -1,0 +1,22 @@
+anchor: stride
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "STRIDE Threat Model"?
+
+      '
+    options:
+      A: A systematic approach for identifying and categorizing the top ten most critical
+        web application security risks; maintained by OWASP foundation; focuses on
+        injection flaws, broken authentication, and sensitive data exposure vulnerabilities
+      B: Impersonating another user, process, or system to gain unauthorized access;
+        mitigated by strong authentication; unauthorized modification of data in transit
+        or at rest; mitigated by integrity controls, digital signatures, and access
+        controls
+      C: A defensive security framework that assumes breach scenarios and implements
+        zero-trust principles; emphasizes continuous verification, least privilege
+        access, and micro-segmentation to limit lateral movement within networks
+      D: A risk assessment methodology for evaluating security controls in regulated
+        environments; provides quantitative scoring based on asset criticality, threat
+        likelihood, and business impact to prioritize remediation efforts
+    correct: B

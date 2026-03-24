@@ -1,0 +1,21 @@
+anchor: moscow
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "MoSCoW"?
+
+      '
+    options:
+      A: A visual mapping technique that organizes user stories chronologically to
+        identify gaps and prioritize features based on user journey stages and business
+        value delivery.
+      B: Non-negotiable requirements essential for the current delivery; without them
+        the solution is unusable or unsafe; important requirements that are not vital;
+        painful to leave out but the solution is still viable without them
+      C: A collaborative workshop method for creating shared understanding of project
+        scope by mapping stakeholders, impacts, and deliverables against strategic
+        business objectives.
+      D: A risk assessment framework that categorizes project uncertainties into severity
+        levels to determine mitigation strategies and contingency planning approaches
+        for delivery teams.
+    correct: B

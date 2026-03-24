@@ -1,0 +1,22 @@
+anchor: llm-evaluations
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "LLM-Evaluations"?
+
+      '
+    options:
+      A: Automated testing frameworks that generate adversarial prompts and edge cases
+        to identify failure modes in language models through mutation-based prompt
+        engineering and stress testing methodologies.
+      B: Standardized datasets and tasks used to compare LLM capabilities — MMLU (Massive
+        Multitask Language Understanding), HellaSwag, HumanEval, BIG-Bench, GSM8K,
+        TruthfulQA, ARC; quantitative measures of model quality — perplexity, accuracy,
+        bleu, rouge, f1, pass@k (code generation), exact match, calibration
+      C: Architectural design patterns and best practices for deploying large language
+        models in production environments, including load balancing, caching strategies,
+        model versioning, and API gateway configurations.
+      D: Chain-of-thought reasoning techniques that enable language models to break
+        down complex problems into step-by-step logical processes, improving performance
+        on mathematical and analytical tasks through structured prompting.
+    correct: B

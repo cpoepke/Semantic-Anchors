@@ -1,0 +1,16 @@
+anchor: property-based-testing
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Property-Based Testing"?
+
+      '
+    options:
+      A: Testing software by validating that object properties and attributes maintain
+        expected values throughout execution
+      B: Invariants that should always hold; automatic test data creation
+      C: A testing methodology that focuses on verifying ownership and access rights
+        of system resources and data
+      D: Unit testing approach that examines individual class properties and their
+        getter/setter method implementations
+    correct: B

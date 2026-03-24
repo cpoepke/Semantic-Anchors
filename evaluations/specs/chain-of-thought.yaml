@@ -1,0 +1,17 @@
+anchor: chain-of-thought
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Chain of Thought (CoT)"?
+
+      '
+    options:
+      A: Connect multiple AI models in sequence where each model's output becomes
+        the input for the next model in the processing pipeline
+      B: Explicitly show intermediate reasoning steps before reaching a conclusion;
+        make the thought process visible, not just the final answer
+      C: Structure prompts using a series of related examples that progressively guide
+        the model toward the desired response pattern
+      D: Break down complex problems into smaller, independent sub-problems that can
+        be solved separately and then combined for the final solution
+    correct: B

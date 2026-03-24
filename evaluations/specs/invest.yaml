@@ -1,0 +1,25 @@
+anchor: invest
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "INVEST"?
+
+      '
+    options:
+      A: Stories should be prioritized using Must have, Should have, Could have, and
+        Won't have categories to ensure critical requirements are delivered first;
+        stakeholders rank features by business value and implementation complexity
+        to guide sprint planning and resource allocation.
+      B: Stories should be self-contained and deliverable in any order; avoid dependencies
+        between stories that force a fixed implementation sequence; stories are not
+        contracts; the details are open to discussion between team and stakeholders
+        until they enter a sprint
+      C: Stories should be mapped chronologically along a user journey timeline with
+        supporting tasks underneath; teams visualize the complete user experience
+        to identify gaps, prioritize releases, and maintain focus on delivering end-to-end
+        value through iterative development cycles.
+      D: Stories should follow a standardized template with acceptance criteria, definition
+        of done, and effort estimates; teams must complete detailed analysis and obtain
+        formal approval from product owners before any story can be moved into development
+        or testing phases.
+    correct: B

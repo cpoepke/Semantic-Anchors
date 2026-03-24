@@ -1,0 +1,16 @@
+anchor: jobs-to-be-done
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Jobs To Be Done (JTBD)"?
+
+      '
+    options:
+      A: A systematic approach to breaking down complex projects into smaller, manageable
+        tasks with clear deliverables
+      B: Progress people want to make in a particular context; practical task to accomplish
+      C: A framework for defining user personas and their specific roles within an
+        organization or system
+      D: A methodology for mapping employee responsibilities to business objectives
+        and performance metrics
+    correct: B

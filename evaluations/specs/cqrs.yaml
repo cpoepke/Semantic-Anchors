@@ -1,0 +1,22 @@
+anchor: cqrs
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "CQRS (Command Query Responsibility
+      Segregation)"?
+
+      '
+    options:
+      A: An architectural pattern that separates business logic from infrastructure
+        concerns by defining ports and adapters, where the core domain remains independent
+        of external systems and frameworks
+      B: Bertrand Meyer's principle — methods either change state (commands) or return
+        data (queries), never both; write operations that change state and return
+        void; represent intent as immutable command objects
+      C: A design approach where complex business domains are modeled through ubiquitous
+        language, bounded contexts, and aggregate roots to align software structure
+        with business requirements
+      D: A distributed system pattern that ensures data consistency across microservices
+        by coordinating transactions through a central orchestrator that manages compensating
+        actions for failures
+    correct: B

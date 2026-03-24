@@ -1,0 +1,13 @@
+anchor: mece
+tier: 3
+
+questions:
+  recognition:
+    question: |
+      Which of the following best describes the "MECE Principle"?
+    options:
+      A: Prioritizing requirements into Must/Should/Could/Won't categories
+      B: Structuring categories so they do not overlap and collectively cover all possibilities
+      C: Presenting the conclusion first, then organizing supporting arguments hierarchically
+      D: Decomposing work into independent, negotiable, and testable user stories
+    correct: B

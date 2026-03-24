@@ -1,0 +1,16 @@
+anchor: cynefin-framework
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Cynefin Framework"?
+
+      '
+    options:
+      A: Strategic mapping technique that visualizes value chains and component evolution
+        stages over time
+      B: 'Five domains; : best practices apply, sense-categorize-respond'
+      C: 'Agile methodology framework with four iterative phases: plan-do-check-act
+        for continuous improvement'
+      D: 'Decision-making model using three assessment layers: context-analysis-action
+        for complex problems'
+    correct: B

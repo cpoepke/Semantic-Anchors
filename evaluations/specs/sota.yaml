@@ -1,0 +1,17 @@
+anchor: sota
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "SOTA (State-of-the-Art)"?
+
+      '
+    options:
+      A: A standardized framework for documenting software architecture decisions
+        and technical specifications across development teams
+      B: Focus on the most current, cutting-edge methods and techniques; reference
+        current research papers, benchmarks, and empirical results
+      C: A methodology for systematic testing and validation of software systems against
+        predefined quality assurance benchmarks
+      D: An agile development approach that emphasizes iterative prototyping and continuous
+        integration of emerging technologies
+    correct: B

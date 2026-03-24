@@ -1,0 +1,18 @@
+anchor: domain-driven-design
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Domain-Driven Design according
+      to Evans"?
+
+      '
+    options:
+      A: Architectural pattern that separates business logic into distinct layers
+        with clear interfaces between presentation, application, and data access components
+      B: Shared vocabulary between developers and domain experts; explicit boundaries
+        where a model is defined and applicable
+      C: Software development methodology that emphasizes iterative delivery of working
+        software through close collaboration between cross-functional teams and stakeholders
+      D: Design approach that focuses on creating reusable software components with
+        well-defined interfaces that can be composed into larger systems
+    correct: B

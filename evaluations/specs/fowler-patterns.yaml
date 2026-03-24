@@ -1,0 +1,21 @@
+anchor: fowler-patterns
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Patterns of Enterprise Application
+      Architecture (PEAA)"?
+
+      '
+    options:
+      A: A comprehensive framework defining bounded contexts, aggregates, entities,
+        value objects, repositories, and domain services for implementing complex
+        business logic in enterprise systems
+      B: Transaction Script, Domain Model, Table Module, Service Layer; table data
+        gateway, row data gateway, active record, data mapper
+      C: An architectural approach emphasizing ports and adapters, dependency inversion,
+        use cases, interactors, and clean separation between business rules and external
+        frameworks or databases
+      D: A layered architecture pattern consisting of presentation layer, business
+        logic layer, data access layer, and cross-cutting concerns like logging, security,
+        and transaction management
+    correct: B

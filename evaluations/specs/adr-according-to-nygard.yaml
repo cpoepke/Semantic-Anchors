@@ -1,0 +1,13 @@
+anchor: adr-according-to-nygard
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "ADR according to Nygard"?
+
+      '
+    options:
+      A: Comprehensive documentation with detailed rationale and implementation steps
+      B: Short, focused records; standard structure
+      C: Lightweight decision tracking focused on reversible architectural choices
+      D: Collaborative review process emphasizing stakeholder consensus and approval
+    correct: B

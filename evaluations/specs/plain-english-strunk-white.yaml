@@ -1,0 +1,27 @@
+anchor: plain-english-strunk-white
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Plain English according to Strunk
+      & White"?
+
+      '
+    options:
+      A: Write with a clear hierarchical structure where conclusions come first followed
+        by supporting arguments, using logical groupings that allow readers to understand
+        the main point before diving into details — start with the answer, then provide
+        the reasoning that led to that conclusion.
+      B: Every word in a sentence should serve a purpose; cut words that add bulk
+        without adding meaning — "the fact that" → "that", "owing to the fact that"
+        → "since"; prefer active constructions over passive; active voice is more
+        direct, vigorous, and concise — "the dog bit the man" not "the man was bitten
+        by the dog"
+      C: Use simple, everyday vocabulary and short sentences that can be understood
+        by the general public, avoiding technical jargon, complex grammatical structures,
+        and industry-specific terminology — choose 'help' over 'facilitate', 'use'
+        over 'utilize', and 'show' over 'demonstrate'.
+      D: Organize information in a bottom-line-up-front approach where the most important
+        message appears at the beginning, followed by supporting details arranged
+        in decreasing order of importance — present key findings first, then provide
+        the analysis and background that supports those conclusions.
+    correct: B

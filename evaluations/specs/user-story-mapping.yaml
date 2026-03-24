@@ -1,0 +1,16 @@
+anchor: user-story-mapping
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "User Story Mapping"?
+
+      '
+    options:
+      A: Visual representation of user personas mapped to specific system requirements
+        and acceptance criteria
+      B: Horizontal arrangement of user activities; high-level tasks users perform
+      C: Hierarchical breakdown of software features organized by technical complexity
+        and development priority
+      D: Sequential workflow diagram showing user interactions and system responses
+        throughout the application lifecycle
+    correct: B

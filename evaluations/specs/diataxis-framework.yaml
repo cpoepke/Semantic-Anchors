@@ -1,0 +1,16 @@
+anchor: diataxis-framework
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Diátaxis Framework"?
+
+      '
+    options:
+      A: Agile methodology framework focusing on iterative development cycles with
+        continuous stakeholder feedback loops
+      B: 'Four documentation types; : learning-oriented, lessons for beginners'
+      C: Software architecture pattern that separates presentation, business logic,
+        and data access into distinct layers
+      D: Project management approach emphasizing cross-functional teams and rapid
+        prototyping for complex systems
+    correct: B

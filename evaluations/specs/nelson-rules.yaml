@@ -1,0 +1,17 @@
+anchor: nelson-rules
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Nelson Rules"?
+
+      '
+    options:
+      A: Two consecutive points beyond 2σ (Warning); 7 alternating points above and
+        below the mean (oscillation)
+      B: One point beyond 3σ (Outlier); 9 consecutive points on the same side of the
+        mean (shift/bias)
+      C: Four points in a row increasing or decreasing (Trend); 6 consecutive points
+        within 1σ (Clustering)
+      D: Eight points beyond 1σ on alternating sides (Variance); 5 consecutive points
+        forming a pattern (Sequence)
+    correct: B

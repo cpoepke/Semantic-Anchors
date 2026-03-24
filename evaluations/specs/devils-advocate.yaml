@@ -1,0 +1,17 @@
+anchor: devils-advocate
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Devil''s Advocate"?
+
+      '
+    options:
+      A: Systematically identify potential failure points and weaknesses in a system
+        design before implementation begins
+      B: Present opposing viewpoints even if not personally held; question premises
+        and surface hidden assumptions
+      C: Challenge team members' technical decisions through aggressive questioning
+        to test their knowledge and expertise
+      D: Assign responsibility for identifying risks and negative outcomes to a designated
+        team member during planning sessions
+    correct: B

@@ -1,0 +1,16 @@
+anchor: impact-mapping
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Impact Mapping"?
+
+      '
+    options:
+      A: User → Stories → Epics → Features; requirement decomposition methodology
+        focusing on user needs and system capabilities
+      B: Goal → Actors → Impacts → Deliverables; business objective (why?)
+      C: Problem → Analysis → Design → Implementation; systematic approach to software
+        development through structured phase transitions
+      D: Stakeholder → Requirements → Architecture → Code; traceability framework
+        linking business needs to technical implementation details
+    correct: B
