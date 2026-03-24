@@ -83,6 +83,11 @@ renderFile(
   path.join(ROOT, 'docs/spec-driven-workflow.adoc'),
   path.join(WEB_DOCS, 'spec-driven-workflow.html')
 )
+
+renderFile(
+  path.join(ROOT, 'docs/anchor-evaluations.adoc'),
+  path.join(WEB_DOCS, 'anchor-evaluations.html')
+)
 renderFile(
   path.join(ROOT, 'docs/spec-driven-workflow.de.adoc'),
   path.join(WEB_DOCS, 'spec-driven-workflow.de.html')

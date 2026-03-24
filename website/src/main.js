@@ -109,6 +109,7 @@ function initApp() {
   addRoute('/rejected-proposals', renderRejectedProposalsPage)
   addRoute('/all-anchors', renderAllAnchorsPage)
   addRoute('/workflow', renderWorkflowPage)
+  addRoute('/evaluations', renderEvaluationsPage)
 
   const app = document.querySelector('#app')
   if (!app) return
@@ -227,6 +228,15 @@ function renderWorkflowPage() {
   pageContent.innerHTML = renderDocPage()
   updateActiveNavLink()
   loadDocContent('docs/spec-driven-workflow.adoc')
+}
+
+function renderEvaluationsPage() {
+  const pageContent = document.getElementById('page-content')
+  if (!pageContent) return
+
+  pageContent.innerHTML = renderDocPage()
+  updateActiveNavLink()
+  loadDocContent('docs/anchor-evaluations.adoc')
 }
 
 function updateActiveNavLink() {

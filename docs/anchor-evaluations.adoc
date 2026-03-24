@@ -1,0 +1,546 @@
+= Evaluating Semantic Anchors Across LLMs
+Ralf D. Müller
+2026-03-24
+:toc:
+:toc-placement: preamble
+
+== The Problem
+
+We curate 90+ semantic anchors and assume they work -- that an LLM activates the right conceptual framework when prompted with "Use TDD, London School" or "Follow arc42."
+We do not know whether this holds equally across models.
+
+A semantic anchor that works perfectly in Claude may activate a different or shallow framework in GPT, Gemini, or an open-source model.
+Without systematic evaluation, our catalog is a collection of untested assumptions.
+
+This document describes how to build evaluations that answer three questions:
+
+. Does a given LLM *recognize* a semantic anchor?
+. Does it activate the *correct and complete* conceptual framework?
+. Is the activation *consistent* across runs and prompt variations?
+
+== What We Are Not Testing
+
+Semantic anchors work *because* LLMs already know the underlying concepts.
+"TDD, London School" does not teach the model anything new -- it activates existing knowledge precisely and compactly.
+
+The evaluation therefore does not ask "does the model know TDD?"
+It asks: *does the compact anchor term activate the knowledge more precisely and completely than a verbose paraphrase would?*
+
+The comparison is always anchor vs. paraphrase, not anchor vs. ignorance.
+For example:
+
+[cols="1,1"]
+|===
+|Anchor prompt |Verbose paraphrase
+
+|"Use TDD, London School"
+|"Write tests first, mock dependencies, work from outside-in"
+
+|"Document using arc42"
+|"Create architecture documentation with context, building blocks, runtime view, and deployment"
+
+|"Apply the Socratic Method"
+|"Ask me targeted questions to uncover my assumptions before proceeding"
+|===
+
+If both produce the same quality of output, the anchor has no advantage -- it is just a shorthand.
+If the anchor activates richer, more specific behavior, it earns its place in the catalog.
+
+== Evaluation Dimensions
+
+The link:#/anchor/what-qualifies-as-a-semantic-anchor[quality criteria for semantic anchors] describe what makes an anchor worth cataloging: Precise, Rich, Consistent, Attributable.
+The evaluation translates these into four measurable dimensions.
+
+[cols="1,1,2,2"]
+|===
+|Dimension |Maps to |What we measure |How it fails
+
+|*Recognition*
+|Precise
+|Does the model identify the anchor as a known, established concept?
+|Model treats it as a generic phrase or confuses it with something else.
+
+|*Accuracy*
+|Attributable
+|Does the model associate the correct core concepts, proponents, and practices?
+|Model attributes wrong proponents, mixes up related concepts, or hallucinates details.
+
+|*Depth*
+|Rich
+|Does the model activate the full conceptual framework, not just a surface definition?
+|Model gives a one-sentence dictionary definition instead of actionable knowledge.
+
+|*Consistency*
+|Consistent
+|Do repeated invocations and paraphrased prompts produce the same conceptual activation?
+|Model gives contradictory answers across runs or changes behavior with minor prompt variations.
+|===
+
+== Evaluation Method: Multiple Choice
+
+A key design decision: we use *multiple-choice questions* instead of open-ended probes wherever possible.
+
+Why this matters: Open-ended responses require an LLM-as-judge to score, which introduces a circular dependency -- an LLM judging another LLM's understanding of the same concepts.
+Multiple-choice questions eliminate this problem entirely.
+The answer is either correct or wrong.
+Scoring is deterministic, cheap, and reproducible.
+
+Each question has exactly one correct answer and three plausible distractors.
+The distractors come from related anchors, common misconceptions, or adjacent concepts -- they must be wrong but not obviously wrong.
+
+=== What Multiple Choice Can and Cannot Measure
+
+Multiple choice works well for Recognition, Accuracy, and Consistency.
+It has a structural limitation for *Depth*: a single MC question tests whether the model picks the right answer from four options, but it cannot measure whether the model would activate the *full, interconnected* conceptual framework in practice.
+A model might correctly identify "TDD, London School" as mock-heavy testing (Recognition) without knowing about interface discovery, the Red-Green-Refactor cycle, or the connection to Hexagonal Architecture (Depth).
+
+We accept this trade-off.
+Depth is partially covered by Level 2 (Application), where the scenario tests whether the model applies the methodology correctly, not just whether it can name it.
+For a more thorough Depth assessment, one could add multiple Recognition questions per anchor -- each testing a different core concept.
+This increases the question count but stays within the deterministic MC framework.
+
+=== Level 1: Recognition
+
+Does the model identify the anchor correctly?
+
+[source]
+----
+Which of the following best describes "TDD, London School"?
+
+A) State-based testing with real objects and minimal mocking
+B) Outside-in development with mock-heavy, interaction-based testing
+C) Acceptance testing using Given/When/Then scenarios
+D) Exploratory testing focused on edge cases and error paths
+
+Answer with the letter only.
+----
+
+Correct: B. Distractor A is Chicago School, C is BDD/Gherkin, D is exploratory testing.
+
+A harder example -- anchors with fuzzier boundaries:
+
+[source]
+----
+Which of the following best describes "Docs-as-Code according to Ralf D. Müller"?
+
+A) Writing documentation in a wiki with WYSIWYG editing
+B) Treating documentation like source code: version-controlled, peer-reviewed, and built automatically
+C) Generating API documentation from code annotations
+D) Maintaining a separate documentation repository with its own release cycle
+
+Answer with the letter only.
+----
+
+Correct: B. All four options involve documentation, making the distractors harder to rule out.
+Distractor C (API doc generation) and D (separate repo) are common practices that sound plausible but miss the core idea.
+
+Generate one Recognition question per anchor.
+The correct answer comes from the anchor's "Core Concepts" in the `.adoc` file.
+The distractors come from the "Related Anchors" and from common mix-ups.
+
+=== Level 2: Application
+
+Does the anchor change the model's behavior, not just its descriptions?
+
+Give the model a task with the anchor, then ask a multiple-choice question about what it *should* do.
+Run twice: once with the anchor term, once with a verbose paraphrase.
+
+[source]
+----
+# Run A (anchor):
+You are reviewing a pull request using TDD, London School principles.
+The code adds a new OrderService that calls PaymentGateway and InventoryService.
+What is your primary recommendation?
+
+A) Write a test that processes a real order end-to-end through all services
+B) Write a test that mocks PaymentGateway and InventoryService to verify OrderService interactions
+C) Write a test that checks the database state after processing an order
+D) Skip unit tests and add an integration test with a test database
+
+# Run B (paraphrase):
+You are reviewing a pull request. Write isolated tests for the service layer.
+The code adds a new OrderService that calls PaymentGateway and InventoryService.
+What is your primary recommendation?
+
+[same options A-D]
+----
+
+Correct: B.
+If both Run A and Run B answer correctly, the anchor is a useful shorthand.
+If only Run A answers correctly, the anchor activates knowledge that the paraphrase misses -- strong evidence the anchor has value.
+If Run A answers wrong but Run B is correct, the model does not associate the term with the expected behavior.
+
+NOTE: Application questions require human authoring.
+Each question needs a realistic scenario and plausible wrong answers.
+Start with a small set for the most important anchors.
+
+*Paraphrase calibration*: The paraphrase must be fair -- neither too close to the correct answer nor too vague.
+A paraphrase like "mock dependencies, work from outside-in" almost spells out option B and will trivially succeed.
+A better paraphrase describes the *goal* without hinting at the *method*: "Write isolated tests for the service layer."
+If the paraphrase consistently outperforms the anchor, check whether the paraphrase leaks the answer before concluding the anchor is weak.
+
+=== Level 3: Differentiation
+
+Can the model distinguish similar anchors?
+
+[source]
+----
+A developer says: "I prefer testing with real collaborating objects,
+minimal mocking, and verifying state through the public API."
+Which approach are they describing?
+
+A) TDD, London School
+B) TDD, Chicago School
+C) Behavior-Driven Development
+D) Property-Based Testing
+
+Answer with the letter only.
+----
+
+Correct: B.
+This is especially important for conflict groups (London vs. Chicago, DRY vs. SPOT, Clean Architecture vs. Hexagonal).
+
+=== Level 4: Consistency
+
+Run the same question multiple times with the anchor referenced differently.
+
+[source]
+----
+# Variant 1: Canonical name
+Which proponent is most closely associated with "TDD, London School"?
+
+# Variant 2: Alias
+Which proponent is most closely associated with "Mockist TDD"?
+
+# Variant 3: Also-known-as
+Which proponent is most closely associated with "Outside-In TDD"?
+
+[same options A-D for all variants]
+----
+
+All three variants ask the same question -- only the name for the anchor changes.
+The model should give the same correct answer regardless of which alias is used.
+Inconsistency across variants indicates fragile recognition.
+
+Additional consistency dimensions:
+
+- *Language*: "Nutze TDD, London School" vs. "Use TDD, London School". The website is bilingual, many users prompt in German.
+- *System prompt*: With and without a system prompt -- coding agents always have one, chat interfaces often do not.
+
+== Automation
+
+=== Test Suite Structure
+
+Each anchor gets an evaluation spec with multiple-choice questions.
+Level 1 (Recognition) and Level 3 (Differentiation) specs can be auto-generated from the `.adoc` metadata -- a script produces a draft, a human reviews the distractors.
+Level 2 (Application) specs must be fully hand-crafted.
+Level 4 (Consistency) reuses the other levels' questions with varied phrasing.
+
+Example spec:
+
+[source,yaml]
+----
+anchor: tdd-london-school
+questions:
+  recognition:
+    question: |
+      Which of the following best describes "TDD, London School"?
+    options:
+      A: State-based testing with real objects and minimal mocking
+      B: Outside-in development with mock-heavy, interaction-based testing
+      C: Acceptance testing using Given/When/Then scenarios
+      D: Exploratory testing focused on edge cases and error paths
+    correct: B
+  application:
+    scenario: |
+      You are reviewing a PR. The code adds a new OrderService
+      that calls PaymentGateway and InventoryService.
+      What is your primary recommendation?
+    anchor_prompt: "using TDD, London School principles"
+    paraphrase_prompt: "Write isolated tests for the service layer"
+    options:
+      A: Write a test that processes a real order end-to-end
+      B: Mock PaymentGateway and InventoryService to verify interactions
+      C: Check the database state after processing an order
+      D: Skip unit tests and add an integration test
+    correct: B
+  differentiation:
+    question: |
+      A developer prefers testing with real collaborating objects,
+      minimal mocking, and verifying state through the public API.
+      Which approach are they describing?
+    options:
+      A: TDD, London School
+      B: TDD, Chicago School
+      C: Behavior-Driven Development
+      D: Property-Based Testing
+    correct: B
+  consistency:
+    variants:
+      - 'Which proponent is most closely associated with "TDD, London School"?'
+      - 'Which proponent is most closely associated with "Mockist TDD"?'
+      - 'Which proponent is most closely associated with "Outside-In TDD"?'
+    language_variant: 'Welcher Proponent wird am engsten mit "TDD, London School" assoziiert?'
+    options:
+      A: Kent Beck
+      B: Steve Freeman
+      C: Dan North
+      D: Martin Fowler
+    correct: B
+----
+
+=== Reproducibility
+
+Every evaluation run must record:
+
+- *Model identifier*: Including version or snapshot date (e.g., `gpt-5-2026-03-15`, not just `gpt-5`)
+- *API parameters*: Temperature, max_tokens, top_p, system prompt (if any)
+- *Timestamp*: Model behavior can change after provider updates without a version bump
+
+Without this metadata, results are not reproducible and cannot be compared across runs.
+
+=== Scoring Pipeline
+
+. *Generate*: Send questions to each target LLM via API. Instruct the model to answer with the letter only.
+. *Score*: Compare the model's answer to the expected letter. No judge needed -- scoring is deterministic.
+. *Aggregate*: Per-anchor, per-model percentage correct across all levels.
+. *Report*: Heatmap of anchor × model with percentage scores.
+
+No LLM-as-judge is required.
+The entire pipeline can run as a simple script: send prompt, parse response, compare to expected answer.
+
+*Response parsing*: Not all models will respond with a single letter.
+Some return "B) Outside-in development...", others "The answer is B", others a full explanation.
+The parser extracts the first occurrence of a capital letter A–D from the response.
+If no letter is found, the response is scored as incorrect.
+link:#/anchor/llm-evaluations[LLM-Evaluations] describes the broader methodology; we apply it to a narrow domain with deterministic scoring.
+
+=== Bootstrapping from the Catalog
+
+The `.adoc` anchor files already contain:
+
+- Core Concepts (expected knowledge → Recognition probes)
+- Key Proponents (expected attributions → Accuracy checks)
+- Related Anchors (differentiation pairs → Level 3 probes)
+- When to Use (application context → Level 2 task design)
+
+A script can generate Level 1 and Level 3 question *templates* from these attributes (correct answer + distractor candidates from related anchors).
+A human reviews and refines the distractors -- they must be plausible, not obviously wrong.
+Level 2 (Application) requires fully hand-crafted scenarios.
+This means Recognition and Differentiation tests scale well, but Application tests scale with human effort.
+
+== Interpreting Results
+
+=== Per-Anchor Health
+
+An anchor that scores poorly across all models may not be a true semantic anchor.
+It might lack definition depth in the training data.
+This feedback loop improves the catalog itself.
+
+=== Model Comparison
+
+A model that scores high on Recognition but low on Application understands the vocabulary but does not change behavior.
+This is the difference between knowing a methodology and applying it.
+
+=== Anchor vs. Paraphrase Delta (Level 2 only)
+
+The most telling metric from Level 2 is the difference between the anchor score and the paraphrase score.
+A large positive delta means the anchor adds value beyond its literal meaning.
+A delta near zero means the anchor is just a convenient shorthand.
+A negative delta means the paraphrase outperforms the anchor -- a signal that the model does not associate the term with the expected behavior.
+
+=== Anchor Tiers
+
+Anchors are assigned tiers based on quality (tier 3 = best, tier 1 = weakest).
+Evaluation results can inform tier assignments with empirical data:
+
+- *Tier 3*: High scores across all models and all four levels.
+- *Tier 2*: Works well on major models, weaker on others or at the Application level.
+- *Tier 1*: Inconsistent recognition or shallow activation. Candidate for removal or rework.
+
+=== Actions for Poor Scores
+
+What happens when an anchor scores red (<50%) on a model?
+
+[cols="1,2"]
+|===
+|Situation |Action
+
+|Red on one model, green on others
+|Add a model-specific note to the anchor page on the website: "This anchor may not work reliably on [model]. Consider using the verbose form instead."
+
+|Red on most models
+|Investigate whether our definition matches the established literature. If it does, the concept may not be well-represented in LLM training data -- demote to Tier 1 or add to rejected proposals.
+
+|Yellow across the board
+|The anchor works but weakly. Consider refining the anchor name or adding a qualifier (e.g., "TDD" alone is weak, but "TDD, London School" is precise).
+
+|Paraphrase outperforms anchor (negative delta in Level 2)
+|The model does not associate the term with the expected behavior. Document the recommended paraphrase as an alternative for that model.
+|===
+
+An anchor that works well on only one or two models is still valuable for users of those models.
+Model-specific scores do not affect the anchor's tier -- the tier reflects the anchor's inherent quality (definition depth, attribution, richness), not its cross-model coverage.
+The heatmap shows coverage; the tier shows quality.
+
+== Scope and Prioritization
+
+Evaluating 90+ anchors across multiple models at four levels is a large effort.
+Start focused:
+
+. *Tier 3 anchors first*: These are our best anchors. Confirm they actually work.
+. *Conflict groups*: TDD London vs. Chicago, Clean vs. Hexagonal, ADR Nygard vs. MADR. Differentiation is the hardest test.
+. *Major models*: Start with Tier 1, expand to Tier 2 when budget allows (see <<model-selection>>).
+. *One level at a time*: Start with Level 1 (Recognition), add Application tests incrementally.
+
+[[model-selection]]
+=== Model Selection
+
+We select models for market relevance (what developers actually use), architectural diversity (different training data and approaches), and API availability (must be programmatically testable).
+
+Where a provider offers multiple tiers, we prefer the *mid-tier* variant over the flagship.
+The smaller model is the harder test -- if an anchor works on Sonnet, it will work on Opus.
+If it fails on Sonnet, that is the interesting finding.
+For Claude, this means Sonnet 4.6 (not Opus).
+For GPT and Gemini, the mid-tier variants are not yet clearly established, so we test the current flagship (GPT-5, Gemini 2.5 Pro) and add smaller variants when they become available.
+A follow-up round with the cheapest variants (Haiku, GPT-5 mini, Gemini Flash) would reveal the lower boundary of anchor activation.
+
+*Commercial models (API cost per call):*
+
+[cols="1,2"]
+|===
+|Model |Rationale
+
+|Claude Sonnet 4.6
+|Our primary development model. Serves as the baseline.
+
+|GPT-5
+|Largest market share, OpenAI ecosystem.
+
+|Gemini 2.5 Pro
+|Google, different training approach.
+|===
+
+*Open-weight models (available as open-source):*
+
+[cols="1,2,1"]
+|===
+|Model |Rationale |Local?
+
+|Llama 4 Maverick
+|Largest open-weight model. Shows whether anchors work without proprietary training -- relevant for self-hosted setups.
+|Yes (Ollama)
+
+|Mistral Large
+|European model with a different training focus. Interesting because the anchor catalog is heavily influenced by English-language software engineering literature.
+|No (too large, use La Plateforme API)
+
+|DeepSeek V3
+|Chinese model. Tests whether anchors work across cultural and training-data boundaries.
+|Yes (Ollama)
+|===
+
+Llama and DeepSeek can run locally (e.g., via Ollama) at no API cost.
+Mistral Large requires the Mistral API -- it is open-weight but too large for local inference.
+This means 4 models have API costs (Claude, GPT, Gemini, Mistral) and 2 run locally for free.
+
+=== Effort Estimate
+
+Each question runs 4 times (randomized option order) to control for position bias.
+Level 2 runs 8 times (4 positions × 2 variants: anchor + paraphrase).
+
+[cols="1,1,1,1,1"]
+|===
+|Level |Anchors |Models |Runs per question |API calls
+
+|Level 1 (Recognition)
+|~30 (Tier 3)
+|6 (3 commercial + 3 local)
+|4
+|720
+
+|Level 2 (Application)
+|~10 (hand-crafted)
+|6
+|8
+|480
+
+|Level 3 (Differentiation)
+|~8 (conflict groups)
+|6
+|4
+|192
+
+|Level 4 (Consistency)
+|~10 (subset)
+|6
+|4 × 4 variants (3 aliases + 1 language)
+|960
+|===
+
+Total across all 6 models: approximately *2350 API calls* (~390 per model).
+Each call is a short prompt with a single-letter response, so token cost is low.
+
+4 models incur API costs (Claude, GPT, Gemini, Mistral) -- roughly *$5–25* for a full run.
+2 models (Llama, DeepSeek) run locally at no cost beyond compute time.
+The budget question affects how often we re-run the commercial models; the local models can run as often as we want.
+Re-runs after model updates are cheap once the question specs exist.
+
+[[limitations]]
+== Limitations and Risks
+
+=== Our Definitions Are Not Objective Truth
+
+The `.adoc` anchor files are our own curated definitions, not an external standard.
+If our definition of an anchor is incomplete or subtly wrong, the evaluation will confirm our bias instead of catching it.
+
+Mitigation: For the most important anchors, cross-reference our definitions against the primary sources (books, papers, original authors) before using them as ground truth.
+
+=== Multiple-Choice Position Bias
+
+LLMs have a known tendency to prefer certain answer positions (often A or the longest option).
+A model might score correctly not because it understands the anchor, but because the correct answer happens to be in a favored position.
+
+Mitigation:
+
+- *Randomize option order* across runs. Run each question multiple times with the correct answer in different positions (A, B, C, D).
+- *Balance distractor quality*. All four options should be similar in length and plausibility. An obviously wrong distractor inflates scores artificially.
+- *Multiple runs per question*. Run each question at least 4 times (once per position of the correct answer). Report the percentage of correct answers, not a single binary result.
+
+This means the actual number of API calls per question is 4×, but the cost per call is minimal (short prompt, single-letter response).
+
+=== Model Versions Are Moving Targets
+
+Model providers update their models without notice.
+An evaluation that passes today may fail next month on the same model identifier.
+
+Mitigation: Record exact model versions and timestamps.
+Re-run evaluations when budget allows, especially after known major model updates.
+
+== Publishing Results
+
+Model-specific scores will be published on the website.
+Users should know which anchors work well on the model they use.
+
+Results will be presented as a heatmap (anchor × model) showing the percentage of correct answers.
+Color coding: green (>80%), yellow (50–80%), red (<50%).
+The raw data (questions, model responses, versions, timestamps) will be available in the repository for reproducibility.
+
+== Next Step: Pilot
+
+Before building the full evaluation infrastructure, run a manual pilot to validate the approach:
+
+. Pick 5 anchors: 2 strong (e.g., TDD London School, arc42), 2 medium (e.g., Docs-as-Code, MECE), 1 weak (e.g., a Tier 1 anchor).
+. Write Level 1 questions for all 5, and one Level 2 question for the 2 strong anchors.
+. Run them manually against Claude Sonnet and one open-source model (e.g., Llama via Ollama).
+. Score by hand. Check: Are the questions well-formed? Are the distractors plausible? Does the position randomization matter?
+. Decide whether to invest in automation based on the pilot results.
+
+The pilot requires approximately 60 API calls and can be done in an afternoon.
+
+== Open Questions
+
+- Should the evaluation results feed back into the anchor `.adoc` files (e.g., a `:model-support:` attribute)?
+- Can we use the evaluation infrastructure to validate new anchor proposals before they enter the catalog?
+- Is the paraphrase comparison in Level 2 sufficient, or do we also need a "no guidance" baseline (task without any methodology hint)?
+- Should we add multiple Recognition questions per anchor (testing different core concepts) to better cover the Depth dimension?
