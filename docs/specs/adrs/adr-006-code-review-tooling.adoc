@@ -1,0 +1,128 @@
+= ADR-006: Auswahl des Code-Review-Tools
+:toc:
+:icons: font
+
+== Status
+
+**Proposed** - 2026-03-24
+
+== Context
+
+Das Projekt nutzt aktuell CodeRabbit (Free Tier) für automatisierte Code-Reviews auf Pull Requests.
+CodeRabbit liefert gute Reviews (hat z.B. den SemVer-Syntaxfehler in PR #343 gefunden und falsche ATAM/Gherkin-Specs erkannt), aber wir stoßen regelmäßig an das kostenlose Limit.
+
+Drei Alternativen stehen zur Verfügung:
+
+* **GitHub Copilot Code Review**: Native GitHub-Integration, kostenlos für Open-Source-Projekte
+* **Claude Code (CLI)**: Bereits im Devcontainer installiert, versteht CLAUDE.md-Kontext
+* **CodeRabbit**: Bewährt, aber Free-Tier-Limit ist ein Problem
+
+=== Betrachtete Alternativen
+
+[cols="1,1,1,1"]
+|===
+|Alternative |Kosten |Integration |Kontext
+
+|CodeRabbit Free
+|Gratis, aber Limit (~3 PRs/Woche)
+|GitHub App, automatisch auf jedem PR
+|Nutzt diff + PR-Beschreibung
+
+|GitHub Copilot Review
+|Gratis (Open-Source-Projekt)
+|Native GitHub, `@copilot review` oder automatisch
+|Nutzt Repository-Kontext
+
+|Claude Code CLI
+|Pro-Plan (bereits vorhanden)
+|Manuell: `claude -p "review PR #xxx"`
+|Nutzt CLAUDE.md, volles Repository-Verständnis
+
+|Claude Code GitHub App
+|Teuer (pro Review)
+|GitHub App, automatisch
+|Nutzt Repository-Kontext
+|===
+
+== Decision
+
+_Noch nicht entschieden — Evaluation läuft._
+
+Der nächste inhaltliche PR wird parallel von allen drei Tools reviewed.
+Bewertungskriterien:
+
+. **Review-Qualität**: Findet es echte Bugs?
+. **False-Positive-Rate**: Wie viele Findings sind Rauschen?
+. **Actionability**: Sind die Vorschläge direkt umsetzbar?
+. **Kontext-Verständnis**: Versteht es die Projekt-Architektur?
+. **Kosten/Limit**: Können wir es unbegrenzt nutzen?
+. **Aufwand**: Automatisch vs. manuell?
+
+=== Pugh-Matrix
+
+[cols="3,1,1,1,1"]
+|===
+|Kriterium |CodeRabbit Free |Copilot Review |Claude CLI |Claude App
+
+|Review-Qualität
+|Baseline (0)
+|?
+|?
+|?
+
+|False-Positive-Rate
+|0
+|?
+|?
+|?
+
+|Actionability
+|0
+|?
+|?
+|?
+
+|Kontext-Verständnis
+|0
+|?
+|?
+|?
+
+|Kosten/Limit
+|-1 (Limit!)
+|+1 (gratis, unlimited)
+|0 (Pro-Plan)
+|-1 (teuer)
+
+|Automatisierung
+|+1 (automatisch)
+|+1 (automatisch)
+|-1 (manuell)
+|+1 (automatisch)
+
+|**Summe**
+|**0**
+|?
+|?
+|?
+|===
+
+Die Pugh-Matrix wird nach der Evaluation ausgefüllt.
+
+== Consequences
+
+=== Positive
+
+* Klare Entscheidungsgrundlage für Tool-Wahl
+* Reduzierung der Kosten oder Aufhebung des Limits
+* Dokumentierte Bewertungskriterien für zukünftige Tool-Wechsel
+
+=== Negative
+
+* Einmaliger Aufwand für die parallele Evaluation
+* Bei Tool-Wechsel: Verlust der CodeRabbit-Konfiguration und -Historie
+
+=== Risiken
+
+* GitHub Copilot Review ist relativ neu — Qualität könnte schwanken
+* Claude Code CLI erfordert manuellen Trigger — wird in der Praxis möglicherweise vergessen
