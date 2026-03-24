@@ -1,0 +1,44 @@
+anchor: lasr
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "LASR according to Toth/Zörner"?
+
+      '
+    options:
+      A: Lightweight Architecture Decision Records that capture the context, decision,
+        and consequences of significant architectural choices using a standardized
+        template format for documentation and communication purposes
+      B: High-level description of how the solution addresses the most important quality
+        requirements and constraints; the central architectural ideas that shape the
+        system; key structural and runtime views showing the main building blocks,
+        their responsibilities, and how they interact at runtime
+      C: Low-level technical specification that defines implementation details, coding
+        standards, and deployment procedures; focuses on concrete technology choices
+        and step-by-step guidance for development teams
+      D: Hierarchical visual modeling technique using context, container, component,
+        and code diagrams to represent software architecture at different levels of
+        abstraction for stakeholder communication and system understanding
+    correct: B
+  application:
+    scenario: Your team has just completed the initial architecture design for a new
+      e-commerce platform that must handle high traffic loads and integrate with multiple
+      payment providers. The product owner and development teams need to understand
+      the key architectural decisions before implementation begins.
+    anchor_prompt: using LASR according to Toth/Zörner
+    paraphrase_prompt: What should you focus on when creating a lightweight architecture
+      document that effectively communicates the essential architectural information
+      to stakeholders?
+    options:
+      A: Document the complete system context, detailed component specifications,
+        comprehensive deployment views, and full traceability matrices to ensure nothing
+        is missed.
+      B: Focus on the core solution strategy for handling traffic loads, key structural
+        components and their interactions, critical interfaces with payment providers,
+        and identified scalability risks with mitigation plans.
+      C: Create detailed use case diagrams, complete database schemas, exhaustive
+        API documentation, and comprehensive testing strategies to cover all system
+        aspects.
+      D: Emphasize stakeholder concerns, detailed quality scenarios, complete constraint
+        documentation, and thorough architectural decision records with full rationale.
+    correct: B

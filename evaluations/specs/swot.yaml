@@ -1,0 +1,45 @@
+anchor: swot
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "SWOT"?
+
+      '
+    options:
+      A: A prioritization framework that categorizes requirements into Should have,
+        Won't have this time, Optional features, and Time-critical deliverables to
+        manage project scope effectively
+      B: Internal positive attributes and resources that give the subject an advantage
+        over others; internal negative attributes or limitations that place the subject
+        at a disadvantage relative to others
+      C: A visual mapping technique that plots the evolution of components along a
+        value chain from genesis to commodity to identify strategic positioning and
+        dependencies
+      D: A decision-making matrix that systematically evaluates multiple alternatives
+        against weighted criteria by scoring each option to determine the optimal
+        solution objectively
+    correct: B
+  application:
+    scenario: Your team is evaluating whether to migrate from a monolithic architecture
+      to microservices for your e-commerce platform. The monolith has served you well
+      for 3 years but scaling challenges are emerging. You need to present a comprehensive
+      analysis to stakeholders covering all key factors that could influence this
+      architectural decision.
+    anchor_prompt: using SWOT
+    paraphrase_prompt: What framework should you use to systematically evaluate both
+      internal capabilities and external factors that could impact this architectural
+      migration decision?
+    options:
+      A: Create a decision matrix listing technical requirements as rows and architecture
+        options as columns, scoring each combination on feasibility and impact to
+        determine the optimal choice.
+      B: Analyze internal strengths and weaknesses of your current capabilities alongside
+        external opportunities and threats in the market to create a comprehensive
+        strategic assessment.
+      C: Map out the current value chain and evolution stages of each system component
+        to identify which parts are commodities versus differentiators before making
+        architectural changes.
+      D: Categorize all migration requirements into must-have, should-have, could-have,
+        and won't-have priorities to focus development effort on the most critical
+        architectural changes first.
+    correct: B

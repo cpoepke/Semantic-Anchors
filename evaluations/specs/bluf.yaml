@@ -1,0 +1,38 @@
+anchor: bluf
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "BLUF (Bottom Line Up Front)"?
+
+      '
+    options:
+      A: Begin with background context and build logically toward the final conclusion;
+        comprehensive analysis precedes recommendations
+      B: State the main point, decision, or recommendation immediately; most important
+        information first, supporting details follow
+      C: Present multiple solutions in order of complexity; start with simple approaches
+        before advancing to detailed implementations
+      D: Structure information using inverted pyramid with broad overview first, then
+        progressively narrow to specific technical details
+    correct: B
+  application:
+    scenario: Your team has discovered a critical security vulnerability in the production
+      API that could expose user data. You need to send an urgent email to the CTO
+      and engineering leadership about the issue, its impact, and the proposed fix.
+    anchor_prompt: using BLUF (Bottom Line Up Front)
+    paraphrase_prompt: to communicate the most critical information first for time-pressed
+      executives who need to make immediate decisions
+    options:
+      A: Start with background context about recent security audits, then explain
+        how the vulnerability was discovered, detail the technical analysis process,
+        and conclude with the severity assessment and recommended actions.
+      B: 'Lead with: ''Critical API vulnerability requires immediate hotfix deployment
+        by EOD to prevent potential user data exposure.'' Follow with impact details,
+        technical specifics, and implementation timeline.'
+      C: Begin by outlining the discovery timeline, present a detailed technical analysis
+        of the vulnerability, discuss various potential solutions, then provide your
+        final recommendation and next steps.
+      D: Open with team credentials and recent security improvements, explain the
+        systematic approach used to identify issues, walk through the vulnerability
+        details, and end with proposed solutions.
+    correct: B

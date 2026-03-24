@@ -1,0 +1,33 @@
+anchor: mece
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes the "MECE Principle"?
+
+      '
+    options:
+      A: Prioritizing requirements into Must/Should/Could/Won't categories
+      B: Structuring categories so they do not overlap and collectively cover all
+        possibilities
+      C: Presenting the conclusion first, then organizing supporting arguments hierarchically
+      D: Decomposing work into independent, negotiable, and testable user stories
+    correct: B
+  application:
+    scenario: Your team is designing a new e-commerce platform and needs to organize
+      the main functional areas into microservices. The platform must handle user
+      management, product catalog, shopping cart, order processing, payment handling,
+      inventory tracking, and customer support features.
+    anchor_prompt: using MECE Principle
+    paraphrase_prompt: How should you organize these functional areas to ensure complete
+      coverage with no overlapping responsibilities between services?
+    options:
+      A: 'Group by user-facing vs backend services: (User Management, Product Catalog,
+        Shopping Cart) and (Order Processing, Payment, Inventory, Support)'
+      B: 'Organize by business capability: User Service, Catalog Service, Cart Service,
+        Order Service, Payment Service, Inventory Service, Support Service'
+      C: 'Structure by data access patterns: Read-heavy services (Catalog, Support)
+        and Write-heavy services (User, Cart, Order, Payment, Inventory)'
+      D: 'Arrange by development team expertise: Core services (User, Product, Cart),
+        Transaction services (Order, Payment), and Operations services (Inventory,
+        Support)'
+    correct: B

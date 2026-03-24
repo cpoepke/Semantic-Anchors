@@ -1,0 +1,44 @@
+anchor: bdd-given-when-then
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "BDD (Behavior-Driven Development)"?
+
+      '
+    options:
+      A: Test-first development approach where unit tests are written before implementation
+        code, focusing on isolated component testing with mock objects to verify interactions
+        between system boundaries
+      B: Structured scenario format — Given a precondition, When an action occurs,
+        Then an expected outcome results; concrete examples as executable specifications
+        that define system behavior
+      C: Agile requirement gathering technique that maps user activities and tasks
+        in chronological order to identify system features and prioritize development
+        based on user journey workflows
+      D: Iterative testing methodology that emphasizes state-based verification through
+        direct assertions on system outputs, promoting comprehensive test coverage
+        without external dependencies or test doubles
+    correct: B
+  application:
+    scenario: Your team is building an e-commerce checkout system where business stakeholders
+      are concerned about complex discount rules and payment validation logic. The
+      product owner, developers, and QA engineers have different interpretations of
+      how promotional codes should work with various payment methods.
+    anchor_prompt: using BDD (Behavior-Driven Development)
+    paraphrase_prompt: to ensure all stakeholders share the same understanding of
+      system behavior and create executable documentation
+    options:
+      A: Write detailed technical specifications first, then have developers implement
+        unit tests that verify the discount calculation algorithms work correctly
+        for each payment method combination.
+      B: Organize discovery workshops with the three amigos to write Given-When-Then
+        scenarios like 'Given a customer has a 20% discount code, When they checkout
+        with a credit card, Then the discount applies before payment processing' that
+        become executable tests.
+      C: Create comprehensive user stories with acceptance criteria, then have QA
+        engineers write end-to-end test scripts that validate the complete checkout
+        workflow from the user interface perspective.
+      D: Develop a prototype of the checkout system quickly, then gather feedback
+        from stakeholders through usability testing sessions to refine the discount
+        and payment features iteratively.
+    correct: B

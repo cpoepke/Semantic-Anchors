@@ -1,0 +1,41 @@
+anchor: stride
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "STRIDE Threat Model"?
+
+      '
+    options:
+      A: A systematic approach for identifying and categorizing the top ten most critical
+        web application security risks; maintained by OWASP foundation; focuses on
+        injection flaws, broken authentication, and sensitive data exposure vulnerabilities
+      B: Impersonating another user, process, or system to gain unauthorized access;
+        mitigated by strong authentication; unauthorized modification of data in transit
+        or at rest; mitigated by integrity controls, digital signatures, and access
+        controls
+      C: A defensive security framework that assumes breach scenarios and implements
+        zero-trust principles; emphasizes continuous verification, least privilege
+        access, and micro-segmentation to limit lateral movement within networks
+      D: A risk assessment methodology for evaluating security controls in regulated
+        environments; provides quantitative scoring based on asset criticality, threat
+        likelihood, and business impact to prioritize remediation efforts
+    correct: B
+  application:
+    scenario: Your team is designing a new online banking application that handles
+      user authentication, financial transactions, and account data. During the security
+      design review, you need to systematically identify potential security threats
+      that could affect different components of the system.
+    anchor_prompt: using STRIDE Threat Model
+    paraphrase_prompt: systematically categorize the security threats by analyzing
+      each component against six fundamental threat categories
+    options:
+      A: Focus primarily on external attack vectors like SQL injection and cross-site
+        scripting, then assess the likelihood and business impact of each vulnerability
+        type
+      B: Examine each system component for Spoofing, Tampering, Repudiation, Information
+        Disclosure, Denial of Service, and Elevation of Privilege threats
+      C: Create attack trees starting from high-value assets, then trace backward
+        through all possible attack paths that could compromise those assets
+      D: Map all system entry points and data flows, then apply a risk rating matrix
+        based on confidentiality, integrity, and availability requirements
+    correct: B

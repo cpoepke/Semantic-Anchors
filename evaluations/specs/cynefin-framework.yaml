@@ -1,0 +1,39 @@
+anchor: cynefin-framework
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Cynefin Framework"?
+
+      '
+    options:
+      A: Strategic mapping technique that visualizes value chains and component evolution
+        stages over time
+      B: 'Five domains; : best practices apply, sense-categorize-respond'
+      C: 'Agile methodology framework with four iterative phases: plan-do-check-act
+        for continuous improvement'
+      D: 'Decision-making model using three assessment layers: context-analysis-action
+        for complex problems'
+    correct: B
+  application:
+    scenario: 'Your team is facing three different challenges: a well-understood database
+      migration that follows established procedures, intermittent performance issues
+      that require expert analysis, and completely unpredictable user behavior patterns
+      in a new AI feature. The team is debating how to approach each problem and allocate
+      resources effectively.'
+    anchor_prompt: using Cynefin Framework
+    paraphrase_prompt: categorize these challenges by their complexity characteristics
+      to determine the most appropriate decision-making approach for each
+    options:
+      A: Treat all three as technical problems requiring expert analysis, form specialized
+        teams for each, and conduct thorough requirements gathering before taking
+        action on any of them.
+      B: Apply best practices to the database migration, assign experts to analyze
+        the performance issues, and run small experiments to understand the AI feature
+        behavior patterns.
+      C: Prioritize all three challenges by business impact, assign the most experienced
+        developers to each, and create detailed project plans with fixed timelines
+        for resolution.
+      D: Escalate all three issues to senior architects for decision-making, document
+        comprehensive risk assessments, and implement the solutions with the highest
+        confidence levels first.
+    correct: B

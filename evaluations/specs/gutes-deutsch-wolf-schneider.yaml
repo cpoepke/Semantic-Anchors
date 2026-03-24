@@ -1,0 +1,44 @@
+anchor: gutes-deutsch-wolf-schneider
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Gutes Deutsch nach Wolf Schneider"?
+
+      '
+    options:
+      A: Structure information hierarchically with the most important conclusion first,
+        followed by supporting arguments grouped logically — each section should build
+        upon the previous one; use consistent formatting throughout.
+      B: Prefer short, direct sentences over long, complex ones — every sentence should
+        express one idea; use active constructions; avoid passive voice and impersonal
+        constructions wherever possible
+      C: Begin with the bottom line up front, presenting key findings immediately
+        — organize supporting details in order of decreasing importance; eliminate
+        unnecessary background information and focus on actionable insights.
+      D: Apply modular design principles where each component serves a single responsibility
+        — minimize dependencies between modules; favor composition over inheritance
+        and maintain loose coupling throughout the system architecture.
+    correct: B
+  application:
+    scenario: A German software company is revising their user documentation after
+      receiving complaints that it's difficult to understand. The current version
+      contains many long sentences with multiple clauses, passive constructions, and
+      abstract technical jargon. The technical writing team needs to rewrite a key
+      section explaining how users can configure system settings.
+    anchor_prompt: using Gutes Deutsch nach Wolf Schneider
+    paraphrase_prompt: to create clear, accessible German prose that prioritizes reader
+      comprehension and eliminates unnecessary complexity
+    options:
+      A: Use sophisticated vocabulary and complex sentence structures to demonstrate
+        technical expertise, incorporate industry-standard terminology throughout,
+        and maintain formal passive voice constructions to convey professional authority.
+      B: Write short, direct sentences with active voice, replace abstract noun phrases
+        with concrete verbs, eliminate filler words, and choose familiar terms over
+        technical jargon when both convey the same meaning.
+      C: Focus on comprehensive coverage by including detailed explanations for every
+        possible scenario, use subordinate clauses to show relationships between concepts,
+        and employ precise technical terminology for accuracy.
+      D: Structure content using bullet points and numbered lists exclusively, maintain
+        consistent sentence length throughout the document, and include extensive
+        cross-references to related technical specifications and standards.
+    correct: B

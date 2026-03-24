@@ -1,0 +1,36 @@
+anchor: chain-of-thought
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Chain of Thought (CoT)"?
+
+      '
+    options:
+      A: Connect multiple AI models in sequence where each model's output becomes
+        the input for the next model in the processing pipeline
+      B: Explicitly show intermediate reasoning steps before reaching a conclusion;
+        make the thought process visible, not just the final answer
+      C: Structure prompts using a series of related examples that progressively guide
+        the model toward the desired response pattern
+      D: Break down complex problems into smaller, independent sub-problems that can
+        be solved separately and then combined for the final solution
+    correct: B
+  application:
+    scenario: Your team is debugging a complex data processing pipeline that produces
+      incorrect results for certain edge cases. The LLM-based component seems to jump
+      directly to conclusions without showing its reasoning process. You need to modify
+      the prompting strategy to make the model's decision-making process visible so
+      you can identify where the logic breaks down.
+    anchor_prompt: using Chain of Thought (CoT)
+    paraphrase_prompt: Which prompting approach would best help you understand and
+      debug the model's reasoning process for complex multi-step problems?
+    options:
+      A: Add more examples to the prompt with only the final correct answers, then
+        use temperature=0 for consistent outputs across all test cases.
+      B: Modify prompts to include phrases like 'Let's think step by step' and provide
+        examples that show intermediate reasoning steps before reaching conclusions.
+      C: Increase the context window size and provide comprehensive background documentation
+        about all possible edge cases and their solutions.
+      D: Use ensemble methods by running multiple model instances with different random
+        seeds and selecting the most frequently occurring answer.
+    correct: B

@@ -1,0 +1,38 @@
+anchor: wardley-mapping
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Wardley Mapping"?
+
+      '
+    options:
+      A: Map system dependencies from infrastructure up; requirements → design → implementation
+        → deployment
+      B: Map components from user needs down; genesis → custom → product → commodity
+      C: Map stakeholder relationships outward; internal → partners → customers →
+        market segments
+      D: Map technical debt from legacy systems; identified → prioritized → refactored
+        → modernized
+    correct: B
+  application:
+    scenario: Your fintech startup is deciding whether to build a custom payment processing
+      system, integrate with an existing payment API like Stripe, or partner with
+      a traditional payment processor. The team is debating the strategic implications
+      of each approach for the company's long-term competitive position.
+    anchor_prompt: using Wardley Mapping
+    paraphrase_prompt: What strategic approach should guide this build-vs-buy-vs-partner
+      decision?
+    options:
+      A: Conduct a cost-benefit analysis comparing the total cost of ownership for
+        each option over a 3-year period, then select the lowest-cost solution that
+        meets current technical requirements.
+      B: Map the payment processing component's position on the evolution axis from
+        genesis to commodity, then choose build for genesis/custom stages and buy/partner
+        for product/commodity stages.
+      C: Survey competitors to see what payment solutions they use, then select the
+        same approach as the most successful competitor to ensure market alignment
+        and reduce strategic risk.
+      D: Evaluate each option based on development team capacity and timeline constraints,
+        prioritizing the approach that can be implemented fastest while maintaining
+        acceptable quality standards.
+    correct: B

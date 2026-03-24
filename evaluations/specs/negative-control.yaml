@@ -1,0 +1,17 @@
+anchor: negative-control
+tier: null
+
+# Negative control: a fabricated anchor that does not exist.
+# Tests whether the model distinguishes real anchors from invented ones.
+# Correct answer is D ("not an established methodology").
+
+questions:
+  recognition:
+    question: |
+      "Müller's Inversion Principle" is:
+    options:
+      A: "A testing methodology that reverses test execution order to detect hidden state dependencies"
+      B: "An architecture pattern that inverts control flow between framework and application code"
+      C: "A requirements technique that starts from the desired outcome and works backward to inputs"
+      D: "Not an established methodology — this term does not refer to a recognized concept"
+    correct: D

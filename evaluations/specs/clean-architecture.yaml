@@ -1,0 +1,39 @@
+anchor: clean-architecture
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Clean Architecture"?
+
+      '
+    options:
+      A: Dependencies flow bidirectionally between layers; presentation ↔ business
+        logic ↔ data access ↔ external services
+      B: Dependencies only point inward; entities → use cases → interface adapters
+        → frameworks & drivers
+      C: Code is organized by technical concerns; controllers → services → repositories
+        → database models
+      D: System components are loosely coupled through message passing; publishers
+        → message brokers → subscribers → event handlers
+    correct: B
+  application:
+    scenario: Your team is developing an e-commerce platform that needs to support
+      multiple payment processors (Stripe, PayPal, Square) and may need to switch
+      between them based on business requirements. The payment processing logic contains
+      complex fraud detection rules and transaction validation that must remain consistent
+      regardless of which payment provider is used.
+    anchor_prompt: using Clean Architecture
+    paraphrase_prompt: to ensure the core business logic remains independent of external
+      payment providers while maintaining flexibility to switch between them
+    options:
+      A: Create a shared payment utility class that contains all provider-specific
+        code and business rules, then inject different configuration objects to switch
+        between providers
+      B: Define payment processing use cases in the core layer with abstract interfaces,
+        implement provider-specific adapters in the outer layer, and inject dependencies
+        inward through dependency inversion
+      C: Build separate microservices for each payment provider with a central orchestrator
+        service that routes requests and handles all business logic validation
+      D: Implement a factory pattern that returns different payment processor instances,
+        with each processor containing its own copy of the fraud detection and validation
+        logic
+    correct: B

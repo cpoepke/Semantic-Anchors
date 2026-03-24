@@ -1,0 +1,40 @@
+anchor: five-whys
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Five Whys (Ohno)"?
+
+      '
+    options:
+      A: Create five alternative solution paths and systematically evaluate each option
+        against predefined criteria to select the optimal approach
+      B: Ask "Why?" repeatedly (typically ~5 times) to drill down to root causes;
+        distinguish between surface symptoms and underlying causes
+      C: Break down complex problems into exactly five manageable components and address
+        each component using dedicated team resources
+      D: Conduct five rounds of stakeholder interviews to gather comprehensive requirements
+        and validate assumptions before implementation
+    correct: B
+  application:
+    scenario: Your team's automated deployment pipeline has failed three times this
+      week, each time requiring manual intervention to complete the release. The immediate
+      cause appears to be intermittent network timeouts during the artifact upload
+      phase, but previous attempts to increase timeout values haven't resolved the
+      underlying issue.
+    anchor_prompt: using Five Whys (Ohno)
+    paraphrase_prompt: to systematically drill down from surface symptoms to identify
+      the actionable root cause of these recurring deployment failures
+    options:
+      A: Document all three failure instances, categorize the types of network errors,
+        and create a comprehensive troubleshooting runbook for future occurrences
+        of similar timeout issues.
+      B: Ask why network timeouts occur, then why that cause exists, continuing this
+        questioning process until you reach an underlying cause that the team can
+        take concrete action to prevent.
+      C: Gather the development, infrastructure, and network teams to brainstorm all
+        possible factors contributing to deployment failures and create a fishbone
+        diagram mapping relationships between causes.
+      D: Implement monitoring dashboards to track network latency patterns, set up
+        automated alerts for timeout thresholds, and establish escalation procedures
+        for deployment pipeline failures.
+    correct: B

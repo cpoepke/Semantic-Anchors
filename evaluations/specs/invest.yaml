@@ -1,0 +1,45 @@
+anchor: invest
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "INVEST"?
+
+      '
+    options:
+      A: Stories should be prioritized using Must have, Should have, Could have, and
+        Won't have categories to ensure critical requirements are delivered first;
+        stakeholders rank features by business value and implementation complexity
+        to guide sprint planning and resource allocation.
+      B: Stories should be self-contained and deliverable in any order; avoid dependencies
+        between stories that force a fixed implementation sequence; stories are not
+        contracts; the details are open to discussion between team and stakeholders
+        until they enter a sprint
+      C: Stories should be mapped chronologically along a user journey timeline with
+        supporting tasks underneath; teams visualize the complete user experience
+        to identify gaps, prioritize releases, and maintain focus on delivering end-to-end
+        value through iterative development cycles.
+      D: Stories should follow a standardized template with acceptance criteria, definition
+        of done, and effort estimates; teams must complete detailed analysis and obtain
+        formal approval from product owners before any story can be moved into development
+        or testing phases.
+    correct: B
+  application:
+    scenario: 'Your team is reviewing user stories during backlog refinement for an
+      e-commerce platform. One story reads: ''As a customer, I want the system to
+      be faster and more secure so that I have a better experience.'' The team is
+      struggling to estimate this story and cannot determine what ''done'' looks like.'
+    anchor_prompt: using INVEST
+    paraphrase_prompt: What should you do to make this story ready for sprint planning?
+    options:
+      A: Add more detailed technical specifications about performance benchmarks and
+        security protocols, then assign it to the most senior developer who can handle
+        the complexity
+      B: Split this into multiple smaller stories with specific acceptance criteria,
+        such as 'reduce page load time to under 2 seconds' and 'implement two-factor
+        authentication for login'
+      C: Move the story to the next release cycle and create a technical spike to
+        research all possible performance and security improvements before writing
+        any user stories
+      D: Keep the story as-is but add story points based on the team's gut feeling,
+        since users clearly value performance and security improvements
+    correct: B

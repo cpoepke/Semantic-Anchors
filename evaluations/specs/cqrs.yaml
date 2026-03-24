@@ -1,0 +1,46 @@
+anchor: cqrs
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "CQRS (Command Query Responsibility
+      Segregation)"?
+
+      '
+    options:
+      A: An architectural pattern that separates business logic from infrastructure
+        concerns by defining ports and adapters, where the core domain remains independent
+        of external systems and frameworks
+      B: Bertrand Meyer's principle — methods either change state (commands) or return
+        data (queries), never both; write operations that change state and return
+        void; represent intent as immutable command objects
+      C: A design approach where complex business domains are modeled through ubiquitous
+        language, bounded contexts, and aggregate roots to align software structure
+        with business requirements
+      D: A distributed system pattern that ensures data consistency across microservices
+        by coordinating transactions through a central orchestrator that manages compensating
+        actions for failures
+    correct: B
+  application:
+    scenario: Your e-commerce platform handles millions of product searches daily
+      but only thousands of inventory updates per hour. The current unified data model
+      causes performance bottlenecks as complex search queries with filters, sorting,
+      and recommendations compete for database resources with critical inventory management
+      operations.
+    anchor_prompt: using CQRS (Command Query Responsibility Segregation)
+    paraphrase_prompt: How would you architect the system to optimize both the high-volume
+      search operations and the critical inventory updates without them interfering
+      with each other?
+    options:
+      A: Implement database sharding to distribute both search and inventory operations
+        across multiple database instances, using product categories as the sharding
+        key to balance the load evenly.
+      B: 'Create separate optimized data models: a normalized write model for inventory
+        commands and denormalized read models for search queries, synchronized through
+        domain events with eventual consistency.'
+      C: Use a master-slave database replication setup where all inventory updates
+        go to the master and search queries are distributed across multiple read replicas
+        to reduce contention.
+      D: Implement a caching layer with Redis to store frequently accessed product
+        data and search results, reducing database load while maintaining a single
+        unified data model.
+    correct: B

@@ -1,0 +1,41 @@
+anchor: prd
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "PRD"?
+
+      '
+    options:
+      A: Systematic prioritization framework using Must have, Should have, Could have,
+        and Won't have categories to rank feature requirements based on business value
+        and urgency
+      B: Clear articulation of the problem to be solved and the target users; measurable
+        outcomes that define what "done" looks like (kpis, okrs)
+      C: Visual representation of user activities and tasks arranged chronologically
+        to identify gaps, priorities, and release planning opportunities for product
+        development
+      D: Structured template format capturing user needs as role-based scenarios with
+        acceptance criteria to ensure requirements are testable and implementable
+        by development teams
+    correct: B
+  application:
+    scenario: Your startup is building a new mobile app for freelance project management.
+      The engineering team keeps asking clarifying questions about features, the design
+      team is unsure about user workflows, and marketing needs to understand the target
+      audience. Stakeholders have conflicting ideas about what should be included
+      in the first release.
+    anchor_prompt: using PRD
+    paraphrase_prompt: What document should you create to align all teams and provide
+      a comprehensive foundation for product development?
+    options:
+      A: Create a technical architecture document that outlines the system components,
+        database schema, and API specifications to guide the engineering team's implementation
+        decisions.
+      B: Write a comprehensive document that defines the problem statement, target
+        users, success metrics, functional requirements, scope boundaries, and constraints
+        to align all stakeholders.
+      C: Develop a project timeline with detailed user stories, acceptance criteria,
+        and sprint planning to coordinate development activities across all teams.
+      D: Conduct stakeholder interviews and create a competitive analysis report with
+        market research findings to inform strategic product positioning decisions.
+    correct: B

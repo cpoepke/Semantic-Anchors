@@ -1,0 +1,36 @@
+anchor: property-based-testing
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Property-Based Testing"?
+
+      '
+    options:
+      A: Testing software by validating that object properties and attributes maintain
+        expected values throughout execution
+      B: Invariants that should always hold; automatic test data creation
+      C: A testing methodology that focuses on verifying ownership and access rights
+        of system resources and data
+      D: Unit testing approach that examines individual class properties and their
+        getter/setter method implementations
+    correct: B
+  application:
+    scenario: You're developing a financial calculator library with functions for
+      compound interest, loan payments, and currency conversions. The library will
+      be used by multiple client applications, and accuracy is critical since even
+      small rounding errors could accumulate into significant financial discrepancies
+      over time.
+    anchor_prompt: using Property-Based Testing
+    paraphrase_prompt: What testing approach would best validate that your financial
+      calculations maintain mathematical correctness across all possible input ranges?
+    options:
+      A: Write comprehensive unit tests covering typical financial scenarios like
+        30-year mortgages, common interest rates, and standard loan amounts
+      B: Define mathematical invariants like 'interest calculations should be commutative'
+        and generate thousands of random valid inputs to verify these properties always
+        hold
+      C: Create integration tests that simulate real user workflows by testing complete
+        financial scenarios from input to final calculation output
+      D: Implement regression tests using historical financial data from previous
+        system versions to ensure calculations remain consistent over time
+    correct: B

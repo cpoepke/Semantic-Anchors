@@ -1,0 +1,42 @@
+anchor: fagan-inspection
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Fagan Inspection"?
+
+      '
+    options:
+      A: A systematic code mutation technique where defects are artificially introduced
+        into software modules to evaluate the effectiveness of existing test suites
+        and identify gaps in test coverage.
+      B: A structured, multi-phase review process for software artifacts (requirements,
+        design, code) with defined roles and entry/exit criteria; moderator (facilitates
+        and logs), author (created the artifact), inspectors (reviewers), recorder
+        (documents defects)
+      C: A formal verification methodology that uses mathematical proofs and static
+        analysis to demonstrate software correctness without executing the program,
+        focusing on pre-conditions and post-conditions.
+      D: A risk-based assessment framework for evaluating software architecture decisions
+        through scenario-based analysis, stakeholder interviews, and systematic documentation
+        of trade-offs and quality attributes.
+    correct: B
+  application:
+    scenario: Your team is developing flight control software for a commercial aircraft.
+      The requirements document has been completed and needs to be reviewed before
+      the design phase begins. Several team members have expressed concerns about
+      potential ambiguities and missing edge cases in the requirements.
+    anchor_prompt: using Fagan Inspection
+    paraphrase_prompt: What structured approach should you take to systematically
+      review the requirements document with your team?
+    options:
+      A: Schedule a team meeting where everyone reads through the requirements together
+        and discusses any issues they notice during the session.
+      B: Assign specific roles including a moderator and recorder, have each inspector
+        study the requirements individually beforehand, then hold a formal meeting
+        to identify and classify defects systematically.
+      C: Distribute the requirements to all team members via email and ask them to
+        send back their comments within a week, then compile all feedback into a single
+        document.
+      D: Have the requirements author present the document to the team in a walkthrough
+        session where attendees can ask questions and suggest improvements in real-time.
+    correct: B

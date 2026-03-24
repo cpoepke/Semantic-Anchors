@@ -1,0 +1,35 @@
+anchor: socratic-method
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Socratic Method"?
+
+      '
+    options:
+      A: Systematic approach to software development that emphasizes iterative refinement
+        through structured peer review and collaborative problem-solving sessions
+      B: Lead learners to insights through questions rather than direct instruction;
+        cross-examination technique to expose contradictions in beliefs
+      C: Teaching methodology that breaks complex problems into smaller components
+        and builds understanding through sequential presentation of foundational concepts
+      D: Architectural pattern that separates concerns by organizing code into distinct
+        layers with well-defined interfaces and dependency injection principles
+    correct: B
+  application:
+    scenario: During a code review, a senior developer notices that a junior developer
+      has implemented a caching solution that could cause data consistency issues
+      in a distributed system. The junior developer seems confident in their approach
+      and hasn't considered the potential problems.
+    anchor_prompt: using Socratic Method
+    paraphrase_prompt: to help the junior developer discover the potential issues
+      through guided inquiry rather than direct criticism
+    options:
+      A: Point out the specific data consistency problems and explain why the current
+        caching approach won't work in a distributed environment.
+      B: Ask questions like 'What happens when multiple services update the same cached
+        data?' and 'How does your cache handle network partitions?'
+      C: Suggest they research distributed caching patterns and come back with alternative
+        solutions before proceeding with the implementation.
+      D: Approve the code for now but schedule a follow-up meeting to discuss distributed
+        systems architecture and caching strategies.
+    correct: B

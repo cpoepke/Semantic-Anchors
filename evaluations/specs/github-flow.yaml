@@ -1,0 +1,37 @@
+anchor: github-flow
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "GitHub Flow"?
+
+      '
+    options:
+      A: A semantic versioning system that automatically increments version numbers
+        based on commit message patterns and release types.
+      B: Workflow steps
+      C: A standardized format for writing commit messages that includes type, scope,
+        and description to improve project history readability.
+      D: A distributed version control architecture that enables multiple developers
+        to work on separate repositories while maintaining code synchronization.
+    correct: B
+  application:
+    scenario: Your team is working on a web application that gets deployed to production
+      multiple times per day. A critical bug has been reported by users, and you need
+      to implement a hotfix while ensuring the main branch remains stable and deployable.
+      The team follows a branch-based workflow where every change goes through code
+      review.
+    anchor_prompt: using GitHub Flow
+    paraphrase_prompt: What approach should you take to implement and deploy this
+      hotfix while maintaining continuous delivery practices?
+    options:
+      A: Create a hotfix branch from the latest release tag, implement the fix, merge
+        it back to both the release branch and main, then deploy from the release
+        branch
+      B: Create a hotfix branch from main, implement the fix, open a pull request
+        for code review, merge to main after approval, then deploy immediately from
+        main
+      C: Implement the fix directly on main branch, commit the changes, run tests
+        locally, then push and deploy if tests pass
+      D: Create a hotfix branch from main, implement the fix, merge it to a staging
+        branch for testing, then merge from staging to main after validation
+    correct: B

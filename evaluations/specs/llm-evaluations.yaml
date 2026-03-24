@@ -1,0 +1,44 @@
+anchor: llm-evaluations
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "LLM-Evaluations"?
+
+      '
+    options:
+      A: Automated testing frameworks that generate adversarial prompts and edge cases
+        to identify failure modes in language models through mutation-based prompt
+        engineering and stress testing methodologies.
+      B: Standardized datasets and tasks used to compare LLM capabilities — MMLU (Massive
+        Multitask Language Understanding), HellaSwag, HumanEval, BIG-Bench, GSM8K,
+        TruthfulQA, ARC; quantitative measures of model quality — perplexity, accuracy,
+        bleu, rouge, f1, pass@k (code generation), exact match, calibration
+      C: Architectural design patterns and best practices for deploying large language
+        models in production environments, including load balancing, caching strategies,
+        model versioning, and API gateway configurations.
+      D: Chain-of-thought reasoning techniques that enable language models to break
+        down complex problems into step-by-step logical processes, improving performance
+        on mathematical and analytical tasks through structured prompting.
+    correct: B
+  application:
+    scenario: Your team has developed a new code generation LLM and needs to compare
+      its performance against existing models like GPT-4 and Claude before deciding
+      whether to deploy it in production. The model will be used for generating Python
+      functions from natural language descriptions in your company's development workflow.
+    anchor_prompt: using LLM-Evaluations
+    paraphrase_prompt: What systematic approach should you take to rigorously assess
+      and compare your model's capabilities against established alternatives?
+    options:
+      A: Run your model on a few hand-selected coding problems, measure basic accuracy,
+        and compare the results against published performance numbers from other models'
+        documentation.
+      B: Evaluate on standardized benchmarks like HumanEval using pass@k metrics,
+        conduct human preference comparisons for code quality, and test for potential
+        training data contamination across multiple coding tasks.
+      C: Deploy all models to a staging environment, collect user feedback over several
+        weeks, and choose the model that receives the highest average satisfaction
+        ratings from developers.
+      D: Measure inference speed and memory usage across different model sizes, then
+        select the model that provides the best performance-to-cost ratio for your
+        infrastructure requirements.
+    correct: B

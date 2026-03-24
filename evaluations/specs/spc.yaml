@@ -1,0 +1,35 @@
+anchor: spc
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "SPC (Statistical Process Control)"?
+
+      '
+    options:
+      A: Structured programming methodology that controls code execution flow through
+        systematic elimination of goto statements and unstructured branching
+      B: Systematic statistical monitoring of running processes; inherent, random
+        fluctuation — stable and predictable
+      C: Statistical performance computing framework that optimizes system resources
+        by analyzing computational workload patterns and predicting bottlenecks
+      D: Software process certification standard that validates development methodologies
+        through rigorous documentation and compliance verification procedures
+    correct: B
+  application:
+    scenario: Your web application's API response times have been averaging 250ms
+      over the past month, but this week you've noticed some responses taking 400-500ms.
+      The development team wants to determine if this represents a real performance
+      degradation that needs investigation or just normal fluctuation.
+    anchor_prompt: using SPC (Statistical Process Control)
+    paraphrase_prompt: to systematically distinguish between normal process variation
+      and signals that indicate a real change requiring intervention
+    options:
+      A: Set a fixed threshold at 300ms and alert whenever any single response exceeds
+        this limit, then investigate each alert individually
+      B: Plot response times on a control chart with calculated control limits, then
+        apply detection rules to identify when the process shows special cause variation
+      C: Compare this week's average response time to last week's using a t-test and
+        investigate if the difference is statistically significant
+      D: Monitor the 95th percentile response time and trigger an investigation whenever
+        it increases by more than 10% from the baseline
+    correct: B

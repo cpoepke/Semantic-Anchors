@@ -1,0 +1,40 @@
+anchor: ears-requirements
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "EARS-Requirements"?
+
+      '
+    options:
+      A: A systematic approach for evaluating and analyzing requirements through stakeholder
+        interviews and documentation review
+      B: '"The <system> shall <requirement>"; "when <trigger> the <system> shall <requirement>"'
+      C: 'A framework for organizing requirements into hierarchical categories: Essential,
+        Auxiliary, Regulatory, and Supplementary'
+      D: A validation methodology that ensures requirements are Explicit, Achievable,
+        Relevant, and Specific before implementation
+    correct: B
+  application:
+    scenario: You are documenting requirements for a medical device monitoring system
+      that tracks patient vital signs. The system must handle various operational
+      states, emergency conditions, and optional features like wireless connectivity.
+      Your team needs clear, testable requirements that will support regulatory approval
+      and system verification.
+    anchor_prompt: using EARS-Requirements
+    paraphrase_prompt: structure these requirements using a systematic template-based
+      approach that ensures clarity and testability
+    options:
+      A: Write detailed user stories with acceptance criteria, organize them by epic
+        and priority, and include definition of done for each story to ensure the
+        development team understands the business value.
+      B: 'Structure requirements using specific templates: ''The system shall...''
+        for basic functions, ''WHEN alarm triggered the system shall...'' for events,
+        ''WHILE monitoring the system shall...'' for states, and ''IF battery low
+        THEN the system shall...'' for conditions.'
+      C: Create a comprehensive requirements specification document with functional
+        and non-functional sections, include use case diagrams, and establish a requirements
+        traceability matrix linking to test cases.
+      D: Define requirements as measurable objectives with key performance indicators,
+        establish SMART criteria for each requirement, and create a validation framework
+        with quantitative success metrics.
+    correct: B

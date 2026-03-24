@@ -1,0 +1,36 @@
+anchor: sota
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "SOTA (State-of-the-Art)"?
+
+      '
+    options:
+      A: A standardized framework for documenting software architecture decisions
+        and technical specifications across development teams
+      B: Focus on the most current, cutting-edge methods and techniques; reference
+        current research papers, benchmarks, and empirical results
+      C: A methodology for systematic testing and validation of software systems against
+        predefined quality assurance benchmarks
+      D: An agile development approach that emphasizes iterative prototyping and continuous
+        integration of emerging technologies
+    correct: B
+  application:
+    scenario: Your team is building a new document search system for a legal firm
+      that needs to handle complex queries across millions of legal documents. The
+      current keyword-based search is inadequate, and you need to implement semantic
+      search capabilities that can understand legal terminology and context.
+    anchor_prompt: using SOTA (State-of-the-Art)
+    paraphrase_prompt: What approach would ensure you're implementing the most current
+      and highest-performing solution based on recent research and benchmarks?
+    options:
+      A: Implement a well-documented TF-IDF approach with legal domain customizations,
+        as it's proven reliable and easier to maintain than newer experimental methods.
+      B: Research recent papers on semantic search benchmarks, compare transformer-based
+        embedding models like BGE and E5, and implement the approach showing best
+        performance on legal document retrieval tasks.
+      C: Use the same semantic search architecture that worked well in your previous
+        project, making minor adjustments for the legal domain and document types.
+      D: Follow the semantic search tutorial from the framework documentation, as
+        it represents the vendor's recommended best practices for production systems.
+    correct: B

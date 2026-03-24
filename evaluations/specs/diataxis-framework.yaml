@@ -1,0 +1,37 @@
+anchor: diataxis-framework
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Diátaxis Framework"?
+
+      '
+    options:
+      A: Agile methodology framework focusing on iterative development cycles with
+        continuous stakeholder feedback loops
+      B: 'Four documentation types; : learning-oriented, lessons for beginners'
+      C: Software architecture pattern that separates presentation, business logic,
+        and data access into distinct layers
+      D: Project management approach emphasizing cross-functional teams and rapid
+        prototyping for complex systems
+    correct: B
+  application:
+    scenario: Your team has developed a new API authentication library and needs to
+      create comprehensive documentation. Users are complaining that they can't find
+      what they need - some want to learn the basics, others need quick solutions
+      to specific problems, and developers need detailed technical specifications.
+    anchor_prompt: using Diátaxis Framework
+    paraphrase_prompt: organize the documentation to systematically address different
+      user needs and purposes
+    options:
+      A: Create a single comprehensive guide that covers everything from basic concepts
+        to advanced implementation details, organized by feature complexity from simple
+        to advanced use cases.
+      B: 'Develop four distinct documentation sections: beginner tutorials for learning,
+        task-specific how-to guides, complete API reference materials, and conceptual
+        explanations of authentication principles.'
+      C: Structure documentation around user personas, creating separate sections
+        for frontend developers, backend developers, security engineers, and project
+        managers with role-specific information.
+      D: 'Organize content chronologically following the typical development workflow:
+        planning, setup, implementation, testing, deployment, and maintenance phases.'
+    correct: B

@@ -1,0 +1,35 @@
+anchor: iec-61508-sil-levels
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "IEC 61508 SIL Levels"?
+
+      '
+    options:
+      A: 'Three Quality Assurance Levels; : 10^-3^ ≤ pfd < 10^-2^ (acceptable defect
+        density)'
+      B: 'Four Safety Integrity Levels; : 10^-2^ ≤ pfd < 10^-1^ (tolerable risk reduction)'
+      C: 'Five Reliability Assessment Levels; : 10^-4^ ≤ pfd < 10^-3^ (minimum performance
+        threshold)'
+      D: 'Six Verification Testing Levels; : 10^-1^ ≤ pfd < 10^0^ (standard compliance
+        range)'
+    correct: B
+  application:
+    scenario: Your team is developing a safety instrumented system for a chemical
+      processing plant that must prevent overpressure conditions. The hazard analysis
+      indicates that failure of this safety function could result in equipment damage
+      and potential worker injury, with a tolerable risk requiring the safety system
+      to have a probability of failure on demand between 10^-3 and 10^-2.
+    anchor_prompt: using IEC 61508 SIL Levels
+    paraphrase_prompt: determine the appropriate safety integrity classification and
+      corresponding development requirements for this safety function
+    options:
+      A: Classify as SIL 1, implement basic software development practices with minimal
+        verification requirements and simple hardware architecture constraints
+      B: Classify as SIL 2, implement structured software development methods with
+        moderate verification requirements and hardware fault tolerance measures
+      C: Classify as SIL 3, implement rigorous software development processes with
+        extensive verification and validation plus high hardware fault tolerance
+      D: Classify as SIL 4, implement the most stringent development processes with
+        maximum verification requirements and highest level hardware redundancy
+    correct: B

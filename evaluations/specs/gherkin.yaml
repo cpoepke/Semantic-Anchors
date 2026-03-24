@@ -1,0 +1,40 @@
+anchor: gherkin
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Gherkin"?
+
+      '
+    options:
+      A: A domain-specific language for writing human-readable executable specifications
+        using Given/When/Then keywords in behavior-driven development
+      B: A software testing methodology that emphasizes writing failing tests first,
+        then implementing the minimum code to make them pass
+      C: A requirements elicitation technique using targeted questions to uncover
+        assumptions and clarify stakeholder needs
+      D: A structured format for documenting acceptance criteria using natural language
+        templates with numbered steps and expected outcomes
+    correct: A
+  application:
+    scenario: Your team is developing an e-commerce checkout system where business
+      analysts need to specify payment validation rules that developers can implement
+      and testers can verify. The product owner wants to ensure that both successful
+      payments and various error conditions are properly handled, and all stakeholders
+      need to understand the expected behavior.
+    anchor_prompt: using Gherkin
+    paraphrase_prompt: structure the payment validation specifications so they can
+      serve as both human-readable documentation and automated test cases
+    options:
+      A: Write detailed technical specifications in confluence with UML diagrams showing
+        payment flow states, then create separate unit tests with mock payment gateways
+        to verify each validation rule independently.
+      B: Create feature files with scenarios that use Given-When-Then steps to describe
+        payment contexts, user actions, and expected outcomes, organizing related
+        scenarios under payment validation features with shared background steps.
+      C: Document payment rules in user story format with acceptance criteria bullets,
+        then implement integration tests that call actual payment APIs to validate
+        the complete payment processing workflow.
+      D: Build a requirements traceability matrix linking business rules to test cases,
+        then write automated UI tests that simulate user interactions with the checkout
+        form to verify payment validation behavior.
+    correct: B

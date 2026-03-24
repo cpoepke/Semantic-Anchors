@@ -1,0 +1,38 @@
+anchor: user-story-mapping
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "User Story Mapping"?
+
+      '
+    options:
+      A: Visual representation of user personas mapped to specific system requirements
+        and acceptance criteria
+      B: Horizontal arrangement of user activities; high-level tasks users perform
+      C: Hierarchical breakdown of software features organized by technical complexity
+        and development priority
+      D: Sequential workflow diagram showing user interactions and system responses
+        throughout the application lifecycle
+    correct: B
+  application:
+    scenario: Your team is building a new e-commerce mobile app and has collected
+      47 user stories in the backlog. The product owner is struggling to explain the
+      release strategy to stakeholders, and developers are confused about how individual
+      stories connect to the overall user experience.
+    anchor_prompt: using User Story Mapping
+    paraphrase_prompt: What approach would best help the team visualize the complete
+      user journey and plan incremental releases?
+    options:
+      A: Group stories by technical complexity and implement the easiest ones first,
+        then present a demo to stakeholders showing completed features in order of
+        development difficulty.
+      B: Arrange stories horizontally by user activities in chronological order, then
+        stack them vertically by priority to identify thin slices of end-to-end functionality
+        for each release.
+      C: Create a detailed project timeline with all stories assigned to specific
+        sprints, then hold stakeholder meetings to review the Gantt chart and adjust
+        dates based on feedback.
+      D: Categorize stories by user role and estimate story points for each category,
+        then create a burndown chart to track progress and communicate velocity to
+        stakeholders.
+    correct: B

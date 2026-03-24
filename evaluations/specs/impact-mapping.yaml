@@ -1,0 +1,39 @@
+anchor: impact-mapping
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Impact Mapping"?
+
+      '
+    options:
+      A: User → Stories → Epics → Features; requirement decomposition methodology
+        focusing on user needs and system capabilities
+      B: Goal → Actors → Impacts → Deliverables; business objective (why?)
+      C: Problem → Analysis → Design → Implementation; systematic approach to software
+        development through structured phase transitions
+      D: Stakeholder → Requirements → Architecture → Code; traceability framework
+        linking business needs to technical implementation details
+    correct: B
+  application:
+    scenario: Your e-commerce platform team has been asked to increase customer retention
+      by 15% over the next six months. The stakeholders have different opinions on
+      what features to build, with marketing wanting loyalty programs, engineering
+      suggesting performance improvements, and customer service pushing for better
+      support tools.
+    anchor_prompt: using Impact Mapping
+    paraphrase_prompt: to create a goal-oriented plan that connects business outcomes
+      to specific deliverables while identifying key stakeholders
+    options:
+      A: Create a feature prioritization matrix ranking loyalty programs, performance
+        improvements, and support tools based on development effort and expected customer
+        impact scores.
+      B: Map the retention goal to key actors (existing customers, support agents,
+        marketing team), identify how their behaviors need to change, then determine
+        what deliverables enable those behavior changes.
+      C: Conduct user story mapping sessions with all stakeholders to create a shared
+        product backlog organized by customer journey stages and prioritized by business
+        value.
+      D: Develop a roadmap showing three parallel workstreams for loyalty features,
+        performance optimization, and support enhancements with clear milestones and
+        dependencies.
+    correct: B

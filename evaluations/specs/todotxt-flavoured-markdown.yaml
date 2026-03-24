@@ -1,0 +1,42 @@
+anchor: todotxt-flavoured-markdown
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "todo.txt-flavoured Markdown"?
+
+      '
+    options:
+      A: A markup syntax that extends standard Markdown with project management features
+        using `@context` and `+project` tags, prioritized by numerical prefixes like
+        `1.`, `2.`, `3.`
+      B: Standard GitHub-flavoured markdown syntax (`- [ ]` uncompleted, `- [x]` completed);
+        uses todo.txt priority notation `(a)`, `(b)`, `(c)` where `(a)` is highest
+        priority
+      C: A documentation format that combines reStructuredText syntax with Kanban-style
+        workflow markers (`TODO:`, `DOING:`, `DONE:`) and uses hashtag priority levels
+        `#high`, `#medium`, `#low`
+      D: An issue tracking notation that merges JIRA-style ticket formatting with
+        plain text using bracketed status indicators `[OPEN]`, `[CLOSED]` and priority
+        weights expressed as `{P1}`, `{P2}`, `{P3}`
+    correct: B
+  application:
+    scenario: Your team is managing multiple feature development streams and bug fixes
+      across different projects. Team members need to track tasks that vary in priority,
+      belong to different projects, require specific tools or contexts, and have various
+      deadlines.
+    anchor_prompt: using todo.txt-flavoured Markdown
+    paraphrase_prompt: How should you structure your task list to combine readable
+      markdown formatting with systematic priority levels, project groupings, context
+      indicators, and searchable metadata?
+    options:
+      A: 'Use standard bullet points with custom formatting like `* HIGH: [Website]
+        Fix login bug - Computer work - Due: Feb 5th` and mark completed items by
+        moving them to a separate section'
+      B: Use checkbox syntax with priority letters, plus-prefixed project tags, at-prefixed
+        contexts, and key:value pairs like `- [ ] (A) Fix login bug +website @computer
+        due:2024-02-05`
+      C: Create separate markdown files for each priority level and use YAML frontmatter
+        to specify project, context, and due dates for each task list
+      D: 'Use numbered lists with emoji indicators for priority (🔥⚡⏰) and hashtag-style
+        tags like `1. 🔥 Fix login bug #website #computer #due-feb-5`'
+    correct: B

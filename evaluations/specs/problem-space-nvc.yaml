@@ -1,0 +1,47 @@
+anchor: problem-space-nvc
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Nonviolent Communication (Rosenberg)"?
+
+      '
+    options:
+      A: A structured approach to code reviews that emphasizes constructive feedback
+        through specific examples and actionable suggestions rather than general criticism.
+      B: Concrete, objective facts without evaluation or judgment. "The deploy failed
+        three times this week" instead of "The deploy always fails."; emotions arising
+        from observations. "i feel frustrated" instead of "this is frustrating."
+      C: A conflict resolution methodology that focuses on identifying root causes
+        of team disagreements and establishing clear communication protocols between
+        stakeholders.
+      D: An agile communication framework that prioritizes transparent status updates
+        and eliminates ambiguous language in sprint retrospectives and daily standups.
+    correct: B
+  application:
+    scenario: 'A product manager sends an email to the development team: ''The search
+      feature is completely broken and users are complaining constantly. You developers
+      never test anything properly before releasing. This is unacceptable and needs
+      to be fixed immediately.'' The team lead wants to respond in a way that addresses
+      the concerns while maintaining a collaborative relationship.'
+    anchor_prompt: using Nonviolent Communication (Rosenberg)
+    paraphrase_prompt: Transform this response to follow a structured approach that
+      separates facts from judgments, acknowledges emotions, identifies underlying
+      needs, and makes specific actionable requests.
+    options:
+      A: I understand you're frustrated with the search feature. However, saying we
+        'never test properly' isn't accurate - we do have testing procedures. Let's
+        schedule a meeting to discuss how we can improve our QA process and address
+        the user complaints more systematically.
+      B: I notice the search feature has generated 15 user complaints this week. I
+        feel concerned because I value delivering quality software that meets user
+        needs. Could we schedule a 30-minute meeting tomorrow to review the specific
+        issues and create an action plan together?
+      C: Thanks for bringing this to our attention. You're right that the search feature
+        has issues and we need to address them quickly. I'll have the team prioritize
+        this as our top bug fix and we'll provide daily updates on our progress until
+        it's resolved.
+      D: I appreciate your passion for quality, and I share your concern about user
+        experience. While the search feature does have problems, let's focus on solutions
+        rather than blame. What specific search scenarios are failing, and what would
+        success look like from your perspective?
+    correct: B

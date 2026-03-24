@@ -1,0 +1,42 @@
+anchor: pyramid-principle
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Pyramid Principle according
+      to Barbara Minto"?
+
+      '
+    options:
+      A: Hierarchical software architecture pattern where base components support
+        higher-level modules; follows dependency inversion with abstractions at the
+        top layer
+      B: Single key message at the top of the pyramid; situation → complication →
+        question → answer structure for setting context
+      C: Project management framework organizing tasks in ascending priority levels;
+        uses risk assessment → resource allocation → timeline planning → execution
+        phases
+      D: Information architecture methodology structuring content from broad categories
+        to specific details; applies user journey mapping with navigation flow optimization
+    correct: B
+  application:
+    scenario: Your engineering team has discovered a critical security vulnerability
+      in the production system that requires immediate attention and significant resources
+      to fix. The CTO has requested a 10-minute presentation to the executive team
+      explaining the situation and recommending next steps.
+    anchor_prompt: using Pyramid Principle according to Barbara Minto
+    paraphrase_prompt: How should you structure your presentation to maximize clarity
+      and executive buy-in for your recommended solution?
+    options:
+      A: Start with technical details of the vulnerability, explain how it was discovered,
+        walk through potential attack vectors, then conclude with your recommended
+        fix and resource requirements.
+      B: Lead with your recommendation to allocate resources for immediate patching,
+        then explain the current security risk situation, the complications it creates
+        for business operations, and supporting evidence for your proposed solution.
+      C: Present three possible solutions with pros and cons for each, provide detailed
+        technical analysis of the vulnerability, then ask the executives to vote on
+        which approach they prefer.
+      D: Begin by establishing credibility through your team's security expertise,
+        chronologically explain how the vulnerability was discovered, detail the investigation
+        process, then present findings and recommendations.
+    correct: B

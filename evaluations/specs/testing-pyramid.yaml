@@ -1,0 +1,35 @@
+anchor: testing-pyramid
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Testing Pyramid"?
+
+      '
+    options:
+      A: A hierarchical structure where system tests form the base, integration tests
+        the middle, and unit tests the top layer
+      B: Three layers; more unit tests, fewer e2e tests
+      C: A risk assessment framework that categorizes software defects into three
+        priority levels based on severity impact
+      D: A test organization model where manual testing supports automated testing
+        which supports exploratory testing at the apex
+    correct: B
+  application:
+    scenario: Your team is developing an e-commerce platform and currently has 20
+      unit tests, 50 integration tests, and 80 end-to-end tests. The CI/CD pipeline
+      takes 45 minutes to run, and developers are frustrated with slow feedback on
+      their commits. Management wants to improve development velocity while maintaining
+      quality.
+    anchor_prompt: using Testing Pyramid
+    paraphrase_prompt: What test distribution strategy would best optimize feedback
+      speed while maintaining comprehensive coverage?
+    options:
+      A: Increase all test types proportionally to 40 unit tests, 100 integration
+        tests, and 160 end-to-end tests for better coverage
+      B: Restructure to 200 unit tests, 40 integration tests, and 15 end-to-end tests,
+        moving logic validation to faster test layers
+      C: Focus primarily on integration tests with 30 unit tests, 120 integration
+        tests, and 20 end-to-end tests for balanced coverage
+      D: Maintain current ratios but optimize each test type for speed without changing
+        the overall distribution strategy
+    correct: B

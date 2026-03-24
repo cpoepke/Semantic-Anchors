@@ -1,0 +1,39 @@
+anchor: adr-according-to-nygard
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "ADR according to Nygard"?
+
+      '
+    options:
+      A: Comprehensive architecture documentation with twelve standardized sections
+        covering context, building blocks, runtime, and deployment views
+      B: Lightweight records that capture a single architecture decision with its
+        context, decision, status, and consequences in a short, focused format
+      C: Collaborative review process where stakeholders evaluate architecture tradeoffs
+        through scenario-based analysis and quality attribute workshops
+      D: Visual modeling technique that represents software architecture at four levels
+        of abstraction from system context down to code
+    correct: B
+  application:
+    scenario: Your team is building a microservices platform and needs to choose between
+      REST APIs and GraphQL for service communication. The decision involves trade-offs
+      between performance, complexity, team expertise, and future scalability requirements.
+    anchor_prompt: using ADR according to Nygard
+    paraphrase_prompt: How should you document this architectural choice to ensure
+      future team members understand the reasoning and can make informed decisions
+      about related architecture changes?
+    options:
+      A: Create a comprehensive design document with detailed technical specifications,
+        implementation guidelines, and performance benchmarks that can be updated
+        as requirements change.
+      B: Write a concise record with the decision title, current status, context explaining
+        the forces at play, the chosen solution, and both positive and negative consequences,
+        then store it immutably with the codebase.
+      C: Document the decision in the project wiki with a detailed comparison matrix,
+        stakeholder approval signatures, and a change log for future modifications
+        to the decision.
+      D: Prepare a formal architecture review presentation covering the evaluation
+        criteria, alternative solutions considered, and implementation roadmap, then
+        archive it in the project repository.
+    correct: B

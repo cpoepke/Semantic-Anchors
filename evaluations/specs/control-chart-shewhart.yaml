@@ -1,0 +1,32 @@
+anchor: control-chart-shewhart
+tier: 3
+questions:
+  recognition:
+    question: 'Which of the following best describes "Control Chart (Shewhart)"?
+
+      '
+    options:
+      A: Graphical representation of system architecture components and their dependencies
+      B: Measured value plotted over time; process mean
+      C: Visual workflow diagram showing sequential steps in a development process
+      D: Matrix displaying test coverage metrics across different software modules
+    correct: B
+  application:
+    scenario: Your team is monitoring API response times for a critical microservice
+      that handles user authentication. Over the past month, you've collected response
+      time measurements every hour during business hours. The service occasionally
+      experiences unexplained spikes in response time that affect user experience.
+    anchor_prompt: using Control Chart (Shewhart)
+    paraphrase_prompt: to systematically distinguish between normal performance fluctuations
+      and genuine performance issues that require investigation
+    options:
+      A: Set fixed thresholds at 95th and 99th percentiles of historical data, then
+        alert whenever current measurements exceed these static boundaries
+      B: Plot response times over time with a centerline at the process mean and control
+        limits at ±3 standard deviations, then investigate points outside these limits
+        or patterns within the limits
+      C: Use machine learning anomaly detection to automatically identify outliers
+        based on complex multivariate patterns in the time series data
+      D: Calculate rolling averages over 24-hour windows and trigger alerts when the
+        current average deviates more than 20% from the previous day's average
+    correct: B
