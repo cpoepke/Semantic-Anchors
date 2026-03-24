@@ -19,3 +19,24 @@ questions:
         Should have, Could have, and Won't have categories; helps teams focus on essential
         features while managing scope and stakeholder expectations effectively
     correct: B
+  application:
+    scenario: Your agile team has been experiencing issues with features being marked
+      as complete during sprints, only to discover missing documentation, failing
+      edge case tests, or incomplete code reviews during the final sprint review.
+      The Product Owner is frustrated because features appear done in daily standups
+      but aren't actually ready for release.
+    anchor_prompt: using Definition of Done
+    paraphrase_prompt: establish a shared understanding of what constitutes truly
+      completed work to prevent late-cycle surprises and ensure consistent quality
+      standards
+    options:
+      A: Create individual checklists for each team member based on their role and
+        expertise, allowing developers to focus on code while QA handles testing criteria
+      B: Collaboratively create a single, team-wide checklist of quality criteria
+        that every increment must satisfy before being declared complete, including
+        code review, tests passing, and documentation updated
+      C: Have the Product Owner define completion criteria for each user story individually
+        based on business value and customer requirements
+      D: Implement a post-sprint quality gate where a designated team lead reviews
+        all completed work and decides what meets release standards
+    correct: B

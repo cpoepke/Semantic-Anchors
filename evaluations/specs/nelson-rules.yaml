@@ -15,3 +15,22 @@ questions:
       D: Eight points beyond 1σ on alternating sides (Variance); 5 consecutive points
         forming a pattern (Sequence)
     correct: B
+  application:
+    scenario: Your team is monitoring API response times using a control chart with
+      mean=200ms and standard deviation=50ms. Over the past 15 data points, you notice
+      that 14 consecutive measurements have been alternating between values above
+      and below the mean (e.g., 220ms, 180ms, 230ms, 170ms, etc.), creating a zigzag
+      pattern.
+    anchor_prompt: using Nelson Rules
+    paraphrase_prompt: to systematically detect whether this alternating pattern indicates
+      a non-random process issue that requires investigation
+    options:
+      A: Focus only on whether any individual points exceed 3 standard deviations
+        from the mean, as this is the most reliable indicator of process problems
+      B: Flag this as a special cause violation since 14 alternating points up and
+        down indicates systematic oscillation that suggests an assignable cause
+      C: Wait for at least 9 consecutive points on the same side of the mean before
+        concluding there is a process shift requiring attention
+      D: Check if 4 out of 5 consecutive points fall beyond 1 standard deviation on
+        the same side before taking corrective action
+    correct: B

@@ -15,3 +15,21 @@ questions:
       D: Verify code stability by introducing controlled runtime errors and monitoring
         how the system handles unexpected failures
     correct: B
+  application:
+    scenario: Your team has achieved 95% code coverage on a critical payment processing
+      module, but recent production bugs have slipped through despite the high coverage
+      numbers. Management is questioning whether the existing test suite is actually
+      effective at catching defects.
+    anchor_prompt: using Mutation Testing
+    paraphrase_prompt: to evaluate whether your tests can actually detect bugs rather
+      than just execute code
+    options:
+      A: Add more unit tests to increase code coverage to 100% and focus on testing
+        edge cases that weren't previously covered
+      B: Introduce small deliberate code changes like flipping operators or removing
+        statements, then run your test suite to see which changes go undetected
+      C: Perform static code analysis to identify potential vulnerabilities and code
+        smells that could lead to production defects
+      D: Implement property-based testing to generate random inputs and verify that
+        system invariants hold across all scenarios
+    correct: B

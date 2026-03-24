@@ -15,3 +15,25 @@ questions:
       D: Develop code in small iterations with continuous refactoring; emphasize pair
         programming and collective code ownership practices
     correct: B
+  application:
+    scenario: You're developing an e-commerce order processing system with complex
+      business rules for discounts, taxes, and inventory management. The team needs
+      to implement the core OrderCalculator class that handles pricing logic, integrating
+      with external payment and inventory services.
+    anchor_prompt: using TDD, Chicago School
+    paraphrase_prompt: What approach should you take to develop and test this core
+      business logic component?
+    options:
+      A: Start by mocking all dependencies including the payment service, inventory
+        service, and database connections, then write tests that verify method calls
+        and interactions between components.
+      B: Begin with tests for the core pricing calculations using real domain objects,
+        mock only the external payment and inventory services, and let the design
+        emerge through refactoring cycles.
+      C: Create comprehensive interface definitions and mock implementations for all
+        collaborating objects first, then build the OrderCalculator by specifying
+        expected behavior through interaction testing.
+      D: Write integration tests that cover the entire order flow from UI to database,
+        then extract unit tests for individual components based on the integration
+        test scenarios.
+    correct: B

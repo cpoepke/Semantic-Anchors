@@ -15,3 +15,21 @@ questions:
       D: Assign responsibility for identifying risks and negative outcomes to a designated
         team member during planning sessions
     correct: B
+  application:
+    scenario: Your team has designed a new microservices architecture that will replace
+      the current monolithic system. The design has been well-received by stakeholders
+      and addresses all known requirements. Before finalizing the architecture decision,
+      you want to ensure you haven't overlooked critical issues.
+    anchor_prompt: using Devil's Advocate
+    paraphrase_prompt: What approach should you take to identify potential weaknesses
+      in your architecture design before implementation?
+    options:
+      A: Conduct a final walkthrough with stakeholders to confirm the design meets
+        all their stated requirements and get formal sign-off
+      B: Systematically argue against your own design by presenting the strongest
+        possible case for why this architecture could fail or cause problems
+      C: Create detailed implementation timelines and resource estimates to validate
+        the feasibility of the proposed architecture
+      D: Research similar architectures used by other companies to benchmark your
+        design against industry best practices
+    correct: B

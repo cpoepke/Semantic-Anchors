@@ -24,3 +24,28 @@ questions:
         rationale, and consequences of significant architectural choices made during
         software development projects.
     correct: B
+  application:
+    scenario: Your development team is building a new mobile banking application and
+      needs to establish quality requirements for the project. The product owner has
+      expressed concerns about user satisfaction, system downtime, and data protection,
+      but the requirements are currently vague and unmeasurable. The team needs a
+      structured approach to define specific, testable quality criteria that align
+      with industry standards.
+    anchor_prompt: using ISO/IEC 25010
+    paraphrase_prompt: to establish comprehensive, measurable quality requirements
+      that cover all critical aspects of software quality
+    options:
+      A: Focus primarily on functional requirements and add basic performance benchmarks,
+        security protocols, and user acceptance criteria as secondary considerations
+        to be refined during testing phases.
+      B: 'Define specific measurable requirements across the eight quality characteristics:
+        functional suitability, performance efficiency, compatibility, usability,
+        reliability, security, maintainability, and portability, with concrete sub-characteristics
+        for each.'
+      C: Create a custom quality framework based on stakeholder interviews, competitor
+        analysis, and industry best practices, then map these findings to relevant
+        testing strategies and acceptance criteria.
+      D: Establish quality gates focused on code coverage, automated testing results,
+        security scan outcomes, and user story completion rates to ensure comprehensive
+        quality measurement throughout development.
+    correct: B

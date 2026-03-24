@@ -14,3 +14,18 @@ questions:
       D: Documentation standard that requires detailed explanations of API functionality
         and business logic for each software release
     correct: B
+  application:
+    scenario: You maintain a JavaScript authentication library that currently has
+      version 2.3.1. You need to release an update that adds a new optional parameter
+      to an existing login method, includes several bug fixes for token validation,
+      and removes a deprecated method that was marked for removal six months ago.
+    anchor_prompt: using Semantic Versioning (SemVer)
+    paraphrase_prompt: determine the appropriate version number for this release that
+      properly communicates the impact of changes to library consumers
+    options:
+      A: 2.3.2 - since the new parameter is optional and doesn't break existing code
+      B: 3.0.0 - because removing the deprecated method constitutes a breaking change
+      C: 2.4.0 - to reflect the addition of new functionality with the optional parameter
+      D: 2.3.1-update.1 - using pre-release notation to indicate multiple types of
+        changes
+    correct: B

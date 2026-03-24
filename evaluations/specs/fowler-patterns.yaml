@@ -19,3 +19,25 @@ questions:
         logic layer, data access layer, and cross-cutting concerns like logging, security,
         and transaction management
     correct: B
+  application:
+    scenario: Your team is building an e-commerce platform where customer orders involve
+      complex business rules like discount calculations, inventory checks, and shipping
+      validations. The application needs to handle high transaction volumes while
+      maintaining data consistency across multiple database tables.
+    anchor_prompt: using Patterns of Enterprise Application Architecture (PEAA)
+    paraphrase_prompt: What architectural approach would best organize the business
+      logic and data access for this complex transactional system?
+    options:
+      A: Implement a microservices architecture with each service handling a single
+        business capability, using REST APIs for communication and eventual consistency
+        for data synchronization.
+      B: Use a Domain Model pattern for complex business logic with a Data Mapper
+        pattern for persistence, complemented by a Unit of Work pattern to manage
+        transactions across multiple entities.
+      C: Create a single monolithic service with stored procedures handling all business
+        logic in the database layer, using direct SQL calls from the presentation
+        tier.
+      D: Build a reactive event-driven system using CQRS with separate read and write
+        models, implementing event sourcing to capture all state changes as immutable
+        events.
+    correct: B

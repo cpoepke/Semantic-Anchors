@@ -16,3 +16,26 @@ questions:
       D: Design approach that focuses on creating reusable software components with
         well-defined interfaces that can be composed into larger systems
     correct: B
+  application:
+    scenario: Your team is building a complex insurance claims processing system where
+      business rules frequently change and involve multiple departments (underwriting,
+      claims adjustment, fraud detection, customer service). The business stakeholders
+      use terms like 'policy holder,' 'coverage limits,' and 'claim settlement' but
+      developers are implementing these concepts inconsistently across different parts
+      of the system.
+    anchor_prompt: using Domain-Driven Design according to Evans
+    paraphrase_prompt: to ensure consistent understanding and implementation of business
+      concepts across the development team and stakeholders
+    options:
+      A: Create comprehensive technical documentation that maps business terms to
+        database schemas and API endpoints, then train all developers on the correct
+        technical implementations
+      B: Establish a ubiquitous language by working closely with domain experts to
+        define shared vocabulary, then ensure this language is consistently used in
+        code, conversations, and models
+      C: Implement a centralized data dictionary service that validates all business
+        term usage across microservices and enforces standardized naming conventions
+      D: Organize regular cross-functional meetings where business stakeholders explain
+        requirements to developers using standardized requirement templates and acceptance
+        criteria
+    correct: B

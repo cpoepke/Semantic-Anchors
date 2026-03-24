@@ -15,3 +15,25 @@ questions:
       D: Generate creative solutions by combining random elements from different domains
         through structured brainstorming techniques
     correct: B
+  application:
+    scenario: 'Your team is designing a new API gateway solution and needs to explore
+      all possible architectural combinations. There are multiple independent dimensions
+      to consider: authentication methods (OAuth2, JWT, API keys, mTLS), rate limiting
+      strategies (token bucket, sliding window, fixed window), storage backends (Redis,
+      PostgreSQL, DynamoDB), and deployment models (containerized, serverless, VM-based).'
+    anchor_prompt: using Morphological Box
+    paraphrase_prompt: What systematic approach should you take to ensure you've considered
+      all viable architectural combinations before making design decisions?
+    options:
+      A: Focus on the most critical dimension first, select the best option for that
+        dimension, then optimize the remaining dimensions around that choice to reduce
+        complexity
+      B: Create a matrix with each dimension as a column, list all possible options
+        for each dimension as rows, then systematically evaluate combinations while
+        filtering out infeasible ones
+      C: Conduct stakeholder interviews to determine preferences for each dimension,
+        then use weighted scoring to rank the top three combinations based on business
+        priorities
+      D: Research industry best practices for each dimension independently, then combine
+        the most popular choices from each category to create a proven solution
+    correct: B

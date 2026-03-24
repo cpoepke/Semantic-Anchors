@@ -1,13 +1,38 @@
 anchor: docs-as-code
 tier: 3
-
 questions:
   recognition:
-    question: |
-      Which of the following best describes "Docs-as-Code according to Ralf D. Müller"?
+    question: 'Which of the following best describes "Docs-as-Code according to Ralf
+      D. Müller"?
+
+      '
     options:
-      A: "Writing documentation in a wiki with WYSIWYG editing and real-time collaboration"
-      B: "Treating documentation like source code: version-controlled, peer-reviewed, and built automatically"
-      C: "Generating API documentation automatically from code annotations and docstrings"
-      D: "Maintaining a separate documentation repository with its own release cycle"
+      A: Writing documentation in a wiki with WYSIWYG editing and real-time collaboration
+      B: 'Treating documentation like source code: version-controlled, peer-reviewed,
+        and built automatically'
+      C: Generating API documentation automatically from code annotations and docstrings
+      D: Maintaining a separate documentation repository with its own release cycle
+    correct: B
+  application:
+    scenario: Your development team maintains a microservices platform with complex
+      API documentation that frequently becomes outdated when code changes. The team
+      uses Git for version control and has automated CI/CD pipelines. Management wants
+      documentation that stays synchronized with code changes and can be generated
+      in multiple formats for different stakeholders.
+    anchor_prompt: using Docs-as-Code according to Ralf D. Müller
+    paraphrase_prompt: How should you structure and manage the documentation workflow
+      to ensure it remains current and accessible?
+    options:
+      A: Create a centralized wiki system with automated API extraction, assign documentation
+        ownership to technical writers, and schedule weekly documentation reviews
+        to ensure accuracy across all services.
+      B: Write documentation in AsciiDoc format stored in Git repositories alongside
+        code, implement docToolchain with Gradle automation, use PlantUML for diagrams,
+        and require documentation updates in every pull request.
+      C: Implement a headless CMS with version control integration, create documentation
+        templates in Microsoft Word, and establish a quarterly documentation sprint
+        cycle with stakeholder review sessions.
+      D: Set up Confluence spaces linked to JIRA tickets, use embedded Lucidchart
+        diagrams, create documentation branches that merge after code releases, and
+        maintain separate review cycles for docs and code.
     correct: B

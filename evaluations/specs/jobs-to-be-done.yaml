@@ -14,3 +14,24 @@ questions:
       D: A methodology for mapping employee responsibilities to business objectives
         and performance metrics
     correct: B
+  application:
+    scenario: A fitness app company is struggling with low user retention despite
+      having comprehensive features like workout tracking, nutrition logging, and
+      social sharing. Users download the app but stop using it within two weeks. The
+      product team needs to understand why users aren't sticking with their solution.
+    anchor_prompt: using Jobs To Be Done (JTBD)
+    paraphrase_prompt: What approach should the product team take to understand the
+      underlying reasons users seek fitness solutions and why they abandon the current
+      app?
+    options:
+      A: Conduct user surveys asking about preferred features, UI design feedback,
+        and demographic information to identify which user segments need different
+        functionality
+      B: Interview users about the specific circumstances that led them to seek a
+        fitness solution, what progress they were trying to make, and what they hired
+        instead when they stopped using the app
+      C: Analyze competitor apps to identify missing features and benchmark against
+        industry best practices for user engagement and retention metrics
+      D: Create detailed user personas based on age, fitness level, and lifestyle
+        to design targeted features for each segment and improve onboarding flows
+    correct: B

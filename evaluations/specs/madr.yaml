@@ -13,3 +13,25 @@ questions:
         approach
       D: Risk assessment framework for technical debt management; evaluation methodology
     correct: B
+  application:
+    scenario: Your team is evaluating three different caching strategies (Redis, Memcached,
+      or in-memory caching) for a high-traffic e-commerce platform. The decision will
+      significantly impact performance, scalability, and operational complexity. You
+      need to document this architectural decision for future reference and stakeholder
+      review.
+    anchor_prompt: using MADR
+    paraphrase_prompt: document this architectural decision with a structured approach
+      that explicitly captures all evaluated alternatives and their trade-offs
+    options:
+      A: Create a simple decision log entry with the chosen option (Redis) and a brief
+        rationale, then store it in the project wiki for easy access and updates.
+      B: Document the decision with sections for context, decision drivers, all three
+        caching options as considered alternatives, pros/cons analysis for each, and
+        the final outcome with justification.
+      C: Write a comprehensive technical specification document detailing the implementation
+        approach for Redis, including configuration parameters, monitoring setup,
+        and deployment procedures.
+      D: Record the decision in a structured format focusing primarily on the chosen
+        solution's benefits and implementation details, with minimal coverage of rejected
+        alternatives.
+    correct: B

@@ -7,13 +7,33 @@ questions:
       '
     options:
       A: A security threat modeling framework that categorizes threats into Spoofing,
-        Tampering, Repudiation, Information Disclosure, Denial of Service, and
-        Elevation of Privilege
+        Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation
+        of Privilege
       B: A privacy threat modeling framework that systematically identifies threats
         like Linkability, Identifiability, Non-repudiation, Detectability, Disclosure
         of information, Unawareness, and Non-compliance
       C: A data protection compliance checklist for ensuring GDPR conformity through
         technical and organizational measures
-      D: A risk assessment methodology that evaluates security controls against
-        a catalog of known vulnerabilities and attack patterns
+      D: A risk assessment methodology that evaluates security controls against a
+        catalog of known vulnerabilities and attack patterns
+    correct: B
+  application:
+    scenario: A healthcare startup is developing a telemedicine platform that collects
+      patient medical records, processes video consultations, and shares data with
+      insurance providers. The development team needs to systematically identify potential
+      privacy risks before the platform launches to ensure GDPR compliance.
+    anchor_prompt: using LINDDUN
+    paraphrase_prompt: What systematic approach should the team take to comprehensively
+      identify and categorize privacy threats across all aspects of their data handling
+      practices?
+    options:
+      A: Focus primarily on encryption and access controls, then conduct penetration
+        testing to identify vulnerabilities in data transmission and storage mechanisms.
+      B: 'Systematically analyze the system against seven privacy threat categories:
+        Linkability, Identifiability, Non-repudiation, Detectability, Disclosure,
+        Unawareness, and Non-compliance to identify specific privacy risks.'
+      C: Implement a risk assessment matrix focusing on data classification, user
+        authentication, and regulatory compliance requirements across different jurisdictions.
+      D: Conduct stakeholder interviews to understand privacy concerns, then map data
+        flows and apply general security threat modeling techniques to identify risks.
     correct: B

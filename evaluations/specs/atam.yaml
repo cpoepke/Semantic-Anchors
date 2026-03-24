@@ -16,3 +16,23 @@ questions:
       D: Structured code review process with defined roles and phases that inspects
         software artifacts against checklists and specifications
     correct: B
+  application:
+    scenario: Your team is designing a financial trading platform where stakeholders
+      demand sub-100ms response times for trade execution, 99.99% uptime, and bank-level
+      security compliance. The architecture team has proposed using microservices
+      with event sourcing, but concerns have been raised about whether this approach
+      can simultaneously meet all quality requirements.
+    anchor_prompt: using ATAM
+    paraphrase_prompt: What systematic approach would best help evaluate whether the
+      proposed architecture can achieve the conflicting quality requirements?
+    options:
+      A: Conduct load testing on a prototype implementation to measure actual performance
+        metrics and identify bottlenecks before making architectural decisions.
+      B: Build a utility tree to prioritize quality scenarios, then analyze how microservices
+        and event sourcing create tradeoff points between performance, availability,
+        and security.
+      C: Create detailed architecture documentation with UML diagrams and have senior
+        architects review the design against established enterprise patterns.
+      D: Implement proof-of-concept services for critical components and run security
+        penetration tests to validate compliance requirements early.
+    correct: B

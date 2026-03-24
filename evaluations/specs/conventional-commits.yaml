@@ -15,3 +15,30 @@ questions:
       D: A deployment methodology that requires all releases to pass through predefined
         stages with automated gates and rollback capabilities
     correct: B
+  application:
+    scenario: Your team is preparing to release version 2.1.3 of your API library.
+      During code review, you notice that one developer's pull request removes a deprecated
+      method that some users might still be calling, while another developer's PR
+      adds a new optional parameter to an existing function. The team lead wants all
+      commit messages to clearly indicate how these changes should affect the next
+      version number.
+    anchor_prompt: using Conventional Commits
+    paraphrase_prompt: structure the commit messages to clearly communicate the semantic
+      versioning impact of these changes
+    options:
+      A: 'feat: remove deprecated getUserData method and add timeout parameter to
+        fetchUser function'
+      B: 'feat!: remove deprecated getUserData method
+
+
+        BREAKING CHANGE: getUserData method no longer available
+
+
+        feat: add optional timeout parameter to fetchUser function'
+      C: 'refactor: remove getUserData method
+
+
+        enhancement: add timeout parameter to fetchUser function'
+      D: 'chore: clean up deprecated getUserData method and improve fetchUser function
+        with timeout support'
+    correct: B

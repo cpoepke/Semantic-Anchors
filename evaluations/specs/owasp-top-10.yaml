@@ -7,12 +7,36 @@ questions:
       '
     options:
       A: A regularly updated list of the ten most critical web application security
-        risks, covering threats like injection, broken access control, and
-        cryptographic failures
-      B: A comprehensive framework for assessing software reliability and safety
-        integrity levels in critical systems with four distinct SIL classifications
-      C: An industry standard methodology for evaluating cybersecurity maturity
-        across organizational processes with five progressive capability levels
+        risks, covering threats like injection, broken access control, and cryptographic
+        failures
+      B: A comprehensive framework for assessing software reliability and safety integrity
+        levels in critical systems with four distinct SIL classifications
+      C: An industry standard methodology for evaluating cybersecurity maturity across
+        organizational processes with five progressive capability levels
       D: A systematic approach to privacy threat modeling that identifies linkability,
         identifiability, and disclosure risks in software systems
     correct: A
+  application:
+    scenario: Your team is conducting a security review of a web application that
+      handles customer financial data. During the assessment, you discover that user
+      input from web forms is directly concatenated into SQL queries without validation,
+      the application uses default database credentials, and sensitive customer data
+      is stored in plain text. The development team needs to prioritize which security
+      issues to address first.
+    anchor_prompt: using OWASP Top 10
+    paraphrase_prompt: prioritize these security vulnerabilities based on established
+      web application security risk categories
+    options:
+      A: Focus on the plain text storage issue first since data encryption is the
+        foundation of all security, then address input validation, and finally update
+        default credentials during the next major release cycle.
+      B: Address the SQL injection vulnerability first (A03 - Injection), then fix
+        the plain text storage (A02 - Cryptographic Failures), and finally remediate
+        the default credentials (A05 - Security Misconfiguration).
+      C: Implement comprehensive logging and monitoring capabilities first to detect
+        future attacks, then gradually address the technical vulnerabilities based
+        on development team availability and sprint capacity.
+      D: Prioritize fixing the default credentials first since they provide the easiest
+        attack vector, then address data encryption, and finally implement input validation
+        as a long-term security enhancement.
+    correct: B

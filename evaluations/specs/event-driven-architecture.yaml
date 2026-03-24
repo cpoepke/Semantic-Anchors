@@ -19,3 +19,26 @@ questions:
         while keeping core business logic independent of external frameworks, databases,
         and user interfaces
     correct: B
+  application:
+    scenario: Your e-commerce platform needs to handle order processing, inventory
+      updates, payment processing, and shipping notifications. Currently, the order
+      service directly calls the inventory service, payment service, and shipping
+      service synchronously, causing delays and tight coupling between services.
+    anchor_prompt: using Event-Driven Architecture
+    paraphrase_prompt: How would you redesign this system to reduce coupling between
+      services and improve scalability while ensuring all necessary business processes
+      still execute when orders are placed?
+    options:
+      A: Create a centralized order orchestrator service that manages the workflow
+        by making sequential API calls to inventory, payment, and shipping services
+        with retry logic and circuit breakers.
+      B: Have the order service publish an 'OrderPlaced' event to a message queue,
+        with inventory, payment, and shipping services subscribing to process their
+        respective tasks independently and asynchronously.
+      C: Implement a shared database that all services can read from and write to,
+        with database triggers that automatically update related tables when orders
+        are inserted.
+      D: Use a microservices gateway that routes requests to the appropriate services
+        and aggregates responses, with caching layers to improve performance between
+        service calls.
+    correct: B

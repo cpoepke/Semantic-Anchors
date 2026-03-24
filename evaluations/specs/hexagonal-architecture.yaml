@@ -16,3 +16,26 @@ questions:
       D: Microservices architecture pattern where six independent services communicate
         through standardized API ports and message adapters
     correct: B
+  application:
+    scenario: Your team is building a payment processing service that needs to support
+      multiple payment gateways (Stripe, PayPal, Square), handle requests from both
+      a web API and a mobile SDK, store transaction data in PostgreSQL, and send notifications
+      via email and SMS. The business requirements are complex but well-defined, while
+      the specific technologies may change over time.
+    anchor_prompt: using Hexagonal Architecture (Ports & Adapters)
+    paraphrase_prompt: How would you structure this system to maximize testability,
+      technology independence, and the ability to easily swap external integrations?
+    options:
+      A: Create a layered architecture with separate presentation, business logic,
+        and data access layers, using dependency injection to manage connections between
+        payment gateways and notification services.
+      B: Place payment processing domain logic at the center, define port interfaces
+        for payment gateways and notifications, then implement adapters for each external
+        service, ensuring all dependencies point inward to the core domain.
+      C: Build a microservices architecture with separate services for each payment
+        gateway, a central orchestrator service, and shared databases to maintain
+        consistency across all payment operations.
+      D: Implement a plugin-based architecture where each payment gateway and notification
+        method is a plugin, with a central registry managing plugin lifecycle and
+        a shared event bus for communication.
+    correct: B

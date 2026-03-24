@@ -18,3 +18,21 @@ questions:
         to users, starting with the most essential features and adding complexity
         as needed
     correct: B
+  application:
+    scenario: Sarah is a senior developer who needs to understand a complex distributed
+      caching system before implementing a critical feature. She's read the documentation
+      and architecture diagrams, but feels uncertain about key concepts like cache
+      coherency protocols and distributed consensus mechanisms.
+    anchor_prompt: using Feynman Technique
+    paraphrase_prompt: to validate and deepen her understanding before implementation
+    options:
+      A: Create detailed technical diagrams mapping all system components and their
+        interactions, then review them with the architecture team to ensure accuracy.
+      B: Write a simple explanation of how the caching system works as if teaching
+        it to a junior developer, noting where she struggles to explain clearly, then
+        study those areas more deeply.
+      C: Build a small prototype implementation to test her assumptions about the
+        system behavior and identify any gaps through hands-on experimentation.
+      D: Schedule meetings with the original system architects to ask detailed questions
+        about implementation decisions and document their responses.
+    correct: B

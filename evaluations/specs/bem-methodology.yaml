@@ -19,3 +19,24 @@ questions:
         to optimize query performance and maintain data integrity across distributed
         systems
     correct: B
+  application:
+    scenario: You're developing a navigation component for an e-commerce website that
+      includes a logo, menu items, search functionality, and a shopping cart icon.
+      The navigation needs to support different states like active menu items, disabled
+      search when no products are available, and a compact version for mobile devices.
+    anchor_prompt: using BEM Methodology
+    paraphrase_prompt: structure the CSS class names to ensure maintainability, avoid
+      naming conflicts, and clearly express component relationships
+    options:
+      A: Use semantic class names like `.navigation`, `.logo`, `.menu-link`, `.search-box`,
+        `.cart`, `.active-link`, `.disabled-search`, `.mobile-nav`
+      B: Use structured class names like `.navbar`, `.navbar__logo`, `.navbar__menu-item`,
+        `.navbar__search`, `.navbar__cart`, `.navbar__menu-item--active`, `.navbar__search--disabled`,
+        `.navbar--compact`
+      C: Use hierarchical class names like `.nav`, `.nav .logo`, `.nav .menu .item`,
+        `.nav .search.box`, `.nav .cart.icon`, `.nav .menu .item.active`, `.nav .search.disabled`,
+        `.nav.mobile`
+      D: Use descriptive class names like `.main-navigation`, `.site-logo`, `.primary-menu-link`,
+        `.product-search-input`, `.shopping-cart-button`, `.current-page-link`, `.inactive-search-field`,
+        `.mobile-navigation-bar`
+    correct: B

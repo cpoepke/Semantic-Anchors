@@ -25,3 +25,26 @@ questions:
         in decreasing order of importance — present key findings first, then provide
         the analysis and background that supports those conclusions.
     correct: B
+  application:
+    scenario: A software engineer is reviewing API documentation that describes error
+      handling procedures. The current draft contains several sentences that feel
+      wordy and unclear, making it difficult for developers to quickly understand
+      what actions to take when errors occur.
+    anchor_prompt: using Plain English according to Strunk & White
+    paraphrase_prompt: to make the error handling documentation as clear, direct,
+      and concise as possible for developer users
+    options:
+      A: Add more detailed explanations and qualifying phrases like 'generally speaking'
+        and 'in most cases' to ensure developers understand the nuanced conditions
+        under which different error handling approaches might be considered appropriate.
+      B: Remove unnecessary words, use active voice, and place the most important
+        action at the end of each sentence. Replace 'In the event that an error occurs'
+        with 'When an error occurs' and 'The system will be restarted by the administrator'
+        with 'The administrator restarts the system.'
+      C: Include comprehensive background context about why each error might occur,
+        using rich descriptive language and multiple adjectives to paint a complete
+        picture of potential system states and failure modes.
+      D: Restructure sentences to use passive voice consistently, add transitional
+        phrases between concepts, and include apologetic language like 'unfortunately'
+        and 'regrettably' to acknowledge the inconvenience of errors.
+    correct: B

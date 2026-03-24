@@ -19,3 +19,26 @@ questions:
         levels to determine mitigation strategies and contingency planning approaches
         for delivery teams.
     correct: B
+  application:
+    scenario: Your agile team has 15 user stories estimated at 120 story points for
+      the next 3-week sprint, but your velocity is only 80 points. The product owner
+      needs to decide which stories to include while ensuring stakeholders understand
+      what won't be delivered.
+    anchor_prompt: using MoSCoW
+    paraphrase_prompt: How should you categorize and communicate the stories to stakeholders
+      for this sprint?
+    options:
+      A: Rank all 15 stories from 1-15 by business value, select the top-ranked stories
+        that fit within 80 points, and inform stakeholders that lower-ranked items
+        are deferred to future sprints.
+      B: Categorize stories into Must have (critical for sprint goal), Should have
+        (important but not essential), Could have (nice to have), and Won't have this
+        sprint (explicitly out of scope), then select from each category to fit 80
+        points.
+      C: Group stories by feature area, estimate the effort for each group, select
+        complete feature groups that fit within 80 points, and communicate to stakeholders
+        which feature areas are postponed.
+      D: Sort stories by technical complexity and business impact using a 2x2 matrix,
+        prioritize high-impact low-complexity items first, and explain to stakeholders
+        which quadrants won't be addressed this sprint.
+    correct: B

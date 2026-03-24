@@ -15,3 +15,25 @@ questions:
       D: 'Four categories of architectural patterns: layered, client-server, pipe-filter,
         and event-driven'
     correct: B
+  application:
+    scenario: Your team is building a new e-commerce platform and needs to present
+      the architecture to various stakeholders including executives, developers, and
+      operations staff. The system involves web applications, mobile apps, payment
+      services, inventory databases, and third-party shipping APIs.
+    anchor_prompt: using C4-Diagrams
+    paraphrase_prompt: create a comprehensive architectural documentation strategy
+      that effectively communicates system structure to all stakeholder groups
+    options:
+      A: Create detailed UML class diagrams showing all system interfaces, then add
+        deployment diagrams and sequence diagrams for each major user workflow to
+        ensure complete technical coverage.
+      B: Start with a context diagram showing the system and external actors, then
+        create container diagrams for applications and databases, followed by component
+        diagrams for complex containers as needed.
+      C: Begin with a comprehensive system landscape diagram, then create detailed
+        data flow diagrams, followed by network topology diagrams and API specification
+        documents for each service.
+      D: Design entity-relationship diagrams for all databases first, then create
+        service architecture diagrams, and finish with user journey maps and technical
+        infrastructure blueprints.
+    correct: B
