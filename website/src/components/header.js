@@ -40,6 +40,7 @@ export function renderHeader() {
                 <a href="#/changelog" class="nav-link text-[var(--color-text-secondary)] hover:text-[var(--color-text)] transition-colors" data-route="/changelog" data-i18n="nav.changelog">${i18n.t('nav.changelog')}</a>
                 <a href="#/agentskill" class="nav-link text-[var(--color-text-secondary)] hover:text-[var(--color-text)] transition-colors" data-route="/agentskill" data-i18n="nav.agentskill">${i18n.t('nav.agentskill')}</a>
                 <a href="#/workflow" class="nav-link text-[var(--color-text-secondary)] hover:text-[var(--color-text)] transition-colors" data-route="/workflow" data-i18n="nav.workflow">${i18n.t('nav.workflow')}</a>
+                <a href="#/contracts" class="nav-link text-[var(--color-text-secondary)] hover:text-[var(--color-text)] transition-colors" data-route="/contracts" data-i18n="nav.contracts">${i18n.t('nav.contracts')}</a>
               </div>
               <div class="flex items-center gap-3">
                 <button
@@ -146,6 +147,7 @@ export function renderHeader() {
             <a href="#/changelog" class="nav-link mobile-nav-link px-3 py-2 rounded-md text-[var(--color-text-secondary)] hover:text-[var(--color-text)] hover:bg-[var(--color-bg-secondary)] transition-colors" data-route="/changelog" data-i18n="nav.changelog">${i18n.t('nav.changelog')}</a>
             <a href="#/agentskill" class="nav-link mobile-nav-link px-3 py-2 rounded-md text-[var(--color-text-secondary)] hover:text-[var(--color-text)] hover:bg-[var(--color-bg-secondary)] transition-colors" data-route="/agentskill" data-i18n="nav.agentskill">${i18n.t('nav.agentskill')}</a>
             <a href="#/workflow" class="nav-link mobile-nav-link px-3 py-2 rounded-md text-[var(--color-text-secondary)] hover:text-[var(--color-text)] hover:bg-[var(--color-bg-secondary)] transition-colors" data-route="/workflow" data-i18n="nav.workflow">${i18n.t('nav.workflow')}</a>
+            <a href="#/contracts" class="nav-link mobile-nav-link px-3 py-2 rounded-md text-[var(--color-text-secondary)] hover:text-[var(--color-text)] hover:bg-[var(--color-bg-secondary)] transition-colors" data-route="/contracts" data-i18n="nav.contracts">${i18n.t('nav.contracts')}</a>
           </div>
         </div>
       </nav>

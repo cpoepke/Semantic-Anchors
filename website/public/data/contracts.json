@@ -1,0 +1,57 @@
+[
+  {
+    "id": "specification",
+    "title": "Specification",
+    "titleDe": "Spezifikation",
+    "description": "What we mean when we say 'spec'",
+    "descriptionDe": "Was wir meinen, wenn wir 'Spec' sagen",
+    "anchors": ["gherkin", "bdd-given-when-then"],
+    "template": "When we talk about a \"specification\" or \"spec\", we mean:\n- Use Cases with Activity Diagrams (all paths, not just the happy path)\n- Acceptance criteria in Gherkin format (Given/When/Then)",
+    "templateDe": "Wenn wir von einer \"Spezifikation\" oder \"Spec\" sprechen, meinen wir:\n- Use Cases mit Activity Diagrams (alle Pfade, nicht nur der Happy Path)\n- Akzeptanzkriterien im Gherkin-Format (Given/When/Then)",
+    "category": "requirements"
+  },
+  {
+    "id": "architecture-documentation",
+    "title": "Architecture Documentation",
+    "titleDe": "Architekturdokumentation",
+    "description": "How we document architecture",
+    "descriptionDe": "Wie wir Architektur dokumentieren",
+    "anchors": ["arc42", "c4-diagrams", "adr-according-to-nygard"],
+    "template": "When we say \"architecture documentation\", we mean:\n- arc42 template with all 12 sections\n- C4 diagrams for visualization\n- ADRs according to Nygard for decisions",
+    "templateDe": "Wenn wir \"Architekturdokumentation\" sagen, meinen wir:\n- arc42-Template mit allen 12 Abschnitten\n- C4-Diagramme zur Visualisierung\n- ADRs nach Nygard für Entscheidungen",
+    "category": "architecture"
+  },
+  {
+    "id": "layer-boundaries",
+    "title": "Layer Boundaries",
+    "titleDe": "Schichtgrenzen",
+    "description": "How we handle boundaries between layers",
+    "descriptionDe": "Wie wir Grenzen zwischen Schichten handhaben",
+    "anchors": ["clean-architecture", "hexagonal-architecture", "domain-driven-design", "solid-dip", "solid-isp"],
+    "template": "At every layer boundary:\n- Expose only well-defined DTOs and contracts — never domain entities\n- Use explicit mapping at every seam\n- Apply Anti-Corruption Layers when integrating external systems\n- Dependency direction points inward (DIP)",
+    "templateDe": "An jeder Schichtgrenze:\n- Nur definierte DTOs und Contracts exponieren — niemals Domain-Entitäten\n- Explizites Mapping an jeder Nahtstelle\n- Anti-Corruption-Layer bei Integration externer Systeme\n- Abhängigkeitsrichtung zeigt nach innen (DIP)",
+    "category": "architecture"
+  },
+  {
+    "id": "code-quality",
+    "title": "Code Quality",
+    "titleDe": "Code-Qualität",
+    "description": "Our coding conventions and quality standards",
+    "descriptionDe": "Unsere Coding-Konventionen und Qualitätsstandards",
+    "anchors": ["tdd-london-school", "tdd-chicago-school", "solid-principles", "dry-principle", "kiss-principle", "conventional-commits"],
+    "template": "Our code follows:\n- TDD (London or Chicago School as appropriate)\n- SOLID principles\n- DRY, KISS\n- Conventional Commits",
+    "templateDe": "Unser Code folgt:\n- TDD (London oder Chicago School je nach Kontext)\n- SOLID-Prinzipien\n- DRY, KISS\n- Conventional Commits",
+    "category": "development"
+  },
+  {
+    "id": "documentation-style",
+    "title": "Documentation Style",
+    "titleDe": "Dokumentationsstil",
+    "description": "How we write and organize documentation",
+    "descriptionDe": "Wie wir Dokumentation schreiben und organisieren",
+    "anchors": ["plain-english-strunk-white", "gutes-deutsch-wolf-schneider", "docs-as-code", "diataxis-framework"],
+    "template": "All documentation uses:\n- Plain English according to Strunk & White (or Gutes Deutsch nach Wolf Schneider for German)\n- Docs-as-Code with AsciiDoc\n- Diataxis for document types",
+    "templateDe": "Alle Dokumentation verwendet:\n- Gutes Deutsch nach Wolf Schneider (oder Plain English nach Strunk & White für Englisch)\n- Docs-as-Code mit AsciiDoc\n- Diataxis für Dokumenttypen",
+    "category": "documentation"
+  }
+]

@@ -131,8 +131,21 @@ export async function fetchAnchorsData() {
   return cachedAnchorsOnly
 }
 
+let cachedContracts = null
+
+export async function fetchContractsData() {
+  if (cachedContracts) return cachedContracts
+  try {
+    cachedContracts = await fetchJson('data/contracts.json')
+  } catch {
+    return []
+  }
+  return cachedContracts
+}
+
 export function __resetDataCacheForTests() {
   dataPromise = null
   cachedAnchorsOnly = null
   cachedFeedback = null
+  cachedContracts = null
 }

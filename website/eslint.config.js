@@ -26,6 +26,7 @@ const browserGlobals = {
   IntersectionObserver: 'readonly',
   requestAnimationFrame: 'readonly',
   performance: 'readonly',
+  Blob: 'readonly',
 }
 
 export default [

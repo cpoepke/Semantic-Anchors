@@ -11,7 +11,7 @@ import {
   updateAnchorCount,
   setFeedbackData,
 } from './components/card-grid.js'
-import { fetchData } from './utils/data-loader.js'
+import { fetchData, fetchContractsData } from './utils/data-loader.js'
 import { buildSearchIndex, isIndexReady, isIndexBuilding } from './utils/search-index.js'
 import { initRouter, addRoute } from './utils/router.js'
 import { renderDocPage, loadDocContent } from './components/doc-page.js'
@@ -20,6 +20,7 @@ import {
   showOnboarding,
   shouldShowOnboarding,
 } from './components/onboarding-modal.js'
+import { renderContractsPage, initContractsPage } from './components/contracts-page.js'
 
 const APP_VERSION = '0.4.0'
 
@@ -109,6 +110,7 @@ function initApp() {
   addRoute('/rejected-proposals', renderRejectedProposalsPage)
   addRoute('/all-anchors', renderAllAnchorsPage)
   addRoute('/workflow', renderWorkflowPage)
+  addRoute('/contracts', renderContractsPageHandler)
   addRoute('/evaluations', renderEvaluationsPage)
 
   const app = document.querySelector('#app')
@@ -228,6 +230,18 @@ function renderWorkflowPage() {
   pageContent.innerHTML = renderDocPage()
   updateActiveNavLink()
   loadDocContent('docs/spec-driven-workflow.adoc')
+}
+
+function renderContractsPageHandler() {
+  const pageContent = document.getElementById('page-content')
+  if (!pageContent) return
+
+  pageContent.innerHTML = renderContractsPage()
+  updateActiveNavLink()
+
+  fetchContractsData().then((contracts) => {
+    initContractsPage(contracts)
+  })
 }
 
 function renderEvaluationsPage() {
