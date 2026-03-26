@@ -2,9 +2,16 @@ import { i18n } from '../i18n.js'
 
 const STORAGE_KEY = 'selected-contracts'
 
+function esc(str) {
+  const d = document.createElement('div')
+  d.textContent = str
+  return d.innerHTML
+}
+
 function getSelectedContracts() {
   try {
-    return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')
+    const val = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')
+    return Array.isArray(val) ? val : []
   } catch {
     return []
   }
@@ -78,7 +85,7 @@ function renderContractCard(contract, isSelected) {
   const anchorLinks = contract.anchors
     .map(
       (id) =>
-        `<a href="#/anchor/${id}" class="inline-block rounded-full bg-blue-100 dark:bg-blue-900/30 px-2 py-0.5 text-xs text-blue-700 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800/40 transition-colors">${id}</a>`
+        `<a href="#/anchor/${esc(id)}" class="inline-block rounded-full bg-blue-100 dark:bg-blue-900/30 px-2 py-0.5 text-xs text-blue-700 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800/40 transition-colors">${esc(id)}</a>`
     )
     .join(' ')
 
@@ -86,28 +93,28 @@ function renderContractCard(contract, isSelected) {
     .split('\n')
     .map((line) => {
       if (line.startsWith('- ')) {
-        return `<span class="text-[var(--color-text-secondary)]">• ${line.slice(2)}</span>`
+        return `<span class="text-[var(--color-text-secondary)]">• ${esc(line.slice(2))}</span>`
       }
-      return `<span class="font-medium">${line}</span>`
+      return `<span class="font-medium">${esc(line)}</span>`
     })
     .join('<br>')
 
   return `
     <div class="contract-card rounded-lg border transition-all cursor-pointer
       ${isSelected ? 'border-blue-500 bg-blue-50/50 dark:bg-blue-900/10 shadow-sm' : 'border-[var(--color-border)] bg-[var(--color-bg)] hover:border-blue-300 dark:hover:border-blue-700'}"
-      data-contract-id="${contract.id}"
+      data-contract-id="${esc(contract.id)}"
     >
       <div class="p-5">
         <div class="flex items-start gap-3">
           <input
             type="checkbox"
             class="contract-checkbox mt-1 h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-            data-contract-id="${contract.id}"
+            data-contract-id="${esc(contract.id)}"
             ${isSelected ? 'checked' : ''}
           />
           <div class="flex-1 min-w-0">
-            <h3 class="text-lg font-semibold text-[var(--color-text)] mb-1">${title}</h3>
-            <p class="text-sm text-[var(--color-text-secondary)] mb-3">${description}</p>
+            <h3 class="text-lg font-semibold text-[var(--color-text)] mb-1">${esc(title)}</h3>
+            <p class="text-sm text-[var(--color-text-secondary)] mb-3">${esc(description)}</p>
             <div class="rounded-md bg-[var(--color-bg-secondary)] p-3 mb-3 text-sm leading-relaxed">
               ${templateHtml}
             </div>
@@ -122,8 +129,12 @@ function renderContractCard(contract, isSelected) {
 }
 
 export function initContractsPage(contracts) {
-  const grid = document.getElementById('contracts-grid')
-  if (!grid || !contracts) return
+  const oldGrid = document.getElementById('contracts-grid')
+  if (!oldGrid || !contracts) return
+
+  // Replace grid to remove stale event listeners from previous init
+  const grid = oldGrid.cloneNode(false)
+  oldGrid.replaceWith(grid)
 
   const selected = getSelectedContracts()
 

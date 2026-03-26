@@ -135,7 +135,11 @@ let cachedContracts = null
 
 export async function fetchContractsData() {
   if (cachedContracts) return cachedContracts
-  cachedContracts = await fetchJson('data/contracts.json').catch(() => [])
+  try {
+    cachedContracts = await fetchJson('data/contracts.json')
+  } catch {
+    return []
+  }
   return cachedContracts
 }
 
