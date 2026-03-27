@@ -22,7 +22,7 @@ Jede Zeile Code, jeder Test, jede Dokumentationsdatei wurde von der KI unter mei
 
 * https://github.com/docToolchain/dacli[*dacli*]: Ein vollständiges CLI-Tool mit Spezifikation, Architekturdokumentation, Tests und Benutzerhandbuch. Von einer KI gebaut, von 5 verschiedenen LLMs gegengelesen.
 * https://github.com/LLM-Coding/Semantic-Anchors[*Semantic Anchors Website*]: 228+ GitHub Stars, Dokumentation und eine Videoserie.
-* https://github.com/rdmueller/vibe-coding-risk-radar[*Vibe Coding Risk Radar*]: Eine interaktive Webanwendung zur Bewertung von KI-Coding-Risiken.
+* https://github.com/LLM-Coding/vibe-coding-risk-radar[*Vibe Coding Risk Radar*]: Eine interaktive Webanwendung zur Bewertung von KI-Coding-Risiken.
 
 [NOTE]
 ====

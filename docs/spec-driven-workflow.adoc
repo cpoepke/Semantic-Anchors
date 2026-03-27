@@ -20,7 +20,7 @@ Every line of code, every test, every documentation file was written by the AI u
 
 * https://github.com/docToolchain/dacli[*dacli*]: A full CLI tool with spec, architecture docs, tests, and user manual. Built by one AI, cross-reviewed by 5 different LLMs.
 * https://github.com/LLM-Coding/Semantic-Anchors[*Semantic Anchors Website*]: 228+ GitHub stars, documentation, and a video series.
-* https://github.com/rdmueller/vibe-coding-risk-radar[*Vibe Coding Risk Radar*]: An interactive web app for assessing AI coding risks.
+* https://github.com/LLM-Coding/vibe-coding-risk-radar[*Vibe Coding Risk Radar*]: An interactive web app for assessing AI coding risks.
 
 [NOTE]
 ====
