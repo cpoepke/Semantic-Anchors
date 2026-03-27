@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 # Pre-commit hook: sync skill/ -> plugins/semantic-anchors/skills/
 #
 # Overwrites the plugin skills directory from the canonical skill/ source so

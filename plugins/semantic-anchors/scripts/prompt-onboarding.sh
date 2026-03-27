@@ -39,6 +39,7 @@ python3 - "$STATE_FILE" "$PROJECT_DIR" "$COOLDOWN_HOURS" <<'PY'
 import json
 import os
 import sys
+import tempfile
 from datetime import datetime, timedelta, timezone
 
 state_path, project_dir, cooldown_hours = sys.argv[1], sys.argv[2], int(sys.argv[3])
@@ -64,9 +65,17 @@ if last_prompt_raw:
 
 entry["last_prompt"] = now.isoformat().replace("+00:00", "Z")
 
-with open(state_path, "w", encoding="utf-8") as handle:
-    json.dump(state, handle, indent=2)
-    handle.write("\n")
+try:
+    state_dir = os.path.dirname(state_path)
+    fd, tmp_path = tempfile.mkstemp(dir=state_dir, suffix=".tmp")
+    with os.fdopen(fd, "w", encoding="utf-8") as handle:
+        json.dump(state, handle, indent=2)
+        handle.write("\n")
+    os.replace(tmp_path, state_path)
+except OSError:
+    # Best-effort: if write fails, skip silently rather than breaking the hook
+    if os.path.exists(tmp_path):
+        os.unlink(tmp_path)
 
 message = (
     "Semantic anchors are not configured for this workspace. "
