@@ -119,5 +119,16 @@
     "template": "Explain complex concepts using simple language and everyday analogies. When the explanation feels hard to write, that reveals gaps in understanding — study those areas first (Feynman Technique).",
     "templateDe": "Komplexe Konzepte mit einfacher Sprache und Alltagsanalogien erklären. Wenn die Erklärung schwerfällt, zeigt das Wissenslücken — diese zuerst vertiefen (Feynman-Technik).",
     "category": "communication"
+  },
+  {
+    "id": "writing-style",
+    "title": "Writing Style",
+    "titleDe": "Schreibstil",
+    "description": "How we write technical texts — language, tone, and structure",
+    "descriptionDe": "Wie wir technische Texte schreiben — Sprache, Ton und Struktur",
+    "anchors": ["gutes-deutsch-wolf-schneider", "plain-english-strunk-white"],
+    "template": "Writing follows Gutes Deutsch nach Wolf Schneider (or Plain English according to Strunk & White).\n\nAdditionally:\n- Technical terms stay in English (LLM, Prompt, Token, Spec, etc.)\n- Address the reader directly, use first person sparingly but deliberately\n- Use analogies to human thinking to explain technical concepts\n- One thought per paragraph (5-8 sentences is fine)\n- Section headings are statements, not topic announcements\n- First sentence says what the paragraph is about\n- Show code and prompts, don't just claim things work\n- Conclusions make a clear statement — never end with 'it remains exciting'",
+    "templateDe": "Schreibstil folgt Gutes Deutsch nach Wolf Schneider (oder Plain English nach Strunk & White).\n\nZusätzlich:\n- Fachbegriffe auf Englisch lassen (LLM, Prompt, Token, Spec, etc.)\n- Leser direkt ansprechen, Ich-Perspektive sparsam aber gezielt\n- Analogien zum menschlichen Denken für technische Konzepte\n- Ein Gedanke pro Absatz (5-8 Sätze OK)\n- Zwischenüberschriften als Aussagen, nicht Themenankündigungen\n- Erster Satz sagt sofort worum es geht\n- Code/Prompts zeigen, nicht nur behaupten\n- Fazit: klare Aussage, kein 'es bleibt spannend'",
+    "category": "communication"
   }
 ]
