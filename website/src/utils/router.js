@@ -1,11 +1,32 @@
 /**
- * Simple hash-based router for single-page navigation
+ * History API-based router for single-page navigation
+ * Deployed under a base path (e.g., /Semantic-Anchors/)
  */
 
 const routes = new Map()
 let currentRoute = null
 let routeBeforeModal = null
 let scrollBeforeModal = 0
+
+// Base path for GitHub Pages subdirectory deployment
+const BASE_PATH = import.meta.env.BASE_URL.replace(/\/$/, '')
+
+/**
+ * Strip base path from a pathname to get the route
+ */
+function stripBase(pathname) {
+  if (BASE_PATH && pathname.startsWith(BASE_PATH)) {
+    return pathname.slice(BASE_PATH.length) || '/'
+  }
+  return pathname || '/'
+}
+
+/**
+ * Build a full pathname from a route path
+ */
+function buildPath(route) {
+  return BASE_PATH + route
+}
 
 /**
  * Register a route handler
@@ -21,7 +42,8 @@ export function addRoute(path, handler) {
  * @param {string} path - Route path
  */
 export function navigate(path) {
-  window.location.hash = '#' + path
+  history.pushState(null, '', buildPath(path))
+  handleRoute()
 }
 
 /**
@@ -29,19 +51,64 @@ export function navigate(path) {
  * @returns {string} Current route path
  */
 export function getCurrentRoute() {
-  const hash = window.location.hash.slice(1) || '/'
-  return hash
+  // Support legacy hash URLs for backward compatibility
+  if (window.location.hash.startsWith('#/')) {
+    return window.location.hash.slice(1)
+  }
+  return stripBase(window.location.pathname)
 }
 
 /**
- * Initialize router and handle hash changes
+ * Initialize router and handle navigation
  */
 export function initRouter() {
+  // Redirect legacy hash URLs to clean URLs
+  if (window.location.hash.startsWith('#/')) {
+    const route = window.location.hash.slice(1)
+    history.replaceState(null, '', buildPath(route))
+  }
+
   // Handle initial route
   handleRoute()
 
-  // Listen for hash changes
-  window.addEventListener('hashchange', handleRoute)
+  // Listen for browser back/forward
+  window.addEventListener('popstate', handleRoute)
+
+  // Intercept link clicks for SPA navigation
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href]')
+    if (!link) return
+
+    const href = link.getAttribute('href')
+
+    // Skip external links, new tab links, and non-http links
+    if (
+      !href ||
+      href.startsWith('http') ||
+      href.startsWith('mailto:') ||
+      link.target === '_blank' ||
+      link.hasAttribute('download')
+    )
+      return
+
+    // Skip anchor-only links (e.g., #section-heading within a page)
+    if (href.startsWith('#') && !href.startsWith('#/')) return
+
+    // Handle legacy hash links (e.g., #/anchor/xxx from rendered AsciiDoc)
+    if (href.startsWith('#/')) {
+      e.preventDefault()
+      history.pushState(null, '', buildPath(href.slice(1)))
+      handleRoute()
+      return
+    }
+
+    // Handle internal route links (e.g., /about, /anchor/xxx)
+    if (href.startsWith('/') || href.startsWith(BASE_PATH)) {
+      e.preventDefault()
+      history.pushState(null, '', href)
+      handleRoute()
+    }
+  })
 }
 
 /**
@@ -50,7 +117,7 @@ export function initRouter() {
 function handleRoute() {
   const path = getCurrentRoute()
 
-  // Check for anchor route (#/anchor/:id)
+  // Check for anchor route (/anchor/:id)
   if (path.startsWith('/anchor/')) {
     const anchorId = path.replace('/anchor/', '')
     const safeAnchorId = /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(anchorId) ? anchorId : null
@@ -68,11 +135,10 @@ function handleRoute() {
         homeHandler()
       }
     }
-    // Restore scroll position (browser resets it on hash change)
+    // Restore scroll position
     window.scrollTo(0, scrollBeforeModal)
 
     // Open the anchor modal as overlay on current page
-    // Import dynamically to avoid circular dependency
     import('../components/anchor-modal.js').then(({ showAnchorDetails }) => {
       showAnchorDetails(safeAnchorId)
     })
@@ -118,3 +184,5 @@ export function getRouteBeforeModal() {
 export function getScrollBeforeModal() {
   return scrollBeforeModal
 }
+
+export { buildPath }

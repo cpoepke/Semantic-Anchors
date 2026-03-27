@@ -1,6 +1,6 @@
 import { i18n } from '../i18n.js'
 import { fetchAnchorsData, fetchFeedbackData } from '../utils/data-loader.js'
-import { getRouteBeforeModal, getScrollBeforeModal } from '../utils/router.js'
+import { getRouteBeforeModal, getScrollBeforeModal, buildPath, navigate } from '../utils/router.js'
 
 let asciidoctor = null
 
@@ -120,9 +120,9 @@ export function closeModal() {
 
     // Restore URL to the page that was active before the modal opened
     // Use replaceState to avoid triggering hashchange (which would re-render the page)
-    if (window.location.hash.startsWith('#/anchor/')) {
+    if (window.location.pathname.includes('/anchor/')) {
       const returnTo = getRouteBeforeModal() || '/'
-      history.replaceState(null, '', '#' + returnTo)
+      history.replaceState(null, '', buildPath(returnTo))
     }
   }
 }
@@ -279,7 +279,7 @@ export async function loadAnchorContent(anchorId) {
         link.addEventListener('click', (e) => {
           e.preventDefault()
           // Navigate to the linked anchor
-          window.location.hash = `#/anchor/${anchorId}`
+          navigate(`/anchor/${anchorId}`)
         })
       }
     })

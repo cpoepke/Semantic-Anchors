@@ -3,29 +3,36 @@ import { addRoute, getCurrentRoute, initRouter, navigate } from './router.js'
 
 describe('router', () => {
   beforeEach(() => {
-    window.location.hash = '#/'
+    // Reset to base path
+    history.replaceState(null, '', '/')
+    window.location.hash = ''
   })
 
-  it('returns current route from hash', () => {
+  it('returns current route from pathname', () => {
+    history.replaceState(null, '', '/about')
+    expect(getCurrentRoute()).toBe('/about')
+  })
+
+  it('supports legacy hash URLs for backward compatibility', () => {
     window.location.hash = '#/about'
     expect(getCurrentRoute()).toBe('/about')
   })
 
-  it('navigates to a route via hash', () => {
+  it('navigates to a route via pushState', () => {
     navigate('/contributing')
-    expect(window.location.hash).toBe('#/contributing')
+    expect(window.location.pathname).toBe('/contributing')
   })
 
-  it('runs registered handler on init and hash changes', async () => {
+  it('runs registered handler on init and popstate', async () => {
     const handler = vi.fn()
     addRoute('/router-test', handler)
-    window.location.hash = '#/router-test'
+    history.replaceState(null, '', '/router-test')
 
     initRouter()
     expect(handler).toHaveBeenCalledTimes(1)
 
-    window.location.hash = '#/router-test'
-    window.dispatchEvent(new HashChangeEvent('hashchange'))
+    history.pushState(null, '', '/router-test')
+    window.dispatchEvent(new PopStateEvent('popstate'))
     expect(handler).toHaveBeenCalledTimes(2)
   })
 })

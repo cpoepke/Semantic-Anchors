@@ -13,7 +13,7 @@ import {
 } from './components/card-grid.js'
 import { fetchData, fetchContractsData } from './utils/data-loader.js'
 import { buildSearchIndex, isIndexReady, isIndexBuilding } from './utils/search-index.js'
-import { initRouter, addRoute } from './utils/router.js'
+import { initRouter, addRoute, getCurrentRoute as getCurrentRouteSync } from './utils/router.js'
 import { renderDocPage, loadDocContent } from './components/doc-page.js'
 import {
   createOnboardingModal,
@@ -25,7 +25,7 @@ import { renderContractsPage, initContractsPage } from './components/contracts-p
 const APP_VERSION = '0.4.0'
 
 window.copyAnchorLink = async function copyAnchorLink(anchorId) {
-  const url = `${window.location.origin}${window.location.pathname}#/anchor/${anchorId}`
+  const url = `${window.location.origin}${import.meta.env.BASE_URL}anchor/${anchorId}`
 
   try {
     await navigator.clipboard.writeText(url)
@@ -255,7 +255,7 @@ function renderEvaluationsPage() {
 }
 
 function updateActiveNavLink() {
-  const currentRoute = window.location.hash.slice(1) || '/'
+  const currentRoute = getCurrentRouteSync()
   document.querySelectorAll('.nav-link').forEach((link) => {
     const route = link.dataset.route
     if (route === currentRoute) {
@@ -442,7 +442,7 @@ function bindLanguageToggle() {
 }
 
 function handleLanguageChange() {
-  const currentRoute = window.location.hash.slice(1) || '/'
+  const currentRoute = getCurrentRouteSync()
 
   if (currentRoute === '/about') {
     loadDocContent('docs/about.adoc')

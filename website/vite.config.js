@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
   ],
-  base: './',
+  base: '/Semantic-Anchors/',
   build: {
     outDir: 'dist',
     emptyOutDir: true,
