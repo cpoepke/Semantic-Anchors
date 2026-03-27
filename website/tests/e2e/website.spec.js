@@ -24,7 +24,7 @@ test.describe('Homepage - Card Grid', () => {
     await expect(page.locator('#lang-toggle')).toHaveText('DE')
 
     // Check navigation links (use .first() to select desktop nav, not mobile)
-    await expect(page.locator('a[data-route="/"]').first()).toContainText('Catalog')
+    await expect(page.locator('a[data-route="/"]').first()).toContainText('Anchors')
     await expect(page.locator('a[data-route="/about"]').first()).toContainText('About')
     await expect(page.locator('a[data-route="/contributing"]').first()).toContainText('Contributing')
   })
@@ -157,6 +157,8 @@ test.describe('Homepage - Card Grid', () => {
   })
 
   test('should display action links', async ({ page }) => {
+    // About link is in the More dropdown — open it first
+    await page.locator('#more-menu-toggle').click()
     const aboutLink = page.locator('a[href="#/about"]').first()
     await expect(aboutLink).toBeVisible()
 
@@ -223,7 +225,8 @@ test.describe('Routing - Documentation Pages', () => {
   })
 
   test('should navigate to About page', async ({ page }) => {
-    // Click About link (use first for desktop nav)
+    // About is in the More dropdown — open it first
+    await page.locator('#more-menu-toggle').click()
     await page.locator('a[data-route="/about"]').first().click()
 
     // URL should update
@@ -239,7 +242,8 @@ test.describe('Routing - Documentation Pages', () => {
   })
 
   test('should navigate to Contributing page', async ({ page }) => {
-    // Click Contributing link (use first for desktop nav)
+    // Contributing is in the More dropdown — open it first
+    await page.locator('#more-menu-toggle').click()
     await page.locator('a[data-route="/contributing"]').first().click()
 
     // URL should update
@@ -254,11 +258,12 @@ test.describe('Routing - Documentation Pages', () => {
     await expect(contributingLink).toHaveClass(/font-semibold/)
   })
 
-  test('should navigate back to Catalog from About', async ({ page }) => {
-    // Go to About (use first for desktop nav)
+  test('should navigate back to Anchors from About', async ({ page }) => {
+    // Go to About via More dropdown
+    await page.locator('#more-menu-toggle').click()
     await page.locator('a[data-route="/about"]').first().click()
 
-    // Go back to Catalog
+    // Go back to Anchors
     await page.locator('a[data-route="/"]').first().click()
 
     // URL should be home
@@ -267,9 +272,9 @@ test.describe('Routing - Documentation Pages', () => {
     // Card grid should be visible
     await expect(page.locator('.anchor-card').first()).toBeVisible()
 
-    // Catalog link should be highlighted (use .first() to select desktop nav)
-    const catalogLink = page.locator('a[data-route="/"]').first()
-    await expect(catalogLink).toHaveClass(/font-semibold/)
+    // Anchors link should be highlighted (use .first() to select desktop nav)
+    const anchorsLink = page.locator('a[data-route="/"]').first()
+    await expect(anchorsLink).toHaveClass(/font-semibold/)
   })
 
   test('should handle direct URL to About page', async ({ page }) => {
@@ -282,7 +287,8 @@ test.describe('Routing - Documentation Pages', () => {
   })
 
   test('should handle browser back button', async ({ page }) => {
-    // Navigate to About (use first for desktop nav)
+    // Navigate to About via More dropdown
+    await page.locator('#more-menu-toggle').click()
     await page.locator('a[data-route="/about"]').first().click()
 
     // Go back
