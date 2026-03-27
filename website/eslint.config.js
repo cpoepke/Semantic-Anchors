@@ -22,6 +22,7 @@ const browserGlobals = {
   CustomEvent: 'readonly',
   KeyboardEvent: 'readonly',
   HashChangeEvent: 'readonly',
+  PopStateEvent: 'readonly',
   MutationObserver: 'readonly',
   IntersectionObserver: 'readonly',
   requestAnimationFrame: 'readonly',
