@@ -8,13 +8,16 @@ PROJECT_DIR="${CLAUDE_PROJECT_DIR:-$PWD}"
 CODEX_HOME_DIR="${CODEX_HOME:-$HOME/.codex}"
 STATE_DIR="$HOME/.claude/semantic-anchor-onboarding"
 STATE_FILE="$STATE_DIR/state.json"
-MARKER="<!-- semantic-anchors:start -->"
+MARKER_START="<!-- semantic-anchors:start -->"
+MARKER_END="<!-- semantic-anchors:end -->"
 COOLDOWN_HOURS=24
 
 has_marker() {
   local file
   for file in "$@"; do
-    if [ -f "$file" ] && grep -qF "$MARKER" "$file"; then
+    if [ -f "$file" ] &&
+       grep -qF "$MARKER_START" "$file" &&
+       grep -qF "$MARKER_END" "$file"; then
       return 0
     fi
   done
@@ -65,6 +68,7 @@ if last_prompt_raw:
 
 entry["last_prompt"] = now.isoformat().replace("+00:00", "Z")
 
+tmp_path = None
 try:
     state_dir = os.path.dirname(state_path)
     fd, tmp_path = tempfile.mkstemp(dir=state_dir, suffix=".tmp")
@@ -74,7 +78,7 @@ try:
     os.replace(tmp_path, state_path)
 except OSError:
     # Best-effort: if write fails, skip silently rather than breaking the hook
-    if os.path.exists(tmp_path):
+    if tmp_path and os.path.exists(tmp_path):
         os.unlink(tmp_path)
 
 message = (
