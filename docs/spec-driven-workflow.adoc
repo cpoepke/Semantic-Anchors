@@ -210,7 +210,7 @@ From the PRD, generate a full specification:
 [source]
 ----
 Create a detailed specification from the PRD. Include:
-- Use Cases (Trigger, Main Flow, Alternative Flows, Postconditions)
+- Use Cases (Trigger, Main Flow, Alternative Flows, Postconditions, Business Rules)
 - Activity Diagrams for all flows (not just the happy path)
 - Acceptance criteria in Gherkin format
 Save as .adoc files in src/docs/specs/.
@@ -224,6 +224,9 @@ Without a trigger, neither the AI nor a tester knows when the use case begins.
 * *Alternative Flows*: Named branches (A1, A2, ...) for error handling, validation failures, and edge cases.
 * *Postconditions*: The guaranteed system state after successful completion.
 Postconditions are what your tests assert.
+* *Business Rules*: Numbered rules (BR-001, BR-002, ...) that capture validation constraints, calculation logic, or domain invariants.
+Business rules make implicit knowledge explicit.
+Without them, the AI invents its own validation logic -- or skips it entirely.
 
 This structure follows Alistair Cockburn's Use Case format, which LLMs recognize reliably.
 The more precise the use case, the less the AI has to guess during implementation.
@@ -457,7 +460,7 @@ The essential one-liners for each phase, with the Semantic Anchors they activate
 |link:#/anchor/plain-english-strunk-white[Strunk & White]
 
 |Specification
-|`Create a detailed spec with Use Cases (Trigger, Main Flow, Alternative Flows, Postconditions), Activity Diagrams (all paths), and Gherkin acceptance criteria.`
+|`Create a detailed spec with Use Cases (Trigger, Main Flow, Alternative Flows, Postconditions, Business Rules), Activity Diagrams (all paths), and Gherkin acceptance criteria.`
 |link:#/anchor/gherkin[Gherkin]
 
 |Architecture

@@ -47,6 +47,10 @@ stop
 * URL enthält Filter-Parameter (für Deep-Linking)
 * Filter-Auswahl wird in localStorage persistiert
 
+=== Geschäftsregeln
+* **BR-01-001**: Ein Anker kann mehreren Rollen zugeordnet sein. Filterung zeigt alle Anker, die mindestens eine der ausgewählten Rollen enthalten.
+* **BR-01-002**: Bei Auswahl von "All Roles" oder leerem Filter werden alle Anker ohne Einschränkung angezeigt.
+
 === Fehlerszenarien
 * **F1**: Keine Anker für ausgewählte Rolle → System zeigt "Keine Anker gefunden für diese Rolle"
 * **F2**: Browser-localStorage nicht verfügbar → Filter wird nicht persistiert, aber funktioniert während Session
@@ -100,6 +104,10 @@ stop
 * Treemap ist interaktiv und responsive
 * Kategorien sind proportional zur Anzahl ihrer Anker dargestellt
 
+=== Geschäftsregeln
+* **BR-02-001**: Kategorie-Größe in der Treemap entspricht der Anzahl der enthaltenen Anker.
+* **BR-02-002**: Kategorien ohne Anker (nach Filterung) werden nicht dargestellt.
+
 === Fehlerszenarien
 * **F1**: Metadata-Datei nicht gefunden → System zeigt Fehlermeldung "Kategorien können nicht geladen werden"
 * **F2**: Sehr kleine Bildschirmgröße → Treemap wird zu vereinfachter Liste
@@ -150,6 +158,11 @@ stop
 === Nachbedingungen
 * Suchergebnisse sind nach Relevanz sortiert
 * URL enthält Suchquery (für Deep-Linking)
+
+=== Geschäftsregeln
+* **BR-03-001**: Suche durchsucht Anker-Namen, Proponenten, Core Concepts und Tags. Andere Felder werden nicht durchsucht.
+* **BR-03-002**: Suche wird debounced (min. 150ms Verzögerung) um übermäßige Anfragen zu vermeiden.
+* **BR-03-003**: Suchbegriffe werden auf maximal 100 Zeichen begrenzt.
 
 === Fehlerszenarien
 * **F1**: Suchindex nicht geladen → System zeigt "Suche vorübergehend nicht verfügbar"
@@ -249,6 +262,11 @@ stop
 * Sprachpräferenz wird bei nächstem Besuch beibehalten
 * `<html lang="...">` ist korrekt gesetzt
 
+=== Geschäftsregeln
+* **BR-05-001**: Unterstützte Sprachen: Englisch (EN) und Deutsch (DE). Englisch ist die Standardsprache.
+* **BR-05-002**: Nur UI-Texte (Navigation, Labels, Buttons, Tooltips) werden übersetzt. Anker-Inhalte bleiben in der Originalsprache.
+* **BR-05-003**: Fehlende Übersetzungen fallen auf Englisch zurück, niemals auf leere Strings.
+
 === Fehlerszenarien
 * **F1**: Übersetzung fehlt → System zeigt Fallback auf Englisch
 * **F2**: localStorage nicht verfügbar → Sprache nur für aktuelle Session
@@ -294,6 +312,10 @@ stop
 * Theme wird sofort ohne Flackern angewendet
 * Theme-Präferenz wird persistiert
 * Alle Komponenten (inkl. Treemap) respektieren Theme
+
+=== Geschäftsregeln
+* **BR-06-001**: Theme-Ermittlung folgt der Priorität: 1. localStorage, 2. `prefers-color-scheme`, 3. Light als Default.
+* **BR-06-002**: Theme-Wechsel erfolgt ohne Seiten-Reload und ohne visuelles Flackern.
 
 === Fehlerszenarien
 * **F1**: localStorage nicht verfügbar → Theme nur für Session, reagiert auf prefers-color-scheme
@@ -362,6 +384,11 @@ stop
 * Automatisches Feedback ist gepostet (bei Validation)
 * Bei Approval: PR ist erstellt mit generiertem Content
 
+=== Geschäftsregeln
+* **BR-07-001**: Jeder vorgeschlagene Anker muss die vier Qualitätskriterien erfüllen: Precise, Rich, Consistent, Attributable.
+* **BR-07-002**: Vorschläge, die reine Instruktionen ohne konzeptuelle Tiefe sind (z.B. "TLDR", "ELI5"), werden abgelehnt.
+* **BR-07-003**: Duplikate bestehender Anker werden abgelehnt mit Verweis auf den existierenden Eintrag.
+
 === Fehlerszenarien
 * **F1**: GitHub Actions Workflow schlägt fehl → Issue bleibt ohne Auto-Comment, manueller Review nötig
 * **F2**: Copilot API nicht verfügbar → Maintainer erstellt Entry manuell
@@ -419,6 +446,10 @@ stop
 * Issue hat Validation Comment
 * Issue hat passendes Label
 * Contributor hat klares Feedback
+
+=== Geschäftsregeln
+* **BR-08-001**: Validierungs-Score basiert auf einer 10-Punkt-Skala. Score > 7 gilt als "validated".
+* **BR-08-002**: Die vier Bewertungskriterien sind: Precise, Rich, Consistent, Attributable — gleichgewichtet.
 
 === Fehlerszenarien
 * **F1**: Copilot API Timeout → Workflow posted "Validation failed, manual review required"
@@ -518,6 +549,11 @@ stop
 * Benutzer sieht korrekten Anker
 * URL ist share-bar (kopierbar)
 * State (Filter, Language) ist in URL kodiert
+
+=== Geschäftsregeln
+* **BR-10-001**: Gültige Deep-Link-Formate: `#/anchor/<anchor-id>` (Hash-basiert).
+* **BR-10-002**: Anker-IDs sind case-sensitive und müssen exakt mit der ID in der Anchor-Datei übereinstimmen.
+* **BR-10-003**: Filter- und Sprachparameter aus der URL werden beim Laden angewendet.
 
 === Fehlerszenarien
 * **F1**: Anker-ID ungültig → 404 Seite mit Suchfunktion

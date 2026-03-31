@@ -6,8 +6,8 @@
     "description": "What we mean when we say 'spec'",
     "descriptionDe": "Was wir meinen, wenn wir 'Spec' sagen",
     "anchors": ["gherkin", "bdd-given-when-then"],
-    "template": "When we talk about a \"specification\" or \"spec\", we mean:\n- Use Cases with Trigger, Main Flow, Alternative Flows, and Postconditions\n- Activity Diagrams for all flows (not just the happy path)\n- Acceptance criteria in Gherkin format (Given/When/Then)",
-    "templateDe": "Wenn wir von einer \"Spezifikation\" oder \"Spec\" sprechen, meinen wir:\n- Use Cases mit Trigger, Hauptablauf, Alternativabläufe und Nachbedingungen\n- Activity Diagrams für alle Abläufe (nicht nur der Happy Path)\n- Akzeptanzkriterien im Gherkin-Format (Given/When/Then)",
+    "template": "When we talk about a \"specification\" or \"spec\", we mean:\n- Use Cases with Trigger, Main Flow, Alternative Flows, Postconditions, and Business Rules (BR-IDs)\n- Activity Diagrams for all flows (not just the happy path)\n- Acceptance criteria in Gherkin format (Given/When/Then)",
+    "templateDe": "Wenn wir von einer \"Spezifikation\" oder \"Spec\" sprechen, meinen wir:\n- Use Cases mit Trigger, Hauptablauf, Alternativabläufe, Nachbedingungen und Geschäftsregeln (BR-IDs)\n- Activity Diagrams für alle Abläufe (nicht nur der Happy Path)\n- Akzeptanzkriterien im Gherkin-Format (Given/When/Then)",
     "category": "requirements"
   },
   {

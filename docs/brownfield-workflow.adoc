@@ -64,7 +64,7 @@ The output is a set of use cases that describe the *existing* behavior -- not wh
 .Prompt
 ----
 Read the code in [bounded context path]. Extract the existing behavior as Use Cases.
-For each Use Case: ID, Trigger, Actors, Preconditions, Main Flow, Alternative Flows, Postconditions.
+For each Use Case: ID, Trigger, Actors, Preconditions, Main Flow, Alternative Flows, Postconditions, Business Rules.
 Save as docs/specs/use-cases-[context-name].adoc.
 ----
 
