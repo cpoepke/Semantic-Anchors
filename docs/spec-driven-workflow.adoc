@@ -210,11 +210,23 @@ From the PRD, generate a full specification:
 [source]
 ----
 Create a detailed specification from the PRD. Include:
-- Use Cases
+- Use Cases (Trigger, Main Flow, Alternative Flows, Postconditions)
 - Activity Diagrams for all flows (not just the happy path)
 - Acceptance criteria in Gherkin format
 Save as .adoc files in src/docs/specs/.
 ----
+
+Each Use Case must define four elements:
+
+* *Trigger*: The specific event that starts the use case ("User clicks Submit", "System receives webhook").
+Without a trigger, neither the AI nor a tester knows when the use case begins.
+* *Main Flow*: The numbered steps of the happy path, each describing observable system behavior.
+* *Alternative Flows*: Named branches (A1, A2, ...) for error handling, validation failures, and edge cases.
+* *Postconditions*: The guaranteed system state after successful completion.
+Postconditions are what your tests assert.
+
+This structure follows Alistair Cockburn's Use Case format, which LLMs recognize reliably.
+The more precise the use case, the less the AI has to guess during implementation.
 
 ⚓ link:#/anchor/gherkin[*Gherkin*] (Given/When/Then) provides acceptance criteria that are both human-readable and machine-testable.
 These criteria become the foundation for TDD later.
@@ -308,14 +320,15 @@ As the project evolves, groom the backlog regularly to re-prioritize based on ne
 Create a feature branch for this EPIC.
 Select the next logical issue from the backlog (respect dependencies).
 Analyze it and document your analysis as a comment on the issue.
-Implement it using TDD (choose London or Chicago School as appropriate). Commit when done.
+Implement it using TDD (choose London or Chicago School as appropriate).
+Each test references its Use Case ID for traceability. Commit when done.
 Check if the spec or architecture docs need updating.
 ----
 
 For each issue:
 
 . *Analyze*: The AI examines the issue, reviews related specs and architecture, checks for dependencies on other issues, and posts an analysis comment on the issue
-. *Implement with TDD*: The AI writes tests first, then implementation
+. *Implement with TDD*: The AI writes tests first, then implementation. Each test references the Use Case ID it verifies (e.g. `UC-01`). The AI chooses the appropriate mechanism for the language -- annotations in Java, comments in JavaScript, docstrings in Python. This creates traceability from tests back to specifications without additional tooling.
 . *Commit*: After the issue is implemented and all tests pass, commit with a reference to the issue number
 . *Check docs*: Ask whether the specification or architecture documentation needs updating based on what was learned during implementation
 
@@ -444,7 +457,7 @@ The essential one-liners for each phase, with the Semantic Anchors they activate
 |link:#/anchor/plain-english-strunk-white[Strunk & White]
 
 |Specification
-|`Create a detailed spec with Use Cases, Activity Diagrams (all paths), and Gherkin acceptance criteria.`
+|`Create a detailed spec with Use Cases (Trigger, Main Flow, Alternative Flows, Postconditions), Activity Diagrams (all paths), and Gherkin acceptance criteria.`
 |link:#/anchor/gherkin[Gherkin]
 
 |Architecture
@@ -464,7 +477,7 @@ The essential one-liners for each phase, with the Semantic Anchors they activate
 |INVEST, link:#/anchor/moscow[MoSCoW]
 
 |Implementation
-|`Select next issue (respect dependencies). Analyze and comment. Implement with TDD. Commit. Check if docs need updating.`
+|`Select next issue (respect dependencies). Analyze and comment. Implement with TDD. Each test references its Use Case ID. Commit. Check if docs need updating.`
 |link:#/anchor/tdd-london-school[TDD London] / link:#/anchor/tdd-chicago-school[Chicago], link:#/anchor/solid-principles[SOLID], link:#/anchor/dry-principle[DRY], link:#/anchor/domain-driven-design[DDD]
 
 |Code Review
