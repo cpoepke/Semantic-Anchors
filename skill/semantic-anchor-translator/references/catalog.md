@@ -111,6 +111,21 @@ Source: https://github.com/LLM-Coding/Semantic-Anchors
 - **Proponents:** ISO/IEC JTC 1/SC 7
 - **Core:** Product quality model with 8 characteristics (Functional Suitability, Performance Efficiency, Compatibility, Usability, Reliability, Security, Maintainability, Portability) plus Quality in Use model (Effectiveness, Efficiency, Satisfaction, Freedom from Risk, Context Coverage); used for structured software quality assessments, architecture reviews, and defining non-functional requirements
 
+### ATAM
+- **Also known as:** Architecture Tradeoff Analysis Method
+- **Proponents:** Rick Kazman, Mark Klein, Paul Clements (SEI/CMU)
+- **Core:** Scenario-driven evaluation of software architectures against quality attributes; elicits stakeholder quality-attribute scenarios, maps them to architectural decisions, identifies sensitivity points, tradeoff points, and risks; produces a documented risk list and tradeoff catalog
+
+### LASR by Toth/Zörner
+- **Also known as:** Layers–Aspects–Solution Strategy–Rationale
+- **Proponents:** Stefan Toth, Stefan Zörner
+- **Core:** Lightweight architecture description framework — describe a system through four lenses: Layers (structural decomposition), Aspects (cross-cutting concerns), Solution Strategy (key technology and design choices), Rationale (documented reasoning behind decisions); pairs naturally with arc42 and ADRs
+
+### OWASP Top 10
+- **Also known as:** OWASP Top Ten, Open Worldwide Application Security Project Top 10
+- **Proponents:** OWASP Foundation
+- **Core:** Consensus ranking of the ten most critical web-application security risks (Broken Access Control, Cryptographic Failures, Injection, Insecure Design, Security Misconfiguration, Vulnerable Components, Authentication Failures, Data Integrity Failures, Logging Failures, SSRF); used as a baseline checklist for secure code review, threat modeling, and compliance
+
 ## Design Principles
 
 ### SOLID Principles
